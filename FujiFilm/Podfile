@@ -11,5 +11,6 @@ target 'FujiFilm' do
   pod 'SDWebImage'
   pod 'JGProgressHUD'
   pod 'Alamofire'
+  pod 'SideMenu'
 
 end
