@@ -9,8 +9,8 @@
 /* Begin PBXBuildFile section */
 		E054A06463E128B5D39D0700 /* Pods_FujiFilm.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4331B429E0D452ACAD1E20FA /* Pods_FujiFilm.framework */; };
 		F2B1F73B222284B500CBEA40 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F2B1F73A222284B500CBEA40 /* AppDelegate.swift */; };
-		F2B1F73D222284B500CBEA40 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F2B1F73C222284B500CBEA40 /* ViewController.swift */; };
-		F2B1F740222284B500CBEA40 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F2B1F73E222284B500CBEA40 /* Main.storyboard */; };
+		F2B1F73D222284B500CBEA40 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F2B1F73C222284B500CBEA40 /* LoginViewController.swift */; };
+		F2B1F740222284B500CBEA40 /* Login.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F2B1F73E222284B500CBEA40 /* Login.storyboard */; };
 		F2B1F742222284B700CBEA40 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F2B1F741222284B700CBEA40 /* Assets.xcassets */; };
 		F2B1F745222284B700CBEA40 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F2B1F743222284B700CBEA40 /* LaunchScreen.storyboard */; };
 		F2B1F76F222285D200CBEA40 /* NSObject+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = F2B1F74E222285D200CBEA40 /* NSObject+Extension.swift */; };
@@ -49,6 +49,25 @@
 		F2B1F7A42222866800CBEA40 /* CellXibs.swift in Sources */ = {isa = PBXBuildFile; fileRef = F2B1F7952222866800CBEA40 /* CellXibs.swift */; };
 		F2B1F7AC2222866800CBEA40 /* HTMLs.swift in Sources */ = {isa = PBXBuildFile; fileRef = F2B1F79D2222866800CBEA40 /* HTMLs.swift */; };
 		F2B1F7AE222288EE00CBEA40 /* GeneralConstant.swift in Sources */ = {isa = PBXBuildFile; fileRef = F2B1F7AD222288EE00CBEA40 /* GeneralConstant.swift */; };
+		F2B1F7C62222996C00CBEA40 /* Raleway-BoldItalic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = F2B1F7B32222996C00CBEA40 /* Raleway-BoldItalic.ttf */; };
+		F2B1F7C72222996C00CBEA40 /* Raleway-MediumItalic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = F2B1F7B42222996C00CBEA40 /* Raleway-MediumItalic.ttf */; };
+		F2B1F7C82222996C00CBEA40 /* Raleway-ThinItalic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = F2B1F7B52222996C00CBEA40 /* Raleway-ThinItalic.ttf */; };
+		F2B1F7C92222996C00CBEA40 /* Raleway-ExtraLight.ttf in Resources */ = {isa = PBXBuildFile; fileRef = F2B1F7B62222996C00CBEA40 /* Raleway-ExtraLight.ttf */; };
+		F2B1F7CA2222996C00CBEA40 /* SIL Open Font License.txt in Resources */ = {isa = PBXBuildFile; fileRef = F2B1F7B72222996C00CBEA40 /* SIL Open Font License.txt */; };
+		F2B1F7CB2222996C00CBEA40 /* Raleway-Medium.ttf in Resources */ = {isa = PBXBuildFile; fileRef = F2B1F7B82222996C00CBEA40 /* Raleway-Medium.ttf */; };
+		F2B1F7CC2222996C00CBEA40 /* Raleway-SemiBold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = F2B1F7B92222996C00CBEA40 /* Raleway-SemiBold.ttf */; };
+		F2B1F7CD2222996C00CBEA40 /* Raleway-ExtraBold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = F2B1F7BA2222996C00CBEA40 /* Raleway-ExtraBold.ttf */; };
+		F2B1F7CE2222996C00CBEA40 /* Raleway-ExtraBoldItalic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = F2B1F7BB2222996C00CBEA40 /* Raleway-ExtraBoldItalic.ttf */; };
+		F2B1F7CF2222996C00CBEA40 /* Raleway-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = F2B1F7BC2222996C00CBEA40 /* Raleway-Regular.ttf */; };
+		F2B1F7D02222996C00CBEA40 /* Raleway-ExtraLightItalic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = F2B1F7BD2222996C00CBEA40 /* Raleway-ExtraLightItalic.ttf */; };
+		F2B1F7D12222996C00CBEA40 /* Raleway-SemiBoldItalic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = F2B1F7BE2222996C00CBEA40 /* Raleway-SemiBoldItalic.ttf */; };
+		F2B1F7D22222996C00CBEA40 /* Raleway-Light.ttf in Resources */ = {isa = PBXBuildFile; fileRef = F2B1F7BF2222996C00CBEA40 /* Raleway-Light.ttf */; };
+		F2B1F7D32222996C00CBEA40 /* Raleway-Black.ttf in Resources */ = {isa = PBXBuildFile; fileRef = F2B1F7C02222996C00CBEA40 /* Raleway-Black.ttf */; };
+		F2B1F7D42222996C00CBEA40 /* Raleway-BlackItalic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = F2B1F7C12222996C00CBEA40 /* Raleway-BlackItalic.ttf */; };
+		F2B1F7D52222996C00CBEA40 /* Raleway-LightItalic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = F2B1F7C22222996C00CBEA40 /* Raleway-LightItalic.ttf */; };
+		F2B1F7D62222996C00CBEA40 /* Raleway-Thin.ttf in Resources */ = {isa = PBXBuildFile; fileRef = F2B1F7C32222996C00CBEA40 /* Raleway-Thin.ttf */; };
+		F2B1F7D72222996C00CBEA40 /* Raleway-Italic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = F2B1F7C42222996C00CBEA40 /* Raleway-Italic.ttf */; };
+		F2B1F7D82222996C00CBEA40 /* Raleway-Bold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = F2B1F7C52222996C00CBEA40 /* Raleway-Bold.ttf */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -57,8 +76,8 @@
 		BE451DCF4657DD3DFFE8386D /* Pods-FujiFilm.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-FujiFilm.release.xcconfig"; path = "Pods/Target Support Files/Pods-FujiFilm/Pods-FujiFilm.release.xcconfig"; sourceTree = "<group>"; };
 		F2B1F737222284B500CBEA40 /* FujiFilm.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = FujiFilm.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		F2B1F73A222284B500CBEA40 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		F2B1F73C222284B500CBEA40 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
-		F2B1F73F222284B500CBEA40 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		F2B1F73C222284B500CBEA40 /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
+		F2B1F73F222284B500CBEA40 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Login.storyboard; sourceTree = "<group>"; };
 		F2B1F741222284B700CBEA40 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		F2B1F744222284B700CBEA40 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		F2B1F746222284B700CBEA40 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -98,6 +117,25 @@
 		F2B1F7952222866800CBEA40 /* CellXibs.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CellXibs.swift; sourceTree = "<group>"; };
 		F2B1F79D2222866800CBEA40 /* HTMLs.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HTMLs.swift; sourceTree = "<group>"; };
 		F2B1F7AD222288EE00CBEA40 /* GeneralConstant.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GeneralConstant.swift; sourceTree = "<group>"; };
+		F2B1F7B32222996C00CBEA40 /* Raleway-BoldItalic.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Raleway-BoldItalic.ttf"; sourceTree = "<group>"; };
+		F2B1F7B42222996C00CBEA40 /* Raleway-MediumItalic.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Raleway-MediumItalic.ttf"; sourceTree = "<group>"; };
+		F2B1F7B52222996C00CBEA40 /* Raleway-ThinItalic.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Raleway-ThinItalic.ttf"; sourceTree = "<group>"; };
+		F2B1F7B62222996C00CBEA40 /* Raleway-ExtraLight.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Raleway-ExtraLight.ttf"; sourceTree = "<group>"; };
+		F2B1F7B72222996C00CBEA40 /* SIL Open Font License.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = "SIL Open Font License.txt"; sourceTree = "<group>"; };
+		F2B1F7B82222996C00CBEA40 /* Raleway-Medium.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Raleway-Medium.ttf"; sourceTree = "<group>"; };
+		F2B1F7B92222996C00CBEA40 /* Raleway-SemiBold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Raleway-SemiBold.ttf"; sourceTree = "<group>"; };
+		F2B1F7BA2222996C00CBEA40 /* Raleway-ExtraBold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Raleway-ExtraBold.ttf"; sourceTree = "<group>"; };
+		F2B1F7BB2222996C00CBEA40 /* Raleway-ExtraBoldItalic.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Raleway-ExtraBoldItalic.ttf"; sourceTree = "<group>"; };
+		F2B1F7BC2222996C00CBEA40 /* Raleway-Regular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Raleway-Regular.ttf"; sourceTree = "<group>"; };
+		F2B1F7BD2222996C00CBEA40 /* Raleway-ExtraLightItalic.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Raleway-ExtraLightItalic.ttf"; sourceTree = "<group>"; };
+		F2B1F7BE2222996C00CBEA40 /* Raleway-SemiBoldItalic.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Raleway-SemiBoldItalic.ttf"; sourceTree = "<group>"; };
+		F2B1F7BF2222996C00CBEA40 /* Raleway-Light.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Raleway-Light.ttf"; sourceTree = "<group>"; };
+		F2B1F7C02222996C00CBEA40 /* Raleway-Black.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Raleway-Black.ttf"; sourceTree = "<group>"; };
+		F2B1F7C12222996C00CBEA40 /* Raleway-BlackItalic.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Raleway-BlackItalic.ttf"; sourceTree = "<group>"; };
+		F2B1F7C22222996C00CBEA40 /* Raleway-LightItalic.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Raleway-LightItalic.ttf"; sourceTree = "<group>"; };
+		F2B1F7C32222996C00CBEA40 /* Raleway-Thin.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Raleway-Thin.ttf"; sourceTree = "<group>"; };
+		F2B1F7C42222996C00CBEA40 /* Raleway-Italic.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Raleway-Italic.ttf"; sourceTree = "<group>"; };
+		F2B1F7C52222996C00CBEA40 /* Raleway-Bold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Raleway-Bold.ttf"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -150,12 +188,13 @@
 		F2B1F739222284B500CBEA40 /* FujiFilm */ = {
 			isa = PBXGroup;
 			children = (
+				F2B1F7B02222996C00CBEA40 /* Resources */,
 				F2B1F78E2222866800CBEA40 /* Enums */,
 				F2B1F74C222285D200CBEA40 /* Extensions */,
 				F2B1F760222285D200CBEA40 /* UIKitSubclasses */,
 				F2B1F73A222284B500CBEA40 /* AppDelegate.swift */,
-				F2B1F73C222284B500CBEA40 /* ViewController.swift */,
-				F2B1F73E222284B500CBEA40 /* Main.storyboard */,
+				F2B1F73C222284B500CBEA40 /* LoginViewController.swift */,
+				F2B1F73E222284B500CBEA40 /* Login.storyboard */,
 				F2B1F741222284B700CBEA40 /* Assets.xcassets */,
 				F2B1F743222284B700CBEA40 /* LaunchScreen.storyboard */,
 				F2B1F746222284B700CBEA40 /* Info.plist */,
@@ -236,6 +275,48 @@
 			path = Enums;
 			sourceTree = "<group>";
 		};
+		F2B1F7B02222996C00CBEA40 /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				F2B1F7B12222996C00CBEA40 /* Fonts */,
+			);
+			path = Resources;
+			sourceTree = "<group>";
+		};
+		F2B1F7B12222996C00CBEA40 /* Fonts */ = {
+			isa = PBXGroup;
+			children = (
+				F2B1F7B22222996C00CBEA40 /* raleway */,
+			);
+			path = Fonts;
+			sourceTree = "<group>";
+		};
+		F2B1F7B22222996C00CBEA40 /* raleway */ = {
+			isa = PBXGroup;
+			children = (
+				F2B1F7B32222996C00CBEA40 /* Raleway-BoldItalic.ttf */,
+				F2B1F7B42222996C00CBEA40 /* Raleway-MediumItalic.ttf */,
+				F2B1F7B52222996C00CBEA40 /* Raleway-ThinItalic.ttf */,
+				F2B1F7B62222996C00CBEA40 /* Raleway-ExtraLight.ttf */,
+				F2B1F7B72222996C00CBEA40 /* SIL Open Font License.txt */,
+				F2B1F7B82222996C00CBEA40 /* Raleway-Medium.ttf */,
+				F2B1F7B92222996C00CBEA40 /* Raleway-SemiBold.ttf */,
+				F2B1F7BA2222996C00CBEA40 /* Raleway-ExtraBold.ttf */,
+				F2B1F7BB2222996C00CBEA40 /* Raleway-ExtraBoldItalic.ttf */,
+				F2B1F7BC2222996C00CBEA40 /* Raleway-Regular.ttf */,
+				F2B1F7BD2222996C00CBEA40 /* Raleway-ExtraLightItalic.ttf */,
+				F2B1F7BE2222996C00CBEA40 /* Raleway-SemiBoldItalic.ttf */,
+				F2B1F7BF2222996C00CBEA40 /* Raleway-Light.ttf */,
+				F2B1F7C02222996C00CBEA40 /* Raleway-Black.ttf */,
+				F2B1F7C12222996C00CBEA40 /* Raleway-BlackItalic.ttf */,
+				F2B1F7C22222996C00CBEA40 /* Raleway-LightItalic.ttf */,
+				F2B1F7C32222996C00CBEA40 /* Raleway-Thin.ttf */,
+				F2B1F7C42222996C00CBEA40 /* Raleway-Italic.ttf */,
+				F2B1F7C52222996C00CBEA40 /* Raleway-Bold.ttf */,
+			);
+			path = raleway;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -296,9 +377,28 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				F2B1F7D12222996C00CBEA40 /* Raleway-SemiBoldItalic.ttf in Resources */,
+				F2B1F7D72222996C00CBEA40 /* Raleway-Italic.ttf in Resources */,
 				F2B1F745222284B700CBEA40 /* LaunchScreen.storyboard in Resources */,
+				F2B1F7D42222996C00CBEA40 /* Raleway-BlackItalic.ttf in Resources */,
 				F2B1F742222284B700CBEA40 /* Assets.xcassets in Resources */,
-				F2B1F740222284B500CBEA40 /* Main.storyboard in Resources */,
+				F2B1F7C72222996C00CBEA40 /* Raleway-MediumItalic.ttf in Resources */,
+				F2B1F7D62222996C00CBEA40 /* Raleway-Thin.ttf in Resources */,
+				F2B1F7CA2222996C00CBEA40 /* SIL Open Font License.txt in Resources */,
+				F2B1F7CB2222996C00CBEA40 /* Raleway-Medium.ttf in Resources */,
+				F2B1F740222284B500CBEA40 /* Login.storyboard in Resources */,
+				F2B1F7D22222996C00CBEA40 /* Raleway-Light.ttf in Resources */,
+				F2B1F7C62222996C00CBEA40 /* Raleway-BoldItalic.ttf in Resources */,
+				F2B1F7C92222996C00CBEA40 /* Raleway-ExtraLight.ttf in Resources */,
+				F2B1F7CE2222996C00CBEA40 /* Raleway-ExtraBoldItalic.ttf in Resources */,
+				F2B1F7C82222996C00CBEA40 /* Raleway-ThinItalic.ttf in Resources */,
+				F2B1F7CF2222996C00CBEA40 /* Raleway-Regular.ttf in Resources */,
+				F2B1F7D52222996C00CBEA40 /* Raleway-LightItalic.ttf in Resources */,
+				F2B1F7D32222996C00CBEA40 /* Raleway-Black.ttf in Resources */,
+				F2B1F7CC2222996C00CBEA40 /* Raleway-SemiBold.ttf in Resources */,
+				F2B1F7D82222996C00CBEA40 /* Raleway-Bold.ttf in Resources */,
+				F2B1F7D02222996C00CBEA40 /* Raleway-ExtraLightItalic.ttf in Resources */,
+				F2B1F7CD2222996C00CBEA40 /* Raleway-ExtraBold.ttf in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -330,12 +430,14 @@
 			);
 			inputPaths = (
 				"${SRCROOT}/Pods/Target Support Files/Pods-FujiFilm/Pods-FujiFilm-frameworks.sh",
+				"${BUILT_PRODUCTS_DIR}/Alamofire/Alamofire.framework",
 				"${BUILT_PRODUCTS_DIR}/JGProgressHUD/JGProgressHUD.framework",
 				"${BUILT_PRODUCTS_DIR}/QRCodeReader.swift/QRCodeReader.framework",
 				"${BUILT_PRODUCTS_DIR}/SDWebImage/SDWebImage.framework",
 			);
 			name = "[CP] Embed Pods Frameworks";
 			outputPaths = (
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Alamofire.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/JGProgressHUD.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/QRCodeReader.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SDWebImage.framework",
@@ -358,7 +460,7 @@
 				F2B1F7A32222866800CBEA40 /* StoryboardNames.swift in Sources */,
 				F2B1F781222285D200CBEA40 /* FujiFilmTextField.swift in Sources */,
 				F2B1F786222285D200CBEA40 /* FujiFilmViewController.swift in Sources */,
-				F2B1F73D222284B500CBEA40 /* ViewController.swift in Sources */,
+				F2B1F73D222284B500CBEA40 /* LoginViewController.swift in Sources */,
 				F2B1F78A222285D200CBEA40 /* FujiFilmLabel.swift in Sources */,
 				F2B1F776222285D200CBEA40 /* UILabel+Extension.swift in Sources */,
 				F2B1F777222285D200CBEA40 /* UIButton+Extension.swift in Sources */,
@@ -396,12 +498,12 @@
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXVariantGroup section */
-		F2B1F73E222284B500CBEA40 /* Main.storyboard */ = {
+		F2B1F73E222284B500CBEA40 /* Login.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
 				F2B1F73F222284B500CBEA40 /* Base */,
 			);
-			name = Main.storyboard;
+			name = Login.storyboard;
 			sourceTree = "<group>";
 		};
 		F2B1F743222284B700CBEA40 /* LaunchScreen.storyboard */ = {
