@@ -6,6 +6,7 @@
 //  Copyright © 2019 Pawan Sharma. All rights reserved.
 //
 
+import IQKeyboardManager
 import SideMenu
 import UIKit
 
@@ -15,6 +16,8 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
     func application(_: UIApplication, didFinishLaunchingWithOptions _: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
         // Override point for customization after application launch.
+
+        IQKeyboardManager.shared().isEnabled = true
 
         // Define the menus
         let menuLeftNavigationController = UISideMenuNavigationController(

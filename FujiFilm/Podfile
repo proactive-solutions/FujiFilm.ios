@@ -12,5 +12,6 @@ target 'FujiFilm' do
   pod 'JGProgressHUD'
   pod 'Alamofire'
   pod 'SideMenu'
+  pod 'IQKeyboardManager'
 
 end

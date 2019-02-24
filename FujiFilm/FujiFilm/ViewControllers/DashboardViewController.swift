@@ -26,7 +26,7 @@ final class DashboardViewController: FujiFilmViewController, UITableViewDataSour
 
         navigationItem.hidesBackButton = true
         navigationItem.leftBarButtonItem = UIBarButtonItem(
-            image: #imageLiteral(resourceName: "successfully_icon"),
+            image: #imageLiteral(resourceName: "menu"),
             style: UIBarButtonItem.Style.plain,
             target: self,
             action: #selector(showSideMenu)
