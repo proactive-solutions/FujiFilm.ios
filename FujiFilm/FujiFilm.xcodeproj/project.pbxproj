@@ -68,6 +68,8 @@
 		F2B1F7D62222996C00CBEA40 /* Raleway-Thin.ttf in Resources */ = {isa = PBXBuildFile; fileRef = F2B1F7C32222996C00CBEA40 /* Raleway-Thin.ttf */; };
 		F2B1F7D72222996C00CBEA40 /* Raleway-Italic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = F2B1F7C42222996C00CBEA40 /* Raleway-Italic.ttf */; };
 		F2B1F7D82222996C00CBEA40 /* Raleway-Bold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = F2B1F7C52222996C00CBEA40 /* Raleway-Bold.ttf */; };
+		F2B1F7DD2222A5DE00CBEA40 /* ForgotPassword.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F2B1F7DB2222A5DE00CBEA40 /* ForgotPassword.storyboard */; };
+		F2B1F7DF2222A5EB00CBEA40 /* ForgotPasswordViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F2B1F7DE2222A5EB00CBEA40 /* ForgotPasswordViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -136,6 +138,8 @@
 		F2B1F7C32222996C00CBEA40 /* Raleway-Thin.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Raleway-Thin.ttf"; sourceTree = "<group>"; };
 		F2B1F7C42222996C00CBEA40 /* Raleway-Italic.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Raleway-Italic.ttf"; sourceTree = "<group>"; };
 		F2B1F7C52222996C00CBEA40 /* Raleway-Bold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Raleway-Bold.ttf"; sourceTree = "<group>"; };
+		F2B1F7DC2222A5DE00CBEA40 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/ForgotPassword.storyboard; sourceTree = "<group>"; };
+		F2B1F7DE2222A5EB00CBEA40 /* ForgotPasswordViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ForgotPasswordViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -188,13 +192,13 @@
 		F2B1F739222284B500CBEA40 /* FujiFilm */ = {
 			isa = PBXGroup;
 			children = (
+				F2B1F7DA2222A5A200CBEA40 /* Storyboards */,
+				F2B1F7D92222A58A00CBEA40 /* ViewControllers */,
 				F2B1F7B02222996C00CBEA40 /* Resources */,
 				F2B1F78E2222866800CBEA40 /* Enums */,
 				F2B1F74C222285D200CBEA40 /* Extensions */,
 				F2B1F760222285D200CBEA40 /* UIKitSubclasses */,
 				F2B1F73A222284B500CBEA40 /* AppDelegate.swift */,
-				F2B1F73C222284B500CBEA40 /* LoginViewController.swift */,
-				F2B1F73E222284B500CBEA40 /* Login.storyboard */,
 				F2B1F741222284B700CBEA40 /* Assets.xcassets */,
 				F2B1F743222284B700CBEA40 /* LaunchScreen.storyboard */,
 				F2B1F746222284B700CBEA40 /* Info.plist */,
@@ -317,6 +321,24 @@
 			path = raleway;
 			sourceTree = "<group>";
 		};
+		F2B1F7D92222A58A00CBEA40 /* ViewControllers */ = {
+			isa = PBXGroup;
+			children = (
+				F2B1F7DE2222A5EB00CBEA40 /* ForgotPasswordViewController.swift */,
+				F2B1F73C222284B500CBEA40 /* LoginViewController.swift */,
+			);
+			path = ViewControllers;
+			sourceTree = "<group>";
+		};
+		F2B1F7DA2222A5A200CBEA40 /* Storyboards */ = {
+			isa = PBXGroup;
+			children = (
+				F2B1F73E222284B500CBEA40 /* Login.storyboard */,
+				F2B1F7DB2222A5DE00CBEA40 /* ForgotPassword.storyboard */,
+			);
+			path = Storyboards;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -380,6 +402,7 @@
 				F2B1F7D12222996C00CBEA40 /* Raleway-SemiBoldItalic.ttf in Resources */,
 				F2B1F7D72222996C00CBEA40 /* Raleway-Italic.ttf in Resources */,
 				F2B1F745222284B700CBEA40 /* LaunchScreen.storyboard in Resources */,
+				F2B1F7DD2222A5DE00CBEA40 /* ForgotPassword.storyboard in Resources */,
 				F2B1F7D42222996C00CBEA40 /* Raleway-BlackItalic.ttf in Resources */,
 				F2B1F742222284B700CBEA40 /* Assets.xcassets in Resources */,
 				F2B1F7C72222996C00CBEA40 /* Raleway-MediumItalic.ttf in Resources */,
@@ -477,6 +500,7 @@
 				F2B1F73B222284B500CBEA40 /* AppDelegate.swift in Sources */,
 				F2B1F787222285D200CBEA40 /* FujiFilmButton.swift in Sources */,
 				F2B1F77C222285D200CBEA40 /* UITextView+Extension.swift in Sources */,
+				F2B1F7DF2222A5EB00CBEA40 /* ForgotPasswordViewController.swift in Sources */,
 				F2B1F7AC2222866800CBEA40 /* HTMLs.swift in Sources */,
 				F2B1F7AE222288EE00CBEA40 /* GeneralConstant.swift in Sources */,
 				F2B1F782222285D200CBEA40 /* FujiFilmSegmentedControl.swift in Sources */,
@@ -512,6 +536,14 @@
 				F2B1F744222284B700CBEA40 /* Base */,
 			);
 			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+		F2B1F7DB2222A5DE00CBEA40 /* ForgotPassword.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				F2B1F7DC2222A5DE00CBEA40 /* Base */,
+			);
+			name = ForgotPassword.storyboard;
 			sourceTree = "<group>";
 		};
 /* End PBXVariantGroup section */

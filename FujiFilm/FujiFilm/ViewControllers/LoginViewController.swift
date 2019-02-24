@@ -9,10 +9,8 @@
 import UIKit
 
 final class LoginViewController: FujiFilmViewController {
-
-    @IBOutlet weak var emailTextField: FujiFilmTextField!
-    @IBOutlet weak var passwordTextField: FujiFilmTextField!
-
+    @IBOutlet var emailTextField: FujiFilmTextField!
+    @IBOutlet var passwordTextField: FujiFilmTextField!
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -23,11 +21,10 @@ final class LoginViewController: FujiFilmViewController {
         }
     }
 
-    @IBAction func loginAction(_ sender: FujiFilmButton) {
-
+    @IBAction func loginAction(_: FujiFilmButton) {
     }
 
-    @IBAction func forgotPasswordAction(_ sender: FujiFilmButton) {
-
+    @IBAction func forgotPasswordAction(_: FujiFilmButton) {
+        showForgotPassword()
     }
 }

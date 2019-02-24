@@ -6,7 +6,8 @@ import Foundation
 import UIKit
 
 enum StoryBoardNames: String {
-    case onboarding = "Login"
+    case login = "Login"
+    case forgotPassword = "ForgotPassword"
 }
 
 extension StoryBoardNames {

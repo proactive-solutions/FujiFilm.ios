@@ -22,4 +22,16 @@ extension UIViewController {
     private var controllerCastingErrorMessage: String {
         return "Could not type cast controller"
     }
+
+    @discardableResult
+    func showForgotPassword() -> ForgotPasswordViewController {
+        let storyboardName = StoryBoardNames.forgotPassword
+
+        guard let controller = storyboardName.instatiateController() as? ForgotPasswordViewController else {
+            fatalError(controllerCastingErrorMessage)
+        }
+
+        navigationController?.pushViewController(controller, animated: true)
+        return controller
+    }
 }
