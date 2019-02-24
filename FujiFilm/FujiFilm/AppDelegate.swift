@@ -43,6 +43,11 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         SideMenuManager.default.menuFadeStatusBar = false
         SideMenuManager.default.menuWidth = (window?.widthValue ?? 320) * 0.8
 
+        if let _ = UserDefaults.standard.userDetails {
+            let controller = StoryBoardNames.dashboard.initialController()
+            (self.window?.rootViewController as? UINavigationController)?.setViewControllers([controller], animated: false)
+        }
+
         return true
     }
 

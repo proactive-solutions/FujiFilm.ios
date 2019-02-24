@@ -27,9 +27,6 @@ final class LoginViewController: FujiFilmViewController {
             return
         }
 
-        showDashboard()
-        return;
-
         view.showLoader()
         var params = [String: String]()
         params["email"] = emailTextField.text

@@ -8,9 +8,21 @@
 
 import UIKit
 
+final class MenuHeaderView: UITableViewHeaderFooterView {
+    @IBOutlet weak var nameLabel: FujiFilmLabel!
+    @IBOutlet weak var locationlabel: FujiFilmLabel!
+}
+
 final class LeftMenuViewController: FujiFilmViewController, UITableViewDataSource, UITableViewDelegate {
     @IBOutlet private var leftmenuTAbleView: UITableView!
-    @IBOutlet private var headerView: UITableViewHeaderFooterView!
+    @IBOutlet private var headerView: MenuHeaderView!
+
+    private lazy var menus: [StoryBoardNames] = [
+        StoryBoardNames.dashboard,
+        StoryBoardNames.workshop,
+        StoryBoardNames.dashboard,
+        StoryBoardNames.workshop,
+    ]
 
     private let menuTitles: [String] = [
         "Workshop",
@@ -28,6 +40,11 @@ final class LeftMenuViewController: FujiFilmViewController, UITableViewDataSourc
         leftmenuTAbleView.hideEmptyAndExtraRows()
         leftmenuTAbleView.tableHeaderView = headerView
         leftmenuTAbleView.sectionHeaderHeight = 300.0
+
+        if let details = UserDefaults.standard.userDetails {
+            self.headerView.nameLabel.text = details.result.fldFirstname + details.result.fldFamilyname
+            self.headerView.locationlabel.text = details.result.fldAddress + details.result.fldAddress1
+        }
     }
 
     func numberOfSections(in _: UITableView) -> Int {
@@ -51,5 +68,12 @@ final class LeftMenuViewController: FujiFilmViewController, UITableViewDataSourc
 
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         tableView.deselectRow(at: indexPath, animated: false)
+        if indexPath.row <= 3 {
+            let controller = menus[indexPath.row].initialController()
+            self.navigationController?.pushViewController(controller, animated: true)
+        } else {
+            UserDefaults.standard.userDetails = nil
+            self.logout()
+        }
     }
 }

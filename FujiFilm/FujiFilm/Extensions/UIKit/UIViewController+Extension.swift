@@ -74,6 +74,16 @@ extension UIViewController {
         return controller
     }
 
+    func logout() {
+        /*
+        let storyboardName = StoryBoardNames.login
+        guard let controller = storyboardName.instatiateController() as? LoginViewController else {
+            fatalError(controllerCastingErrorMessage)
+        }
+        navigationController?.setViewControllers([controller], animated: true)
+         */
+    }
+
     @objc
     func showSideMenu() {
         guard let menuLeft = SideMenuManager.default.menuLeftNavigationController else { return }

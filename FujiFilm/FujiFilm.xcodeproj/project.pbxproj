@@ -87,6 +87,7 @@
 		F2D8D74B22231CB500B15CC7 /* QRScanResultViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F2D8D74A22231CB500B15CC7 /* QRScanResultViewController.swift */; };
 		F2D8D74E2223261400B15CC7 /* APIError.swift in Sources */ = {isa = PBXBuildFile; fileRef = F2D8D74D2223261400B15CC7 /* APIError.swift */; };
 		F2D8D750222327F100B15CC7 /* UserDetails.swift in Sources */ = {isa = PBXBuildFile; fileRef = F2D8D74F222327F100B15CC7 /* UserDetails.swift */; };
+		F2D8D752222336F500B15CC7 /* EventList.swift in Sources */ = {isa = PBXBuildFile; fileRef = F2D8D751222336F500B15CC7 /* EventList.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -174,6 +175,7 @@
 		F2D8D74A22231CB500B15CC7 /* QRScanResultViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QRScanResultViewController.swift; sourceTree = "<group>"; };
 		F2D8D74D2223261400B15CC7 /* APIError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIError.swift; sourceTree = "<group>"; };
 		F2D8D74F222327F100B15CC7 /* UserDetails.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserDetails.swift; sourceTree = "<group>"; };
+		F2D8D751222336F500B15CC7 /* EventList.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EventList.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -426,6 +428,7 @@
 			children = (
 				F2D8D74D2223261400B15CC7 /* APIError.swift */,
 				F2D8D74F222327F100B15CC7 /* UserDetails.swift */,
+				F2D8D751222336F500B15CC7 /* EventList.swift */,
 			);
 			path = models;
 			sourceTree = "<group>";
@@ -627,6 +630,7 @@
 				F2B1F79E2222866800CBEA40 /* CustomFontStyle.swift in Sources */,
 				F2B1F780222285D200CBEA40 /* FujiFilmTableView.swift in Sources */,
 				F2B1F783222285D200CBEA40 /* FujiFilmImageView.swift in Sources */,
+				F2D8D752222336F500B15CC7 /* EventList.swift in Sources */,
 				F2B1F7A42222866800CBEA40 /* CellXibs.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

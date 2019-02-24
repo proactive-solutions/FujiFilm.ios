@@ -50,7 +50,7 @@
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="U0l-gD-Yfy" userLabel="First Responder" sceneMemberID="firstResponder"/>
-                <view contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="fp1-EZ-zE2" customClass="UITableViewHeaderFooterView">
+                <view contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="fp1-EZ-zE2" customClass="MenuHeaderView" customModule="FujiFilm" customModuleProvider="target">
                     <rect key="frame" x="0.0" y="0.0" width="337" height="200"/>
                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                     <subviews>
@@ -82,9 +82,13 @@
                         <constraint firstAttribute="trailing" secondItem="t0c-jV-H09" secondAttribute="trailing" id="g2D-2v-WH5"/>
                         <constraint firstAttribute="bottom" secondItem="t0c-jV-H09" secondAttribute="bottom" id="tL0-r8-RVD"/>
                     </constraints>
+                    <connections>
+                        <outlet property="locationlabel" destination="FVF-uj-PAG" id="6Qm-fy-Uqt"/>
+                        <outlet property="nameLabel" destination="ltl-pO-C4C" id="Y8F-Ue-Uii"/>
+                    </connections>
                 </view>
             </objects>
-            <point key="canvasLocation" x="153" y="-7"/>
+            <point key="canvasLocation" x="-170" y="-38"/>
         </scene>
     </scenes>
     <resources>
