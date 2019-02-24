@@ -27,7 +27,7 @@ final class LoginViewController: FujiFilmViewController {
             return
         }
 
-        self.showDashboard()
+        showDashboard()
         return;
 
         view.showLoader()

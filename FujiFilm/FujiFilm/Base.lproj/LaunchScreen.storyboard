@@ -13,20 +13,10 @@
         <scene sceneID="EHf-IW-A2E">
             <objects>
                 <viewController id="01J-lp-oVM" sceneMemberID="viewController">
-                    <view key="view" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="Ze5-6b-2t3">
+                    <imageView key="view" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="splash_image" id="Rcy-eH-cjE">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
-                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <subviews>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Logo-Black" translatesAutoresizingMaskIntoConstraints="NO" id="gBY-nE-YF0">
-                                <rect key="frame" x="16" y="305" width="343" height="57"/>
-                            </imageView>
-                        </subviews>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                        <constraints>
-                            <constraint firstItem="gBY-nE-YF0" firstAttribute="centerX" secondItem="Ze5-6b-2t3" secondAttribute="centerX" id="VLe-Rb-V4P"/>
-                            <constraint firstItem="gBY-nE-YF0" firstAttribute="centerY" secondItem="Ze5-6b-2t3" secondAttribute="centerY" id="jDb-Ul-hbQ"/>
-                        </constraints>
-                    </view>
+                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                    </imageView>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="iYj-Kq-Ea1" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -34,6 +24,6 @@
         </scene>
     </scenes>
     <resources>
-        <image name="Logo-Black" width="343" height="57"/>
+        <image name="splash_image" width="360" height="640"/>
     </resources>
 </document>

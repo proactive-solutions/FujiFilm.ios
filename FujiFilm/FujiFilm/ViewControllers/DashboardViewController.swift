@@ -23,6 +23,14 @@ final class DashboardViewController: FujiFilmViewController, UITableViewDataSour
         menuTableView.registerNib(.dashboad)
         menuTableView.calculateCellHeight(estimatedHeight: 80.0)
         menuTableView.hideEmptyAndExtraRows()
+
+        navigationItem.hidesBackButton = true
+        navigationItem.leftBarButtonItem = UIBarButtonItem(
+            image: #imageLiteral(resourceName: "successfully_icon"),
+            style: UIBarButtonItem.Style.plain,
+            target: self,
+            action: #selector(showSideMenu)
+        )
     }
 
     func numberOfSections(in _: UITableView) -> Int {

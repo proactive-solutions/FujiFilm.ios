@@ -74,6 +74,7 @@ extension UIViewController {
         return controller
     }
 
+    @objc
     func showSideMenu() {
         guard let menuLeft = SideMenuManager.default.menuLeftNavigationController else { return }
         present(menuLeft, animated: true, completion: nil)
