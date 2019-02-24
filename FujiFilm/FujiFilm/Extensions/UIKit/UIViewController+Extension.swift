@@ -2,6 +2,7 @@
 //  PumaPay
 //  Copyright © 2019 PumaPay. All rights reserved.
 
+import SideMenu
 import UIKit
 
 // MARK: - Share
@@ -33,5 +34,10 @@ extension UIViewController {
 
         navigationController?.pushViewController(controller, animated: true)
         return controller
+    }
+
+    func showSideMenu() {
+        guard let menuLeft = SideMenuManager.default.menuLeftNavigationController else { return }
+        present(menuLeft, animated: true, completion: nil)
     }
 }

@@ -8,6 +8,7 @@ import UIKit
 enum StoryBoardNames: String {
     case login = "Login"
     case forgotPassword = "ForgotPassword"
+    case leftMenu = "LeftMenu"
 }
 
 extension StoryBoardNames {

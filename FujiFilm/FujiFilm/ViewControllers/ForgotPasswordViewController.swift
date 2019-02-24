@@ -20,6 +20,6 @@ final class ForgotPasswordViewController: FujiFilmViewController {
     }
 
     @IBAction func submitAction(_: FujiFilmButton) {
-
+        showSideMenu()
     }
 }

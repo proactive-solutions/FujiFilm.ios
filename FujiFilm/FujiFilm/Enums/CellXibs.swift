@@ -5,14 +5,7 @@
 import Foundation
 
 enum TableViewCellXibs: String {
-    case homeCell = "HomeCell"
-    case currencyCell = "CurrencyCell"
-    case upcomingPaymentCell = "UpcomingPaymentCell"
-    case transactionHistoryCell = "TransactionHistoryCell"
-    case filterMenuCell = "FilterMenuCell"
-    case walletDetailCell = "WalletDetailCell"
-    case currencyListCell = "CurrencyListCell"
-    case menuCell = "MenuCell"
+    case leftMenuCell = "FujiFilmLeftMenuCell"
 }
 
 enum CollectionViewCellXibs: String {
