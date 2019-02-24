@@ -56,7 +56,7 @@ extension UIViewController {
             fatalError(controllerCastingErrorMessage)
         }
 
-        navigationController?.pushViewController(controller, animated: true)
+        navigationController?.setViewControllers([controller], animated: true)
         return controller
     }
 

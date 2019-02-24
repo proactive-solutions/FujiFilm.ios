@@ -20,10 +20,14 @@ final class ForgotPasswordViewController: FujiFilmViewController {
     }
 
     @IBAction func submitAction(_: FujiFilmButton) {
+        if emailTextField.text?.trimmed.count == 0 {
+            view.show(error: "Please enter your email address")
+            return
+        }
+
         view.showLoader()
-        let params: [String: String] = [
-            "email": "dev1@yeahinfotech.com",
-        ]
+        var params = [String: String]()
+        params["email"] = emailTextField.text
 
         APIManager().request(
             path: APIPaths.forgotPassword,

@@ -22,10 +22,18 @@ final class LoginViewController: FujiFilmViewController {
     }
 
     @IBAction func loginAction(_: FujiFilmButton) {
-        let params: [String: String] = [
-            "email": "dev1@abir.net",
-            "password": "123",
-        ]
+        if emailTextField.text?.trimmed.count == 0 || passwordTextField.text?.trimmed.count == 0 {
+            view.show(error: "Please enter your email address and password")
+            return
+        }
+
+        self.showDashboard()
+        return;
+
+        view.showLoader()
+        var params = [String: String]()
+        params["email"] = emailTextField.text
+        params["password"] = passwordTextField.text
 
         APIManager().request(
             path: .login,
@@ -34,11 +42,12 @@ final class LoginViewController: FujiFilmViewController {
             headers: nil,
             success: { [weak self] (data: Data, _: Int) in
                 guard let self = self else { return }
+                self.view.hideLoader()
                 if let error = try? JSONDecoder().decode(APIError.self, from: data) {
-                    print(error)
                     self.view.show(error: error.message)
                 } else if let user = try? JSONDecoder().decode(UserDetails.self, from: data) {
-                    print(user)
+                    UserDefaults.standard.userDetails = user
+                    self.showDashboard()
                 }
             }, failure: { [weak self] error in
                 guard let self = self else { return }
