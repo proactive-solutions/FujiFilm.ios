@@ -5,5 +5,4 @@
 import UIKit
 
 class FujiFilmImageView: UIImageView {
-
 }

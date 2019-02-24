@@ -25,11 +25,11 @@ extension UIColor {
         return color
     }
 
-	class var paleGrey: UIColor {
-		return #colorLiteral(red: 0.9254901961, green: 0.9254901961, blue: 0.9450980392, alpha: 1)
-	}
+    class var paleGrey: UIColor {
+        return #colorLiteral(red: 0.9254901961, green: 0.9254901961, blue: 0.9450980392, alpha: 1)
+    }
 
-	class var btcBGColor: UIColor {
-		return #colorLiteral(red: 0.9960784314, green: 0.9490196078, blue: 0.8980392157, alpha: 1)
-	}
+    class var btcBGColor: UIColor {
+        return #colorLiteral(red: 0.9960784314, green: 0.9490196078, blue: 0.8980392157, alpha: 1)
+    }
 }

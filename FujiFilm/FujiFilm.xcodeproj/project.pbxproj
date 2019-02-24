@@ -45,20 +45,10 @@
 		F2B1F78C222285D200CBEA40 /* FujiFilmSwitch.swift in Sources */ = {isa = PBXBuildFile; fileRef = F2B1F76D222285D200CBEA40 /* FujiFilmSwitch.swift */; };
 		F2B1F78D222285D200CBEA40 /* FujiFilmShadowView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F2B1F76E222285D200CBEA40 /* FujiFilmShadowView.swift */; };
 		F2B1F79E2222866800CBEA40 /* CustomFontStyle.swift in Sources */ = {isa = PBXBuildFile; fileRef = F2B1F78F2222866800CBEA40 /* CustomFontStyle.swift */; };
-		F2B1F79F2222866800CBEA40 /* AppLanguages.swift in Sources */ = {isa = PBXBuildFile; fileRef = F2B1F7902222866800CBEA40 /* AppLanguages.swift */; };
-		F2B1F7A02222866800CBEA40 /* ETHMethods.swift in Sources */ = {isa = PBXBuildFile; fileRef = F2B1F7912222866800CBEA40 /* ETHMethods.swift */; };
-		F2B1F7A12222866800CBEA40 /* TermsOfUseStatus.swift in Sources */ = {isa = PBXBuildFile; fileRef = F2B1F7922222866800CBEA40 /* TermsOfUseStatus.swift */; };
-		F2B1F7A22222866800CBEA40 /* TransferType.swift in Sources */ = {isa = PBXBuildFile; fileRef = F2B1F7932222866800CBEA40 /* TransferType.swift */; };
 		F2B1F7A32222866800CBEA40 /* StoryboardNames.swift in Sources */ = {isa = PBXBuildFile; fileRef = F2B1F7942222866800CBEA40 /* StoryboardNames.swift */; };
 		F2B1F7A42222866800CBEA40 /* CellXibs.swift in Sources */ = {isa = PBXBuildFile; fileRef = F2B1F7952222866800CBEA40 /* CellXibs.swift */; };
-		F2B1F7A52222866800CBEA40 /* ETHState.swift in Sources */ = {isa = PBXBuildFile; fileRef = F2B1F7962222866800CBEA40 /* ETHState.swift */; };
-		F2B1F7A62222866800CBEA40 /* BottomTabMenuIndex.swift in Sources */ = {isa = PBXBuildFile; fileRef = F2B1F7972222866800CBEA40 /* BottomTabMenuIndex.swift */; };
-		F2B1F7A72222866800CBEA40 /* NetworkResult.swift in Sources */ = {isa = PBXBuildFile; fileRef = F2B1F7982222866800CBEA40 /* NetworkResult.swift */; };
-		F2B1F7A82222866800CBEA40 /* MenuOptions.swift in Sources */ = {isa = PBXBuildFile; fileRef = F2B1F7992222866800CBEA40 /* MenuOptions.swift */; };
-		F2B1F7A92222866800CBEA40 /* WelcomeMode.swift in Sources */ = {isa = PBXBuildFile; fileRef = F2B1F79A2222866800CBEA40 /* WelcomeMode.swift */; };
-		F2B1F7AA2222866800CBEA40 /* CryptoCurrencies.swift in Sources */ = {isa = PBXBuildFile; fileRef = F2B1F79B2222866800CBEA40 /* CryptoCurrencies.swift */; };
-		F2B1F7AB2222866800CBEA40 /* NetworkId.swift in Sources */ = {isa = PBXBuildFile; fileRef = F2B1F79C2222866800CBEA40 /* NetworkId.swift */; };
 		F2B1F7AC2222866800CBEA40 /* HTMLs.swift in Sources */ = {isa = PBXBuildFile; fileRef = F2B1F79D2222866800CBEA40 /* HTMLs.swift */; };
+		F2B1F7AE222288EE00CBEA40 /* GeneralConstant.swift in Sources */ = {isa = PBXBuildFile; fileRef = F2B1F7AD222288EE00CBEA40 /* GeneralConstant.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -104,20 +94,10 @@
 		F2B1F76D222285D200CBEA40 /* FujiFilmSwitch.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FujiFilmSwitch.swift; sourceTree = "<group>"; };
 		F2B1F76E222285D200CBEA40 /* FujiFilmShadowView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FujiFilmShadowView.swift; sourceTree = "<group>"; };
 		F2B1F78F2222866800CBEA40 /* CustomFontStyle.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CustomFontStyle.swift; sourceTree = "<group>"; };
-		F2B1F7902222866800CBEA40 /* AppLanguages.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AppLanguages.swift; sourceTree = "<group>"; };
-		F2B1F7912222866800CBEA40 /* ETHMethods.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ETHMethods.swift; sourceTree = "<group>"; };
-		F2B1F7922222866800CBEA40 /* TermsOfUseStatus.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TermsOfUseStatus.swift; sourceTree = "<group>"; };
-		F2B1F7932222866800CBEA40 /* TransferType.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TransferType.swift; sourceTree = "<group>"; };
 		F2B1F7942222866800CBEA40 /* StoryboardNames.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StoryboardNames.swift; sourceTree = "<group>"; };
 		F2B1F7952222866800CBEA40 /* CellXibs.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CellXibs.swift; sourceTree = "<group>"; };
-		F2B1F7962222866800CBEA40 /* ETHState.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ETHState.swift; sourceTree = "<group>"; };
-		F2B1F7972222866800CBEA40 /* BottomTabMenuIndex.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BottomTabMenuIndex.swift; sourceTree = "<group>"; };
-		F2B1F7982222866800CBEA40 /* NetworkResult.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NetworkResult.swift; sourceTree = "<group>"; };
-		F2B1F7992222866800CBEA40 /* MenuOptions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MenuOptions.swift; sourceTree = "<group>"; };
-		F2B1F79A2222866800CBEA40 /* WelcomeMode.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WelcomeMode.swift; sourceTree = "<group>"; };
-		F2B1F79B2222866800CBEA40 /* CryptoCurrencies.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CryptoCurrencies.swift; sourceTree = "<group>"; };
-		F2B1F79C2222866800CBEA40 /* NetworkId.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NetworkId.swift; sourceTree = "<group>"; };
 		F2B1F79D2222866800CBEA40 /* HTMLs.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HTMLs.swift; sourceTree = "<group>"; };
+		F2B1F7AD222288EE00CBEA40 /* GeneralConstant.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GeneralConstant.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -179,6 +159,7 @@
 				F2B1F741222284B700CBEA40 /* Assets.xcassets */,
 				F2B1F743222284B700CBEA40 /* LaunchScreen.storyboard */,
 				F2B1F746222284B700CBEA40 /* Info.plist */,
+				F2B1F7AD222288EE00CBEA40 /* GeneralConstant.swift */,
 			);
 			path = FujiFilm;
 			sourceTree = "<group>";
@@ -248,19 +229,8 @@
 			isa = PBXGroup;
 			children = (
 				F2B1F78F2222866800CBEA40 /* CustomFontStyle.swift */,
-				F2B1F7902222866800CBEA40 /* AppLanguages.swift */,
-				F2B1F7912222866800CBEA40 /* ETHMethods.swift */,
-				F2B1F7922222866800CBEA40 /* TermsOfUseStatus.swift */,
-				F2B1F7932222866800CBEA40 /* TransferType.swift */,
 				F2B1F7942222866800CBEA40 /* StoryboardNames.swift */,
 				F2B1F7952222866800CBEA40 /* CellXibs.swift */,
-				F2B1F7962222866800CBEA40 /* ETHState.swift */,
-				F2B1F7972222866800CBEA40 /* BottomTabMenuIndex.swift */,
-				F2B1F7982222866800CBEA40 /* NetworkResult.swift */,
-				F2B1F7992222866800CBEA40 /* MenuOptions.swift */,
-				F2B1F79A2222866800CBEA40 /* WelcomeMode.swift */,
-				F2B1F79B2222866800CBEA40 /* CryptoCurrencies.swift */,
-				F2B1F79C2222866800CBEA40 /* NetworkId.swift */,
 				F2B1F79D2222866800CBEA40 /* HTMLs.swift */,
 			);
 			path = Enums;
@@ -360,11 +330,13 @@
 			);
 			inputPaths = (
 				"${SRCROOT}/Pods/Target Support Files/Pods-FujiFilm/Pods-FujiFilm-frameworks.sh",
+				"${BUILT_PRODUCTS_DIR}/JGProgressHUD/JGProgressHUD.framework",
 				"${BUILT_PRODUCTS_DIR}/QRCodeReader.swift/QRCodeReader.framework",
 				"${BUILT_PRODUCTS_DIR}/SDWebImage/SDWebImage.framework",
 			);
 			name = "[CP] Embed Pods Frameworks";
 			outputPaths = (
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/JGProgressHUD.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/QRCodeReader.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SDWebImage.framework",
 			);
@@ -380,7 +352,6 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				F2B1F7A72222866800CBEA40 /* NetworkResult.swift in Sources */,
 				F2B1F770222285D200CBEA40 /* String+Extension.swift in Sources */,
 				F2B1F779222285D200CBEA40 /* UIViewController+Extension.swift in Sources */,
 				F2B1F77F222285D200CBEA40 /* UITableView+Extension.swift in Sources */,
@@ -388,15 +359,10 @@
 				F2B1F781222285D200CBEA40 /* FujiFilmTextField.swift in Sources */,
 				F2B1F786222285D200CBEA40 /* FujiFilmViewController.swift in Sources */,
 				F2B1F73D222284B500CBEA40 /* ViewController.swift in Sources */,
-				F2B1F7AB2222866800CBEA40 /* NetworkId.swift in Sources */,
 				F2B1F78A222285D200CBEA40 /* FujiFilmLabel.swift in Sources */,
-				F2B1F7A82222866800CBEA40 /* MenuOptions.swift in Sources */,
 				F2B1F776222285D200CBEA40 /* UILabel+Extension.swift in Sources */,
-				F2B1F7A52222866800CBEA40 /* ETHState.swift in Sources */,
 				F2B1F777222285D200CBEA40 /* UIButton+Extension.swift in Sources */,
-				F2B1F7A92222866800CBEA40 /* WelcomeMode.swift in Sources */,
 				F2B1F773222285D200CBEA40 /* UIImageView+Extension.swift in Sources */,
-				F2B1F7A62222866800CBEA40 /* BottomTabMenuIndex.swift in Sources */,
 				F2B1F77B222285D200CBEA40 /* UICollectionView+Extension.swift in Sources */,
 				F2B1F77A222285D200CBEA40 /* UISegmentedControl+Extension.swift in Sources */,
 				F2B1F77D222285D200CBEA40 /* UIScrollView+Content.swift in Sources */,
@@ -405,27 +371,23 @@
 				F2B1F784222285D200CBEA40 /* FujiFilmTabBarItem.swift in Sources */,
 				F2B1F775222285D200CBEA40 /* UIColor+Extension.swift in Sources */,
 				F2B1F778222285D200CBEA40 /* UIView+Extension.swift in Sources */,
-				F2B1F79F2222866800CBEA40 /* AppLanguages.swift in Sources */,
 				F2B1F78B222285D200CBEA40 /* FujiFilmTabController.swift in Sources */,
 				F2B1F73B222284B500CBEA40 /* AppDelegate.swift in Sources */,
 				F2B1F787222285D200CBEA40 /* FujiFilmButton.swift in Sources */,
 				F2B1F77C222285D200CBEA40 /* UITextView+Extension.swift in Sources */,
 				F2B1F7AC2222866800CBEA40 /* HTMLs.swift in Sources */,
+				F2B1F7AE222288EE00CBEA40 /* GeneralConstant.swift in Sources */,
 				F2B1F782222285D200CBEA40 /* FujiFilmSegmentedControl.swift in Sources */,
 				F2B1F788222285D200CBEA40 /* FujiFilmCollectionView.swift in Sources */,
 				F2B1F78C222285D200CBEA40 /* FujiFilmSwitch.swift in Sources */,
 				F2B1F771222285D200CBEA40 /* UserDefaults+Extension.swift in Sources */,
 				F2B1F789222285D200CBEA40 /* FujiFilmNavigationBar.swift in Sources */,
-				F2B1F7A02222866800CBEA40 /* ETHMethods.swift in Sources */,
 				F2B1F772222285D200CBEA40 /* UIApplication+Extension.swift in Sources */,
-				F2B1F7A22222866800CBEA40 /* TransferType.swift in Sources */,
 				F2B1F785222285D200CBEA40 /* FujiFilmTextView.swift in Sources */,
 				F2B1F774222285D200CBEA40 /* UIFont+Extension.swift in Sources */,
 				F2B1F76F222285D200CBEA40 /* NSObject+Extension.swift in Sources */,
 				F2B1F79E2222866800CBEA40 /* CustomFontStyle.swift in Sources */,
 				F2B1F780222285D200CBEA40 /* FujiFilmTableView.swift in Sources */,
-				F2B1F7A12222866800CBEA40 /* TermsOfUseStatus.swift in Sources */,
-				F2B1F7AA2222866800CBEA40 /* CryptoCurrencies.swift in Sources */,
 				F2B1F783222285D200CBEA40 /* FujiFilmImageView.swift in Sources */,
 				F2B1F7A42222866800CBEA40 /* CellXibs.swift in Sources */,
 			);
@@ -577,11 +539,12 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = Z95J8CA4LH;
 				INFOPLIST_FILE = FujiFilm/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = com.FujiFilm.FujiFilm;
+				PRODUCT_BUNDLE_IDENTIFIER = "com.fujifilm-xmea.distributor";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.2;
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -596,11 +559,12 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = Z95J8CA4LH;
 				INFOPLIST_FILE = FujiFilm/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = com.FujiFilm.FujiFilm;
+				PRODUCT_BUNDLE_IDENTIFIER = "com.fujifilm-xmea.distributor";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.2;
 				TARGETED_DEVICE_FAMILY = "1,2";

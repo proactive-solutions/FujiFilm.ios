@@ -5,8 +5,8 @@
 import Foundation
 
 extension NSObject {
-	class var className: String {
-		let name = String(describing: self)
-		return name
-	}
+    class var className: String {
+        let name = String(describing: self)
+        return name
+    }
 }

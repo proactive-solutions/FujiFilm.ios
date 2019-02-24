@@ -6,10 +6,7 @@ import Foundation
 
 extension String {
     var localised: String {
-        guard let json = AppEnvironment.active.languageJSON else {
-            return self
-        }
-        return json[self].stringValue
+        return NSLocalizedString(self, comment: "")
     }
 
     var trimmed: String {

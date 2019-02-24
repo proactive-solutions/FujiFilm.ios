@@ -6,16 +6,16 @@ import Foundation
 
 enum TableViewCellXibs: String {
     case homeCell = "HomeCell"
-	case currencyCell = "CurrencyCell"
-	case upcomingPaymentCell = "UpcomingPaymentCell"
-	case transactionHistoryCell = "TransactionHistoryCell"
-	case filterMenuCell = "FilterMenuCell"
-	case walletDetailCell = "WalletDetailCell"
-	case currencyListCell = "CurrencyListCell"
+    case currencyCell = "CurrencyCell"
+    case upcomingPaymentCell = "UpcomingPaymentCell"
+    case transactionHistoryCell = "TransactionHistoryCell"
+    case filterMenuCell = "FilterMenuCell"
+    case walletDetailCell = "WalletDetailCell"
+    case currencyListCell = "CurrencyListCell"
     case menuCell = "MenuCell"
 }
 
 enum CollectionViewCellXibs: String {
     case carouselCell = "CarouselCell"
-	case currencyCollectionCell = "CurrencyCollectionCell"
+    case currencyCollectionCell = "CurrencyCollectionCell"
 }

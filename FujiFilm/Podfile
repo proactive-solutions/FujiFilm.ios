@@ -9,5 +9,6 @@ target 'FujiFilm' do
 
   pod 'QRCodeReader.swift'
   pod 'SDWebImage'
+  pod 'JGProgressHUD'
 
 end

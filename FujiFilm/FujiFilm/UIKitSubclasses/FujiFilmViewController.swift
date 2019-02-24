@@ -38,15 +38,14 @@ class FujiFilmViewController: UIViewController {
 
     override func viewWillDisappear(_ animated: Bool) {
         super.viewWillDisappear(animated)
-        mainNavigationItem.rightBarButtonItem = nil
     }
 
     @objc private func updateText() {
         guard let key = self.textKey else {
-			return
-		}
-        mainNavigationItem.title = key.localised
-        mainNavigationItem.titleView = nil
+            return
+        }
+        navigationItem.title = key.localised
+        navigationItem.titleView = nil
     }
 
     private func observeLanguageChangeNotification() {
@@ -60,15 +59,6 @@ class FujiFilmViewController: UIViewController {
 
     func closeMenu() {
         navigationController?.dismiss(animated: true, completion: nil)
-    }
-
-    var mainNavigationItem: UINavigationItem {
-        if let parentViewController = parent as? PPTabController {
-            if let dashVC = parentViewController.parent as? DashboardVC {
-                return dashVC.navigationItem
-            }
-        }
-        return navigationItem
     }
 
     deinit {

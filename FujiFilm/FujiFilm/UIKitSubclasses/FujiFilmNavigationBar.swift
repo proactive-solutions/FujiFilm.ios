@@ -32,7 +32,7 @@ final class FujiFilmNavigationBar: UINavigationBar {
 
         titleTextAttributes = [
             NSAttributedString.Key.foregroundColor: UIColor.black,
-            NSAttributedString.Key.font: UIFont.font(style: .medium, size: 16.0)
+            NSAttributedString.Key.font: UIFont.font(style: .medium, size: 16.0),
         ]
     }
 }

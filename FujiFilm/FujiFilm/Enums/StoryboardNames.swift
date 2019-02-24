@@ -20,16 +20,16 @@ enum StoryBoardNames: String {
     case welcomeHome = "WelcomeHome"
     case dashboard = "Dashboard"
     case purchasePMA = "PurchasePMA"
-	case wallet = "Wallet"
-	case transactionHistory = "TransactionHistory"
-	case transactionFilter = "TransactionFilter"
-	case receiveFunds = "ReceiveFunds"
-	case walletSettings = "WalletSettings"
-	case supportedCurrencies = "SupportedCurrencies"
-	case qrCode = "QRCode"
-	case sendFund = "SendFund"
-	case amount = "Amount"
-	case walletDetails = "WalletDetails"
+    case wallet = "Wallet"
+    case transactionHistory = "TransactionHistory"
+    case transactionFilter = "TransactionFilter"
+    case receiveFunds = "ReceiveFunds"
+    case walletSettings = "WalletSettings"
+    case supportedCurrencies = "SupportedCurrencies"
+    case qrCode = "QRCode"
+    case sendFund = "SendFund"
+    case amount = "Amount"
+    case walletDetails = "WalletDetails"
 }
 
 extension StoryBoardNames {
@@ -48,8 +48,8 @@ extension StoryBoardNames {
         )
 
         let controller = storyboard.instantiateViewController(
-			withIdentifier: self.controller
-		)
+            withIdentifier: self.controller
+        )
         return controller
     }
 

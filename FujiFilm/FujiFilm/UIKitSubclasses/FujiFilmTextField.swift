@@ -5,7 +5,7 @@
 import UIKit
 
 final class FujiFilmTextField: UITextField {
-    private(set) var textKey: String?
+    private var textKey: String?
 
     @IBInspectable var localeTextKey: String? {
         get {

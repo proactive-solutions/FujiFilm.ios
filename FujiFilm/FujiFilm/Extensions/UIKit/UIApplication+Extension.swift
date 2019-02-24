@@ -11,7 +11,7 @@ extension UIApplication {
         if #available(iOS 12, *) {
             UNUserNotificationCenter.current().requestAuthorization(
                 options: [
-                    .badge, .alert, .sound, .provisional, .providesAppNotificationSettings, .criticalAlert
+                    .badge, .alert, .sound, .provisional, .providesAppNotificationSettings, .criticalAlert,
                 ]
             ) { _, _ in }
             registerForRemoteNotifications()

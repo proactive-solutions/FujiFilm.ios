@@ -5,7 +5,7 @@
 import UIKit
 
 class FujiFilmSegmentedControl: UISegmentedControl {
-    private(set) var textKey: String?
+    private var textKey: String?
 
     @IBInspectable var localeTextKey: String? {
         get {

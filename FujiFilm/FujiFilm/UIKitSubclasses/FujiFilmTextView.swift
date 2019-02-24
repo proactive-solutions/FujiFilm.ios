@@ -2,11 +2,10 @@
 //  NavigationBarSample
 //  Copyright © 2019 TR. All rights reserved.
 
-import GrowingTextView
 import UIKit
 
-class FujiFilmTextView: GrowingTextView {
-    private(set) var textKey: String?
+class FujiFilmTextView: UITextView {
+    private var textKey: String?
 
     @IBInspectable var localeTextKey: String? {
         get {
@@ -42,7 +41,7 @@ class FujiFilmTextView: GrowingTextView {
 
     @objc private func updateText() {
         guard let key = self.textKey else { return }
-        placeholder = key.localised
+        print(key)
     }
 
     private func observeLanguageChangeNotification() {

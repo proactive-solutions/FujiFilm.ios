@@ -19,11 +19,11 @@ final class FujiFilmTabController: UITabBarController {
         let view = UIView(frame: CGRect(x: 0, y: -1, width: tabBar.frame.size.width, height: 3))
         view.backgroundColor = UIColor.white
         tabBar.insertSubview(view, at: 0)
-        PPTabBarItem.appearance().setTitleTextAttributes(
+        FujiFilmTabBarItem.appearance().setTitleTextAttributes(
             [NSAttributedString.Key.font: UIFont.font(style: .regular, size: 8)],
             for: .normal
         )
-        PPTabBarItem.appearance().setTitleTextAttributes(
+        FujiFilmTabBarItem.appearance().setTitleTextAttributes(
             [NSAttributedString.Key.font: UIFont.font(style: .regular, size: 8)],
             for: .selected
         )

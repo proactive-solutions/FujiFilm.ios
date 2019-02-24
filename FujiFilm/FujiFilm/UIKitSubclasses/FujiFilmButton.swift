@@ -5,7 +5,7 @@
 import UIKit
 
 class FujiFilmButton: UIButton {
-    private(set) var textKey: String?
+    private var textKey: String?
 
     @IBInspectable var localeTextKey: String? {
         get {

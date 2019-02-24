@@ -7,7 +7,9 @@ import JGProgressHUD
 import UIKit
 
 extension UIView {
+
     // MARK: - Properties
+
     @IBInspectable var cornerRadius: CGFloat {
         get {
             return layer.cornerRadius
@@ -43,7 +45,7 @@ extension UIView {
                 self?.layer.borderColor = newValue?.cgColor
             }
         }
-	}
+    }
 
     var xOrigin: CGFloat {
         get {
@@ -131,7 +133,7 @@ extension UIView {
 
     func showLoader(message: String? = nil) {
         let hud = JGProgressHUD(style: .dark)
-        self.endEditing(false)
+        endEditing(false)
 
         DispatchQueue.main.async {
             hud.textLabel.text = message
@@ -175,29 +177,29 @@ extension UIView {
         let mask = CAShapeLayer()
 
         mask.path = path.cgPath
-        self.layer.mask = mask
+        layer.mask = mask
     }
 
-	class func loadFromXIB() -> UIView {
-		guard let xibView = Bundle.main.loadNibNamed(
-			self.className,
-			owner: nil,
-			options: nil
-		)?.first as? UIView else { fatalError("Could not load view from XIB") }
-		return xibView
-	}
+    class func loadFromXIB() -> UIView {
+        guard let xibView = Bundle.main.loadNibNamed(
+            self.className,
+            owner: nil,
+            options: nil
+        )?.first as? UIView else { fatalError("Could not load view from XIB") }
+        return xibView
+    }
 
     func addShadow() {
         // Add Shadow
-        self.layer.masksToBounds = false
-        self.layer.shadowColor = UIColor.lightGray.cgColor
-        self.layer.shadowOffset = GeneralConstant.SHADOW_OFFSET
-        self.layer.shadowRadius = GeneralConstant.SHADOW_RADIUS
-        self.layer.shadowOpacity = GeneralConstant.SHADOW_OPACITY
+        layer.masksToBounds = false
+        layer.shadowColor = UIColor.lightGray.cgColor
+        layer.shadowOffset = GeneralConstant.SHADOW_OFFSET
+        layer.shadowRadius = GeneralConstant.SHADOW_RADIUS
+        layer.shadowOpacity = GeneralConstant.SHADOW_OPACITY
 
-        self.layer.shadowPath = UIBezierPath(
-            roundedRect: self.bounds,
-            cornerRadius: self.layer.cornerRadius
+        layer.shadowPath = UIBezierPath(
+            roundedRect: bounds,
+            cornerRadius: layer.cornerRadius
         ).cgPath
     }
 }

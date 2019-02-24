@@ -5,6 +5,4 @@
 import UIKit
 
 class FujiFilmSwitch: UISwitch {
-
-
 }
