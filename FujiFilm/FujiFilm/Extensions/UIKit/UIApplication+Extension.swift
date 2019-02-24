@@ -11,7 +11,12 @@ extension UIApplication {
         if #available(iOS 12, *) {
             UNUserNotificationCenter.current().requestAuthorization(
                 options: [
-                    .badge, .alert, .sound, .provisional, .providesAppNotificationSettings, .criticalAlert,
+                    .badge,
+                    .alert,
+                    .sound,
+                    .provisional,
+                    .providesAppNotificationSettings,
+                    .criticalAlert,
                 ]
             ) { _, _ in }
             registerForRemoteNotifications()
@@ -22,12 +27,6 @@ extension UIApplication {
                 options: [.badge, .alert, .sound]
             ) { _, _ in }
             registerForRemoteNotifications()
-        } else if #available(iOS 9, *) { // iOS 9 support
-            UIApplication.shared.registerUserNotificationSettings(
-                UIUserNotificationSettings(types: [.badge, .sound, .alert],
-                                           categories: nil)
-            )
-            UIApplication.shared.registerForRemoteNotifications()
         }
     }
 }
