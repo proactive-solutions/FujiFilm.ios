@@ -163,7 +163,7 @@ extension UIView {
             hud.textLabel.text = message
             hud.indicatorView = JGProgressHUDErrorIndicatorView()
             hud.show(in: self)
-            hud.dismiss(afterDelay: 1.0)
+            hud.dismiss(afterDelay: 1.5)
         }
     }
 

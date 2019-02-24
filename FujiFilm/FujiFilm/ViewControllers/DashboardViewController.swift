@@ -11,10 +11,10 @@ import UIKit
 final class DashboardViewController: FujiFilmViewController, UITableViewDataSource, UITableViewDelegate {
     @IBOutlet private var menuTableView: UITableView!
 
-    private let menuTitles: [String] = [
-        "Workshop",
-        "Loan Program",
-        "Warranty",
+    private let menuTitles: [UIImage] = [
+        #imageLiteral(resourceName: "workshop_image"),
+        #imageLiteral(resourceName: "loan_program_image"),
+        #imageLiteral(resourceName: "warranty_image"),
     ]
 
     override func viewDidLoad() {
@@ -38,6 +38,8 @@ final class DashboardViewController: FujiFilmViewController, UITableViewDataSour
             withIdentifier: TableViewCellXibs.dashboad.rawValue,
             for: indexPath
         ) as? DashboardCell else { return DashboardCell() }
+
+        cell.logoImageView.image = menuTitles[indexPath.row]
 
         return cell
     }

@@ -19,15 +19,15 @@ class FujiFilmViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        automaticallyAdjustsScrollViewInsets = false
         observeLanguageChangeNotification()
         navigationController?.interactivePopGestureRecognizer?.isEnabled = false
         navigationController?.isNavigationBarHidden = false
-        navigationItem.titleView = UIImageView(image: #imageLiteral(resourceName: "Logo-Black"))
+        // navigationItem.titleView = UIImageView(image: #imageLiteral(resourceName: "Logo-Black"))
+        navigationItem.titleView = nil
         updateText()
 
         let item = UIBarButtonItem(
-            image: #imageLiteral(resourceName: "Logo"),
+            image: #imageLiteral(resourceName: "arrow"),
             style: UIBarButtonItem.Style.plain,
             target: nil,
             action: nil

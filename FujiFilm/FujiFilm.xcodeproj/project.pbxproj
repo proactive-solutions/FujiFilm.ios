@@ -83,6 +83,10 @@
 		F2D8D73A2223005800B15CC7 /* Workshop.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F2D8D7382223005800B15CC7 /* Workshop.storyboard */; };
 		F2D8D745222304B300B15CC7 /* WorkshopCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = F2D8D743222304B300B15CC7 /* WorkshopCell.xib */; };
 		F2D8D746222304B300B15CC7 /* WorkshopCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = F2D8D744222304B300B15CC7 /* WorkshopCell.swift */; };
+		F2D8D74922231C7F00B15CC7 /* QRScanResult.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F2D8D74722231C7F00B15CC7 /* QRScanResult.storyboard */; };
+		F2D8D74B22231CB500B15CC7 /* QRScanResultViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F2D8D74A22231CB500B15CC7 /* QRScanResultViewController.swift */; };
+		F2D8D74E2223261400B15CC7 /* APIError.swift in Sources */ = {isa = PBXBuildFile; fileRef = F2D8D74D2223261400B15CC7 /* APIError.swift */; };
+		F2D8D750222327F100B15CC7 /* UserDetails.swift in Sources */ = {isa = PBXBuildFile; fileRef = F2D8D74F222327F100B15CC7 /* UserDetails.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -166,6 +170,10 @@
 		F2D8D7392223005800B15CC7 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Workshop.storyboard; sourceTree = "<group>"; };
 		F2D8D743222304B300B15CC7 /* WorkshopCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = WorkshopCell.xib; sourceTree = "<group>"; };
 		F2D8D744222304B300B15CC7 /* WorkshopCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WorkshopCell.swift; sourceTree = "<group>"; };
+		F2D8D74822231C7F00B15CC7 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/QRScanResult.storyboard; sourceTree = "<group>"; };
+		F2D8D74A22231CB500B15CC7 /* QRScanResultViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QRScanResultViewController.swift; sourceTree = "<group>"; };
+		F2D8D74D2223261400B15CC7 /* APIError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIError.swift; sourceTree = "<group>"; };
+		F2D8D74F222327F100B15CC7 /* UserDetails.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserDetails.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -218,6 +226,7 @@
 		F2B1F739222284B500CBEA40 /* FujiFilm */ = {
 			isa = PBXGroup;
 			children = (
+				F2D8D74C2223260600B15CC7 /* models */,
 				F2B1F7E82222E84C00CBEA40 /* XIBs */,
 				F2B1F7DA2222A5A200CBEA40 /* Storyboards */,
 				F2B1F7D92222A58A00CBEA40 /* ViewControllers */,
@@ -353,6 +362,7 @@
 			isa = PBXGroup;
 			children = (
 				F2D8D7362223004D00B15CC7 /* WorkshopViewController.swift */,
+				F2D8D74A22231CB500B15CC7 /* QRScanResultViewController.swift */,
 				F2D8D72D2222FAF000B15CC7 /* DashboardViewController.swift */,
 				F2B1F7DE2222A5EB00CBEA40 /* ForgotPasswordViewController.swift */,
 				F2B1F7E62222E6AF00CBEA40 /* LeftMenuViewController..swift */,
@@ -368,6 +378,7 @@
 				F2D8D72A2222F5BE00B15CC7 /* Dashboard.storyboard */,
 				F2B1F7E32222E62B00CBEA40 /* LeftMenu.storyboard */,
 				F2B1F73E222284B500CBEA40 /* Login.storyboard */,
+				F2D8D74722231C7F00B15CC7 /* QRScanResult.storyboard */,
 				F2B1F7DB2222A5DE00CBEA40 /* ForgotPassword.storyboard */,
 			);
 			path = Storyboards;
@@ -408,6 +419,15 @@
 				F2D8D744222304B300B15CC7 /* WorkshopCell.swift */,
 			);
 			path = WorkshopCell;
+			sourceTree = "<group>";
+		};
+		F2D8D74C2223260600B15CC7 /* models */ = {
+			isa = PBXGroup;
+			children = (
+				F2D8D74D2223261400B15CC7 /* APIError.swift */,
+				F2D8D74F222327F100B15CC7 /* UserDetails.swift */,
+			);
+			path = models;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -479,6 +499,7 @@
 				F2B1F7C72222996C00CBEA40 /* Raleway-MediumItalic.ttf in Resources */,
 				F2D8D73A2223005800B15CC7 /* Workshop.storyboard in Resources */,
 				F2B1F7D62222996C00CBEA40 /* Raleway-Thin.ttf in Resources */,
+				F2D8D74922231C7F00B15CC7 /* QRScanResult.storyboard in Resources */,
 				F2B1F7CA2222996C00CBEA40 /* SIL Open Font License.txt in Resources */,
 				F2B1F7CB2222996C00CBEA40 /* Raleway-Medium.ttf in Resources */,
 				F2B1F740222284B500CBEA40 /* Login.storyboard in Resources */,
@@ -567,10 +588,13 @@
 				F2B1F786222285D200CBEA40 /* FujiFilmViewController.swift in Sources */,
 				F2B1F73D222284B500CBEA40 /* LoginViewController.swift in Sources */,
 				F2B1F7EB2222E87000CBEA40 /* FujiFilmLeftMenuCell.swift in Sources */,
+				F2D8D750222327F100B15CC7 /* UserDetails.swift in Sources */,
 				F2B1F78A222285D200CBEA40 /* FujiFilmLabel.swift in Sources */,
+				F2D8D74B22231CB500B15CC7 /* QRScanResultViewController.swift in Sources */,
 				F2B1F776222285D200CBEA40 /* UILabel+Extension.swift in Sources */,
 				F2B1F777222285D200CBEA40 /* UIButton+Extension.swift in Sources */,
 				F2B1F773222285D200CBEA40 /* UIImageView+Extension.swift in Sources */,
+				F2D8D74E2223261400B15CC7 /* APIError.swift in Sources */,
 				F2B1F77B222285D200CBEA40 /* UICollectionView+Extension.swift in Sources */,
 				F2B1F77A222285D200CBEA40 /* UISegmentedControl+Extension.swift in Sources */,
 				F2B1F77D222285D200CBEA40 /* UIScrollView+Content.swift in Sources */,
@@ -654,6 +678,14 @@
 				F2D8D7392223005800B15CC7 /* Base */,
 			);
 			name = Workshop.storyboard;
+			sourceTree = "<group>";
+		};
+		F2D8D74722231C7F00B15CC7 /* QRScanResult.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				F2D8D74822231C7F00B15CC7 /* Base */,
+			);
+			name = QRScanResult.storyboard;
 			sourceTree = "<group>";
 		};
 /* End PBXVariantGroup section */
@@ -780,7 +812,8 @@
 			baseConfigurationReference = B9AC35523AD33718DC5ED1ED /* Pods-FujiFilm.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				CODE_SIGN_STYLE = Automatic;
+				CODE_SIGN_IDENTITY = "iPhone Distribution";
+				CODE_SIGN_STYLE = Manual;
 				DEVELOPMENT_TEAM = A7CB3M55R3;
 				INFOPLIST_FILE = FujiFilm/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
@@ -788,8 +821,9 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = "com.fujifilm-xmea.distributor";
+				PRODUCT_BUNDLE_IDENTIFIER = com.fujimea.team;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = FujifilmXmeaTeam;
 				SWIFT_VERSION = 4.2;
 				TARGETED_DEVICE_FAMILY = 1;
 			};
@@ -800,7 +834,8 @@
 			baseConfigurationReference = BE451DCF4657DD3DFFE8386D /* Pods-FujiFilm.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				CODE_SIGN_STYLE = Automatic;
+				CODE_SIGN_IDENTITY = "iPhone Distribution";
+				CODE_SIGN_STYLE = Manual;
 				DEVELOPMENT_TEAM = A7CB3M55R3;
 				INFOPLIST_FILE = FujiFilm/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
@@ -808,8 +843,9 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = "com.fujifilm-xmea.distributor";
+				PRODUCT_BUNDLE_IDENTIFIER = com.fujimea.team;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = FujifilmXmeaTeam;
 				SWIFT_VERSION = 4.2;
 				TARGETED_DEVICE_FAMILY = 1;
 			};

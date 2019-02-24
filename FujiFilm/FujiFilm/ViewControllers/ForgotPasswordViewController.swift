@@ -20,6 +20,30 @@ final class ForgotPasswordViewController: FujiFilmViewController {
     }
 
     @IBAction func submitAction(_: FujiFilmButton) {
-        showSideMenu()
+        view.showLoader()
+        let params: [String: String] = [
+            "email": "dev1@yeahinfotech.com",
+        ]
+
+        APIManager().request(
+            path: APIPaths.forgotPassword,
+            method: .post,
+            parameters: params,
+            headers: nil,
+            success: { [weak self] (data: Data, code: Int) in
+                guard let self = self else { return }
+                self.view.hideLoader()
+                if let response = try? JSONDecoder().decode(APIError.self, from: data) {
+                    if code == 200 {
+                        self.view.show(success: response.message)
+                    } else {
+                        self.view.show(error: response.message)
+                    }
+                }
+            }, failure: { [weak self] error in
+                guard let self = self else { return }
+                self.view.hideLoader()
+                self.view.show(error: error.localizedDescription)
+        })
     }
 }

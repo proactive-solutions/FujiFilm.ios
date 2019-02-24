@@ -1,6 +1,21 @@
 import Alamofire
 import Foundation
 
+enum APIPaths: String {
+    case login = "/login"
+    case forgotPassword = "/ForgotPassword"
+    case getDistributorWorkshop = "/getDistributorWorkshop"
+    case scanQrCodeByDistributor = "/scanQrCodeByDistributor"
+
+    var version: String {
+        return "V1"
+    }
+
+    var baseURL: String {
+        return "http://abir.net/api/"
+    }
+}
+
 protocol DataConvertible {
     var binaryData: Data { get }
 }
@@ -28,7 +43,7 @@ extension String: DataConvertible {
 
 extension UIImage: DataConvertible {
     var binaryData: Data {
-        return self.jpegData(compressionQuality: 1.0)!
+        return jpegData(compressionQuality: 1.0)!
     }
 }
 
@@ -56,10 +71,14 @@ class APIManager: NSObject {
 
     // MARK: - DataTask
 
-    func request(url: String, method: HTTPMethod, parameters: Parameters? = nil, headers: HTTPHeaders? = nil, success: ((Data, Int) -> Void)? = nil, failure: ((Error) -> Void)? = nil) {
+    func request(path: APIPaths, method: HTTPMethod, parameters: Parameters? = nil, headers: HTTPHeaders? = nil, success: ((Data, Int) -> Void)? = nil, failure: ((Error) -> Void)? = nil) {
+        let url: String = path.baseURL + path.version + path.rawValue
         let urlEncode = url.addingPercentEncoding(withAllowedCharacters: .urlQueryAllowed)
-        currentDataRequest = Alamofire.request(urlEncode!, method: method, parameters: parameters, headers: headers).responseData { response in
-
+        currentDataRequest = Alamofire.request(
+            urlEncode!, method: method,
+            parameters: parameters,
+            headers: headers
+        ).responseData { response in
             switch response.result {
             case let .success(data):
                 success?(data, (response.response?.statusCode)!)
@@ -113,7 +132,7 @@ class APIManager: NSObject {
             headers: headers,
             encodingCompletion: { encodingResult in
                 switch encodingResult {
-                case .success(let upload, _, _):
+                case let .success(upload, _, _):
                     upload.responseData { response in
                         switch response.result {
                         case .success:

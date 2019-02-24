@@ -60,6 +60,20 @@ extension UIViewController {
         return controller
     }
 
+    @discardableResult
+    func showQRScanResult(_ result: String) -> QRScanResultViewController {
+        let storyboardName = StoryBoardNames.QRScanResult
+
+        guard let controller = storyboardName.instatiateController() as? QRScanResultViewController else {
+            fatalError(controllerCastingErrorMessage)
+        }
+
+        controller.qrResult = result
+
+        navigationController?.pushViewController(controller, animated: true)
+        return controller
+    }
+
     func showSideMenu() {
         guard let menuLeft = SideMenuManager.default.menuLeftNavigationController else { return }
         present(menuLeft, animated: true, completion: nil)

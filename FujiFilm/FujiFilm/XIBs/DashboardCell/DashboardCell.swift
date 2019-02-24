@@ -9,6 +9,8 @@
 import UIKit
 
 class DashboardCell: UITableViewCell {
+    @IBOutlet var logoImageView: FujiFilmImageView!
+
     override func awakeFromNib() {
         super.awakeFromNib()
         // Initialization code

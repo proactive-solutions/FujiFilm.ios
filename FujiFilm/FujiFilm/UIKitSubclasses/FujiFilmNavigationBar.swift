@@ -22,7 +22,7 @@ final class FujiFilmNavigationBar: UINavigationBar {
         backIndicatorTransitionMaskImage = UIImage()
         tintColor = UIColor.black
         barTintColor = UIColor.white
-        backgroundColor = UIColor.white
+        backgroundColor = UIColor.red
 
         layer.shadowColor = UIColor.black.withAlphaComponent(0.2).cgColor
         layer.shadowOffset = CGSize(width: 0.0, height: 2.0)

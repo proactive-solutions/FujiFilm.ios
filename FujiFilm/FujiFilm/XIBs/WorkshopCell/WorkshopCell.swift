@@ -9,10 +9,20 @@
 import UIKit
 
 class WorkshopCell: UITableViewCell {
+    var scan: (() -> Void)?
 
     override func awakeFromNib() {
         super.awakeFromNib()
-        // Initialization code
+
+        DispatchQueue.main.asyncAfter(deadline: DispatchTime.now() + 0.1) {
+            [weak self] in
+            self?.addShadow()
+        }
+    }
+
+    override func prepareForReuse() {
+        super.prepareForReuse()
+        addShadow()
     }
 
     override func setSelected(_ selected: Bool, animated: Bool) {
@@ -20,5 +30,8 @@ class WorkshopCell: UITableViewCell {
 
         // Configure the view for the selected state
     }
-    
+
+    @IBAction func scanQRCode(_: UIButton) {
+        scan?()
+    }
 }
