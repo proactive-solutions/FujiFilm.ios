@@ -3,7 +3,6 @@
 //  Copyright © 2019 PumaPay. All rights reserved.
 
 import Foundation
-import SwiftyJSON
 
 extension String {
     var localised: String {

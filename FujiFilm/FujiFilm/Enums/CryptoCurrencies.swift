@@ -1,0 +1,63 @@
+//  CryptoCurrencies.swift
+//  PumaPay
+//  Copyright © 2019 PumaPay. All rights reserved.
+
+import Foundation
+
+enum CryptoCurrencies: String {
+    case BTC
+    case PMA
+    case ETH
+    case EOS
+    case TRX
+    case VEN
+    case FOTF
+    case BNB
+    case MAT
+    case OMG
+    case ICX
+    case ZIL
+    case AE
+    case ZRX
+    case BTM
+    case MKR
+    case RHOC
+    case GNT
+    case REP
+    case PPT
+    case WTC
+    case SNT
+    case IOST
+    case AION
+    case NAS
+    case DGD
+    case LRC
+    case HT
+    case BAT
+    case ELF
+    case BNT
+    case CMT
+    case Dentacoin
+    case BIX
+    case ETHOS
+    case CTXC
+    case KNC
+    case QASH
+    case POLY
+    case FSN
+    case FUN
+    case LOOM
+    case VERI
+    case NULS
+    case CENNZ
+    case KIN
+    case SUB
+    case DRGN
+    case THETA
+    case HOT
+    case ENG
+    case STORM
+    case POWR
+    case SOC
+    case MANA
+}
