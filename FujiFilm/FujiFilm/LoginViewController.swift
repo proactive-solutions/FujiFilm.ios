@@ -8,7 +8,7 @@
 
 import UIKit
 
-class LoginViewController: UIViewController {
+final class LoginViewController: FujiFilmViewController {
 
     @IBOutlet weak var emailTextField: FujiFilmTextField!
     @IBOutlet weak var passwordTextField: FujiFilmTextField!
@@ -16,10 +16,18 @@ class LoginViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        // Do any additional setup after loading the view, typically from a nib.
+        navigationController?.isNavigationBarHidden = true
 
         [emailTextField, passwordTextField].forEach {
             $0?.addBottomBorderWithColor(color: UIColor.gray, width: 0.5)
         }
+    }
+
+    @IBAction func loginAction(_ sender: FujiFilmButton) {
+
+    }
+
+    @IBAction func forgotPasswordAction(_ sender: FujiFilmButton) {
+
     }
 }
