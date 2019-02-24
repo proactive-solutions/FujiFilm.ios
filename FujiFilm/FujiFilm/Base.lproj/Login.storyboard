@@ -9,6 +9,14 @@
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
+    <customFonts key="customFonts">
+        <array key="Raleway-Regular.ttf">
+            <string>Raleway-Regular</string>
+        </array>
+        <array key="Raleway-SemiBold.ttf">
+            <string>Raleway-SemiBold</string>
+        </array>
+    </customFonts>
     <scenes>
         <!--Login View Controller-->
         <scene sceneID="tne-QT-ifu">
@@ -24,38 +32,126 @@
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="sLb-ol-LWf">
                                         <rect key="frame" x="0.0" y="0.0" width="375" height="647"/>
                                         <subviews>
-                                            <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Zxu-WN-n2E">
-                                                <rect key="frame" x="8" y="37" width="367" height="128"/>
-                                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Zxu-WN-n2E">
+                                                <rect key="frame" x="72.5" y="40" width="230" height="27.5"/>
+                                                <subviews>
+                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" text="Welcome to" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="WKJ-ak-wf2" customClass="FujiFilmLabel" customModule="FujiFilm" customModuleProvider="target">
+                                                        <rect key="frame" x="0.0" y="0.0" width="133" height="27.5"/>
+                                                        <fontDescription key="fontDescription" name="Raleway-SemiBold" family="Raleway" pointSize="23"/>
+                                                        <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                        <nil key="highlightedColor"/>
+                                                    </label>
+                                                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Logo-Black" translatesAutoresizingMaskIntoConstraints="NO" id="WCI-O5-APP">
+                                                        <rect key="frame" x="143" y="7" width="87" height="14"/>
+                                                    </imageView>
+                                                </subviews>
                                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                <constraints>
+                                                    <constraint firstItem="WKJ-ak-wf2" firstAttribute="leading" secondItem="Zxu-WN-n2E" secondAttribute="leading" id="BQn-BJ-ZD5"/>
+                                                    <constraint firstAttribute="width" constant="230" id="GnS-Vn-tVH"/>
+                                                    <constraint firstAttribute="trailing" secondItem="WCI-O5-APP" secondAttribute="trailing" id="V10-cP-lna"/>
+                                                    <constraint firstAttribute="bottom" secondItem="WKJ-ak-wf2" secondAttribute="bottom" id="YXq-iI-YZe"/>
+                                                    <constraint firstItem="WKJ-ak-wf2" firstAttribute="top" secondItem="Zxu-WN-n2E" secondAttribute="top" id="brj-9j-2h4"/>
+                                                    <constraint firstItem="WCI-O5-APP" firstAttribute="leading" secondItem="WKJ-ak-wf2" secondAttribute="trailing" constant="10" id="eYf-oj-WN7"/>
+                                                    <constraint firstItem="WCI-O5-APP" firstAttribute="centerY" secondItem="WKJ-ak-wf2" secondAttribute="centerY" id="ey2-Ib-kcT"/>
+                                                </constraints>
                                             </view>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" text="Log In" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="5ZK-Px-n2U" customClass="FujiFilmLabel" customModule="FujiFilm" customModuleProvider="target">
+                                                <rect key="frame" x="154.5" y="127.5" width="66" height="27.5"/>
+                                                <fontDescription key="fontDescription" name="Raleway-Regular" family="Raleway" pointSize="23"/>
+                                                <color key="textColor" red="0.17240679264068604" green="0.14355120062828064" blue="0.15318098664283752" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" spacing="20" translatesAutoresizingMaskIntoConstraints="NO" id="8LS-rw-r6r">
+                                                <rect key="frame" x="25" y="183.5" width="325" height="110"/>
+                                                <subviews>
+                                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Email" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="nKd-xF-Hes" customClass="FujiFilmTextField" customModule="FujiFilm" customModuleProvider="target">
+                                                        <rect key="frame" x="0.0" y="0.0" width="325" height="45"/>
+                                                        <constraints>
+                                                            <constraint firstAttribute="height" constant="45" id="FWi-4p-pxY"/>
+                                                        </constraints>
+                                                        <nil key="textColor"/>
+                                                        <fontDescription key="fontDescription" name="Raleway-Regular" family="Raleway" pointSize="17"/>
+                                                        <textInputTraits key="textInputTraits"/>
+                                                    </textField>
+                                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Password" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="KC0-0Q-7rg" customClass="FujiFilmTextField" customModule="FujiFilm" customModuleProvider="target">
+                                                        <rect key="frame" x="0.0" y="65" width="325" height="45"/>
+                                                        <nil key="textColor"/>
+                                                        <fontDescription key="fontDescription" name="Raleway-Regular" family="Raleway" pointSize="17"/>
+                                                        <textInputTraits key="textInputTraits"/>
+                                                    </textField>
+                                                </subviews>
+                                            </stackView>
+                                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" spacing="15" translatesAutoresizingMaskIntoConstraints="NO" id="a85-cQ-eNZ">
+                                                <rect key="frame" x="25" y="333.5" width="325" height="95"/>
+                                                <subviews>
+                                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="trq-c1-Unt" customClass="FujiFilmButton" customModule="FujiFilm" customModuleProvider="target">
+                                                        <rect key="frame" x="0.0" y="0.0" width="325" height="40"/>
+                                                        <color key="backgroundColor" red="0.065899103879928589" green="0.065985687077045441" blue="0.065912492573261261" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                        <constraints>
+                                                            <constraint firstAttribute="height" constant="40" id="lH9-a2-kbK"/>
+                                                        </constraints>
+                                                        <fontDescription key="fontDescription" name="Raleway-Regular" family="Raleway" pointSize="17"/>
+                                                        <state key="normal" title="LOGIN">
+                                                            <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                        </state>
+                                                    </button>
+                                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ioA-qm-hEi" customClass="FujiFilmButton" customModule="FujiFilm" customModuleProvider="target">
+                                                        <rect key="frame" x="0.0" y="55" width="325" height="40"/>
+                                                        <fontDescription key="fontDescription" name="Raleway-Regular" family="Raleway" pointSize="17"/>
+                                                        <state key="normal" title="Forgot Password?">
+                                                            <color key="titleColor" red="1" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                                        </state>
+                                                    </button>
+                                                </subviews>
+                                            </stackView>
                                         </subviews>
                                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <constraints>
+                                            <constraint firstItem="Zxu-WN-n2E" firstAttribute="centerX" secondItem="sLb-ol-LWf" secondAttribute="centerX" id="H4h-zZ-6dU"/>
+                                            <constraint firstItem="5ZK-Px-n2U" firstAttribute="centerX" secondItem="sLb-ol-LWf" secondAttribute="centerX" id="Hm1-xy-rC8"/>
+                                            <constraint firstItem="5ZK-Px-n2U" firstAttribute="top" secondItem="Zxu-WN-n2E" secondAttribute="bottom" constant="60" id="KnY-bK-rlU"/>
+                                            <constraint firstItem="8LS-rw-r6r" firstAttribute="centerX" secondItem="sLb-ol-LWf" secondAttribute="centerX" id="LtL-ST-ns5"/>
+                                            <constraint firstItem="8LS-rw-r6r" firstAttribute="top" secondItem="5ZK-Px-n2U" secondAttribute="bottom" constant="28.5" id="Mbh-a4-WOe"/>
+                                            <constraint firstItem="a85-cQ-eNZ" firstAttribute="top" secondItem="8LS-rw-r6r" secondAttribute="bottom" constant="40" id="ViW-8h-naC"/>
+                                            <constraint firstItem="8LS-rw-r6r" firstAttribute="leading" secondItem="sLb-ol-LWf" secondAttribute="leading" constant="25" id="f06-eK-9IV"/>
+                                            <constraint firstItem="a85-cQ-eNZ" firstAttribute="trailing" secondItem="8LS-rw-r6r" secondAttribute="trailing" id="scl-6n-lv6"/>
+                                            <constraint firstItem="Zxu-WN-n2E" firstAttribute="top" secondItem="sLb-ol-LWf" secondAttribute="top" constant="40" id="taw-kc-mIp"/>
+                                            <constraint firstItem="a85-cQ-eNZ" firstAttribute="leading" secondItem="8LS-rw-r6r" secondAttribute="leading" id="z2R-f8-iUD"/>
+                                        </constraints>
                                     </view>
                                 </subviews>
                                 <constraints>
-                                    <constraint firstItem="sLb-ol-LWf" firstAttribute="top" secondItem="2po-rn-yrU" secondAttribute="top" id="NxO-2A-N2X"/>
-                                    <constraint firstAttribute="trailing" secondItem="sLb-ol-LWf" secondAttribute="trailing" id="ZcD-HO-L4l"/>
-                                    <constraint firstItem="sLb-ol-LWf" firstAttribute="centerY" secondItem="2po-rn-yrU" secondAttribute="centerY" id="fDg-3F-H3Q"/>
-                                    <constraint firstAttribute="bottom" secondItem="sLb-ol-LWf" secondAttribute="bottom" id="kVN-rr-j4g"/>
-                                    <constraint firstItem="sLb-ol-LWf" firstAttribute="centerX" secondItem="2po-rn-yrU" secondAttribute="centerX" id="kll-sL-SYJ"/>
-                                    <constraint firstItem="sLb-ol-LWf" firstAttribute="leading" secondItem="2po-rn-yrU" secondAttribute="leading" id="nSI-4j-oEp"/>
+                                    <constraint firstAttribute="bottom" secondItem="sLb-ol-LWf" secondAttribute="bottom" id="A2L-FV-Z6t"/>
+                                    <constraint firstItem="sLb-ol-LWf" firstAttribute="centerY" secondItem="2po-rn-yrU" secondAttribute="centerY" id="BdG-Jg-jcH"/>
+                                    <constraint firstItem="sLb-ol-LWf" firstAttribute="centerX" secondItem="2po-rn-yrU" secondAttribute="centerX" id="Kq8-0v-lZr"/>
+                                    <constraint firstItem="sLb-ol-LWf" firstAttribute="top" secondItem="2po-rn-yrU" secondAttribute="top" id="aLw-lj-F9J"/>
+                                    <constraint firstItem="sLb-ol-LWf" firstAttribute="centerX" secondItem="2po-rn-yrU" secondAttribute="centerX" id="b5K-5p-zql"/>
+                                    <constraint firstAttribute="trailing" secondItem="sLb-ol-LWf" secondAttribute="trailing" id="idY-mK-ZDk"/>
+                                    <constraint firstItem="sLb-ol-LWf" firstAttribute="leading" secondItem="2po-rn-yrU" secondAttribute="leading" id="lyX-uv-UXn"/>
                                 </constraints>
                             </scrollView>
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
-                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="2po-rn-yrU" secondAttribute="bottom" id="35W-gw-HKX"/>
-                            <constraint firstItem="2po-rn-yrU" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" id="6gm-gB-hCw"/>
-                            <constraint firstItem="2po-rn-yrU" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="UfA-b5-91r"/>
-                            <constraint firstAttribute="trailing" secondItem="2po-rn-yrU" secondAttribute="trailing" id="beO-q4-nqh"/>
+                            <constraint firstItem="2po-rn-yrU" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" id="Dgf-gq-fZi"/>
+                            <constraint firstItem="2po-rn-yrU" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="VNr-xn-lnt"/>
+                            <constraint firstItem="2po-rn-yrU" firstAttribute="trailing" secondItem="6Tk-OE-BBY" secondAttribute="trailing" id="nf5-MU-jSz"/>
+                            <constraint firstItem="2po-rn-yrU" firstAttribute="bottom" secondItem="6Tk-OE-BBY" secondAttribute="bottom" id="zcb-rE-vxN"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
+                    <connections>
+                        <outlet property="emailTextField" destination="nKd-xF-Hes" id="QJo-hn-meO"/>
+                        <outlet property="passwordTextField" destination="KC0-0Q-7rg" id="C8V-kb-AWH"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="37.600000000000001" y="25.637181409295355"/>
+            <point key="canvasLocation" x="433" y="25"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="Logo-Black" width="87.5" height="14.5"/>
+    </resources>
 </document>

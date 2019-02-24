@@ -10,29 +10,49 @@ enum CustomFontStyle {
     case medium
     case regular
     case thin
+    case extraLight
+    case semiBold
+
+    var familyName: String {
+        return "Raleway"
+    }
 
     var fontName: String {
+        /*
+         [["Raleway-SemiBoldItalic", "Raleway-Italic", "Raleway-LightItalic",
+         "Raleway-ExtraLightItalic", "Raleway-ThinItalic", "Raleway-MediumItalic",
+         "Raleway-ExtraBoldItalic", "Raleway-Black", "Raleway-Thin",
+         "Raleway-BoldItalic", "Raleway-BlackItalic"]
+         ]
+         */
+
         switch self {
         case .black:
-            return "Heebo-Black"
+            return "Raleway-Black"
 
         case .bold:
-            return "Heebo-Bold"
+            return "Raleway-Bold"
 
         case .extrabold:
-            return "Heebo-ExtraBold"
+            return "Raleway-ExtraBold"
 
         case .light:
-            return "Heebo-Light"
+            return "Raleway-Light"
 
         case .medium:
-            return "Heebo-Medium"
+            return "Raleway-Medium"
 
         case .regular:
-            return "Heebo-Regular"
+            return "Raleway-Regular"
 
         case .thin:
-            return "Heebo-Thin"
+            return "Raleway-Thin"
+
+        case .extraLight:
+            return "Raleway-ExtraLight"
+
+        case .semiBold:
+            return "Raleway-SemiBold"
         }
     }
 }
