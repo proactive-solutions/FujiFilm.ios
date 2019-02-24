@@ -36,6 +36,30 @@ extension UIViewController {
         return controller
     }
 
+    @discardableResult
+    func showWorkshop() -> WorkshopViewController {
+        let storyboardName = StoryBoardNames.workshop
+
+        guard let controller = storyboardName.instatiateController() as? WorkshopViewController else {
+            fatalError(controllerCastingErrorMessage)
+        }
+
+        navigationController?.pushViewController(controller, animated: true)
+        return controller
+    }
+
+    @discardableResult
+    func showDashboard() -> DashboardViewController {
+        let storyboardName = StoryBoardNames.dashboard
+
+        guard let controller = storyboardName.instatiateController() as? DashboardViewController else {
+            fatalError(controllerCastingErrorMessage)
+        }
+
+        navigationController?.pushViewController(controller, animated: true)
+        return controller
+    }
+
     func showSideMenu() {
         guard let menuLeft = SideMenuManager.default.menuLeftNavigationController else { return }
         present(menuLeft, animated: true, completion: nil)

@@ -22,6 +22,7 @@ final class LoginViewController: FujiFilmViewController {
     }
 
     @IBAction func loginAction(_: FujiFilmButton) {
+        showDashboard()
     }
 
     @IBAction func forgotPasswordAction(_: FujiFilmButton) {

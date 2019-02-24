@@ -9,6 +9,8 @@ enum StoryBoardNames: String {
     case login = "Login"
     case forgotPassword = "ForgotPassword"
     case leftMenu = "LeftMenu"
+    case dashboard = "Dashboard"
+    case workshop = "Workshop"
 }
 
 extension StoryBoardNames {
