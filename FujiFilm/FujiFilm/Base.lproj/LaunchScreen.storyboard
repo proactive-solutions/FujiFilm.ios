@@ -17,14 +17,14 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <imageView opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" image="Logo" translatesAutoresizingMaskIntoConstraints="NO" id="JT0-Uv-mts">
-                                <rect key="frame" x="126.5" y="321.5" width="122" height="24"/>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Logo-Black" translatesAutoresizingMaskIntoConstraints="NO" id="gBY-nE-YF0">
+                                <rect key="frame" x="16" y="305" width="343" height="57"/>
                             </imageView>
                         </subviews>
-                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
-                            <constraint firstItem="JT0-Uv-mts" firstAttribute="centerX" secondItem="Ze5-6b-2t3" secondAttribute="centerX" id="Ct5-Po-NKj"/>
-                            <constraint firstItem="JT0-Uv-mts" firstAttribute="centerY" secondItem="Ze5-6b-2t3" secondAttribute="centerY" id="ZjN-4r-p1L"/>
+                            <constraint firstItem="gBY-nE-YF0" firstAttribute="centerX" secondItem="Ze5-6b-2t3" secondAttribute="centerX" id="VLe-Rb-V4P"/>
+                            <constraint firstItem="gBY-nE-YF0" firstAttribute="centerY" secondItem="Ze5-6b-2t3" secondAttribute="centerY" id="jDb-Ul-hbQ"/>
                         </constraints>
                     </view>
                 </viewController>
@@ -34,6 +34,6 @@
         </scene>
     </scenes>
     <resources>
-        <image name="Logo" width="122.5" height="24"/>
+        <image name="Logo-Black" width="343" height="57"/>
     </resources>
 </document>
