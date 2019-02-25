@@ -88,6 +88,10 @@
 		F2D8D74E2223261400B15CC7 /* APIError.swift in Sources */ = {isa = PBXBuildFile; fileRef = F2D8D74D2223261400B15CC7 /* APIError.swift */; };
 		F2D8D750222327F100B15CC7 /* UserDetails.swift in Sources */ = {isa = PBXBuildFile; fileRef = F2D8D74F222327F100B15CC7 /* UserDetails.swift */; };
 		F2D8D752222336F500B15CC7 /* EventList.swift in Sources */ = {isa = PBXBuildFile; fileRef = F2D8D751222336F500B15CC7 /* EventList.swift */; };
+		F2F9639A22245E1E001F51D5 /* Warranty.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F2F9639822245E1E001F51D5 /* Warranty.storyboard */; };
+		F2F9639C22245E44001F51D5 /* WarrantyViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F2F9639B22245E44001F51D5 /* WarrantyViewController.swift */; };
+		F2F9639F22245F09001F51D5 /* WarrantyCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = F2F9639D22245F09001F51D5 /* WarrantyCell.swift */; };
+		F2F963A022245F09001F51D5 /* WarrantyCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = F2F9639E22245F09001F51D5 /* WarrantyCell.xib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -176,6 +180,10 @@
 		F2D8D74D2223261400B15CC7 /* APIError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIError.swift; sourceTree = "<group>"; };
 		F2D8D74F222327F100B15CC7 /* UserDetails.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserDetails.swift; sourceTree = "<group>"; };
 		F2D8D751222336F500B15CC7 /* EventList.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EventList.swift; sourceTree = "<group>"; };
+		F2F9639922245E1E001F51D5 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Warranty.storyboard; sourceTree = "<group>"; };
+		F2F9639B22245E44001F51D5 /* WarrantyViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WarrantyViewController.swift; sourceTree = "<group>"; };
+		F2F9639D22245F09001F51D5 /* WarrantyCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WarrantyCell.swift; sourceTree = "<group>"; };
+		F2F9639E22245F09001F51D5 /* WarrantyCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = WarrantyCell.xib; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -366,6 +374,7 @@
 				F2D8D7362223004D00B15CC7 /* WorkshopViewController.swift */,
 				F2D8D74A22231CB500B15CC7 /* QRScanResultViewController.swift */,
 				F2D8D72D2222FAF000B15CC7 /* DashboardViewController.swift */,
+				F2F9639B22245E44001F51D5 /* WarrantyViewController.swift */,
 				F2B1F7DE2222A5EB00CBEA40 /* ForgotPasswordViewController.swift */,
 				F2B1F7E62222E6AF00CBEA40 /* LeftMenuViewController..swift */,
 				F2B1F73C222284B500CBEA40 /* LoginViewController.swift */,
@@ -378,6 +387,7 @@
 			children = (
 				F2D8D7382223005800B15CC7 /* Workshop.storyboard */,
 				F2D8D72A2222F5BE00B15CC7 /* Dashboard.storyboard */,
+				F2F9639822245E1E001F51D5 /* Warranty.storyboard */,
 				F2B1F7E32222E62B00CBEA40 /* LeftMenu.storyboard */,
 				F2B1F73E222284B500CBEA40 /* Login.storyboard */,
 				F2D8D74722231C7F00B15CC7 /* QRScanResult.storyboard */,
@@ -392,6 +402,7 @@
 				F2D8D742222304B300B15CC7 /* WorkshopCell */,
 				F2B1F7ED2222E8AD00CBEA40 /* FujiFilmLeftMenuCell */,
 				F2D8D7332222FBCF00B15CC7 /* DashboardCell */,
+				F2F963A122245F10001F51D5 /* WarrantyCell */,
 			);
 			path = XIBs;
 			sourceTree = "<group>";
@@ -431,6 +442,15 @@
 				F2D8D751222336F500B15CC7 /* EventList.swift */,
 			);
 			path = models;
+			sourceTree = "<group>";
+		};
+		F2F963A122245F10001F51D5 /* WarrantyCell */ = {
+			isa = PBXGroup;
+			children = (
+				F2F9639D22245F09001F51D5 /* WarrantyCell.swift */,
+				F2F9639E22245F09001F51D5 /* WarrantyCell.xib */,
+			);
+			path = WarrantyCell;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -500,6 +520,7 @@
 				F2B1F7D42222996C00CBEA40 /* Raleway-BlackItalic.ttf in Resources */,
 				F2B1F742222284B700CBEA40 /* Assets.xcassets in Resources */,
 				F2B1F7C72222996C00CBEA40 /* Raleway-MediumItalic.ttf in Resources */,
+				F2F9639A22245E1E001F51D5 /* Warranty.storyboard in Resources */,
 				F2D8D73A2223005800B15CC7 /* Workshop.storyboard in Resources */,
 				F2B1F7D62222996C00CBEA40 /* Raleway-Thin.ttf in Resources */,
 				F2D8D74922231C7F00B15CC7 /* QRScanResult.storyboard in Resources */,
@@ -517,6 +538,7 @@
 				F2B1F7CF2222996C00CBEA40 /* Raleway-Regular.ttf in Resources */,
 				F2B1F7D52222996C00CBEA40 /* Raleway-LightItalic.ttf in Resources */,
 				F2B1F7D32222996C00CBEA40 /* Raleway-Black.ttf in Resources */,
+				F2F963A022245F09001F51D5 /* WarrantyCell.xib in Resources */,
 				F2B1F7CC2222996C00CBEA40 /* Raleway-SemiBold.ttf in Resources */,
 				F2D8D7322222FBC800B15CC7 /* DashboardCell.xib in Resources */,
 				F2B1F7D82222996C00CBEA40 /* Raleway-Bold.ttf in Resources */,
@@ -588,6 +610,7 @@
 				F2B1F77F222285D200CBEA40 /* UITableView+Extension.swift in Sources */,
 				F2D8D7352222FEEA00B15CC7 /* APIManager.swift in Sources */,
 				F2B1F7A32222866800CBEA40 /* StoryboardNames.swift in Sources */,
+				F2F9639C22245E44001F51D5 /* WarrantyViewController.swift in Sources */,
 				F2D8D746222304B300B15CC7 /* WorkshopCell.swift in Sources */,
 				F2B1F781222285D200CBEA40 /* FujiFilmTextField.swift in Sources */,
 				F2B1F786222285D200CBEA40 /* FujiFilmViewController.swift in Sources */,
@@ -630,6 +653,7 @@
 				F2B1F79E2222866800CBEA40 /* CustomFontStyle.swift in Sources */,
 				F2B1F780222285D200CBEA40 /* FujiFilmTableView.swift in Sources */,
 				F2B1F783222285D200CBEA40 /* FujiFilmImageView.swift in Sources */,
+				F2F9639F22245F09001F51D5 /* WarrantyCell.swift in Sources */,
 				F2D8D752222336F500B15CC7 /* EventList.swift in Sources */,
 				F2B1F7A42222866800CBEA40 /* CellXibs.swift in Sources */,
 			);
@@ -692,6 +716,14 @@
 				F2D8D74822231C7F00B15CC7 /* Base */,
 			);
 			name = QRScanResult.storyboard;
+			sourceTree = "<group>";
+		};
+		F2F9639822245E1E001F51D5 /* Warranty.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				F2F9639922245E1E001F51D5 /* Base */,
+			);
+			name = Warranty.storyboard;
 			sourceTree = "<group>";
 		};
 /* End PBXVariantGroup section */

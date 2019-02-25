@@ -35,6 +35,7 @@ final class LoginViewController: FujiFilmViewController {
         APIManager().request(
             path: .login,
             method: .post,
+            extraParams: nil,
             parameters: params,
             headers: nil,
             success: { [weak self] (data: Data, _: Int) in

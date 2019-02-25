@@ -244,6 +244,16 @@
                     <constraint firstItem="9eB-AQ-6zv" firstAttribute="top" secondItem="e0k-jZ-7Dx" secondAttribute="bottom" constant="15" id="ym4-sC-FcA"/>
                 </constraints>
             </tableViewCellContentView>
+            <connections>
+                <outlet property="absentLabel" destination="N1p-0k-3BO" id="bkF-p7-OaT"/>
+                <outlet property="attendeeLabel" destination="YA7-a9-Zl9" id="Njj-AZ-EVh"/>
+                <outlet property="dateLabel1" destination="N7q-9g-MzW" id="Nby-E0-I6F"/>
+                <outlet property="dateLabel2" destination="7I6-aY-yIY" id="BVq-AH-0zw"/>
+                <outlet property="dateLabel3" destination="nHE-Lc-LKF" id="Z1c-Mj-dSc"/>
+                <outlet property="iconImageView" destination="bS2-51-C52" id="5Mx-Q8-2ll"/>
+                <outlet property="nameLabel" destination="GWM-kL-mR6" id="7DP-cg-ALG"/>
+                <outlet property="presentLabel" destination="e20-tU-aeb" id="Bam-HR-M9R"/>
+            </connections>
             <point key="canvasLocation" x="473.60000000000002" y="214.54272863568218"/>
         </tableViewCell>
     </objects>

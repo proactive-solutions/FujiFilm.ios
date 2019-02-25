@@ -17,11 +17,12 @@ final class FujiFilmNavigationBar: UINavigationBar {
     }
 
     private func customize() {
+        print("Customize your fucking nav bar")
         barStyle = .default
         backIndicatorImage = UIImage()
         backIndicatorTransitionMaskImage = UIImage()
         tintColor = UIColor.black
-        barTintColor = UIColor.white
+        barTintColor = UIColor.black
         backgroundColor = UIColor.red
 
         layer.shadowColor = UIColor.black.withAlphaComponent(0.2).cgColor
@@ -31,7 +32,7 @@ final class FujiFilmNavigationBar: UINavigationBar {
         layer.masksToBounds = false
 
         titleTextAttributes = [
-            NSAttributedString.Key.foregroundColor: UIColor.black,
+            NSAttributedString.Key.foregroundColor: UIColor.white,
             NSAttributedString.Key.font: UIFont.font(style: .medium, size: 16.0),
         ]
     }

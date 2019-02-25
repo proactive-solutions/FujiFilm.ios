@@ -32,6 +32,7 @@ final class ForgotPasswordViewController: FujiFilmViewController {
         APIManager().request(
             path: APIPaths.forgotPassword,
             method: .post,
+            extraParams: nil,
             parameters: params,
             headers: nil,
             success: { [weak self] (data: Data, code: Int) in

@@ -12,6 +12,7 @@ enum StoryBoardNames: String {
     case dashboard = "Dashboard"
     case workshop = "Workshop"
     case QRScanResult
+    case Warranty
 }
 
 extension StoryBoardNames {

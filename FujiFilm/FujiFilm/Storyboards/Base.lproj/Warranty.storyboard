@@ -10,16 +10,16 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--Workshop-->
+        <!--Warranty View Controller-->
         <scene sceneID="bJ7-Xr-IHO">
             <objects>
-                <viewController storyboardIdentifier="WorkshopViewController" title="Workshop" id="cal-Rp-o0J" customClass="WorkshopViewController" customModule="FujiFilm" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="WarrantyViewController" id="cal-Rp-o0J" customClass="WarrantyViewController" customModule="FujiFilm" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="Rsz-ZY-wVx">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" dataMode="prototypes" style="plain" separatorStyle="none" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="hvw-Qm-mBm">
-                                <rect key="frame" x="15" y="20" width="345" height="647"/>
+                                <rect key="frame" x="0.0" y="20" width="375" height="647"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <connections>
                                     <outlet property="dataSource" destination="cal-Rp-o0J" id="fJY-Zm-8I2"/>
@@ -30,8 +30,8 @@
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
                             <constraint firstItem="gQw-Yx-1tc" firstAttribute="bottom" secondItem="hvw-Qm-mBm" secondAttribute="bottom" id="3ad-JD-DCk"/>
-                            <constraint firstItem="gQw-Yx-1tc" firstAttribute="trailing" secondItem="hvw-Qm-mBm" secondAttribute="trailing" constant="15" id="RKA-MR-BZ8"/>
-                            <constraint firstItem="hvw-Qm-mBm" firstAttribute="leading" secondItem="gQw-Yx-1tc" secondAttribute="leading" constant="15" id="TWQ-AL-z9H"/>
+                            <constraint firstItem="gQw-Yx-1tc" firstAttribute="trailing" secondItem="hvw-Qm-mBm" secondAttribute="trailing" id="RKA-MR-BZ8"/>
+                            <constraint firstItem="hvw-Qm-mBm" firstAttribute="leading" secondItem="gQw-Yx-1tc" secondAttribute="leading" id="TWQ-AL-z9H"/>
                             <constraint firstItem="hvw-Qm-mBm" firstAttribute="top" secondItem="gQw-Yx-1tc" secondAttribute="top" id="qbM-M6-Aa0"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="gQw-Yx-1tc"/>

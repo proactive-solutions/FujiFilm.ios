@@ -71,8 +71,11 @@ class APIManager: NSObject {
 
     // MARK: - DataTask
 
-    func request(path: APIPaths, method: HTTPMethod, parameters: Parameters? = nil, headers: HTTPHeaders? = nil, success: ((Data, Int) -> Void)? = nil, failure: ((Error) -> Void)? = nil) {
-        let url: String = path.baseURL + path.version + path.rawValue
+    func request(path: APIPaths, method: HTTPMethod, extraParams: String?, parameters: Parameters?, headers: HTTPHeaders?, success: ((Data, Int) -> Void)?, failure: ((Error) -> Void)?) {
+        var url: String = path.baseURL + path.version + path.rawValue
+        if let extra = extraParams {
+            url += "/" + extra
+        }
         let urlEncode = url.addingPercentEncoding(withAllowedCharacters: .urlQueryAllowed)
         currentDataRequest = Alamofire.request(
             urlEncode!, method: method,

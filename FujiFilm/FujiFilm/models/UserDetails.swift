@@ -72,5 +72,3 @@ struct UserDetails: Codable {
         }
     }
 }
-
-

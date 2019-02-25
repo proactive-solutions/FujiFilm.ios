@@ -21,11 +21,7 @@ final class WorkshopViewController: FujiFilmViewController, UITableViewDataSourc
         return QRCodeReaderViewController(builder: builder)
     }()
 
-    private let menuTitles: [String] = [
-        "Workshop",
-        "Loan Program",
-        "Warranty",
-    ]
+    private var evnetsEventList: [EventList.Result] = []
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -33,6 +29,34 @@ final class WorkshopViewController: FujiFilmViewController, UITableViewDataSourc
         menuTableView.registerNib(.workshop)
         menuTableView.calculateCellHeight(estimatedHeight: 80.0)
         menuTableView.hideEmptyAndExtraRows()
+
+        menuTableView.addExtraScrollAt(top: 20.0)
+        getWorkshop()
+    }
+
+    private func getWorkshop() {
+        guard let user = UserDefaults.standard.userDetails else { return }
+        self.view.showLoader()
+        APIManager().request(
+            path: APIPaths.getDistributorWorkshop,
+            method: .get,
+            extraParams: user.result.fldDid,
+            parameters: nil,
+            headers: nil,
+            success: { [weak self] (data: Data, _: Int) in
+                guard let self = self else { return }
+                self.view.hideLoader()
+                if let list = try? JSONDecoder().decode(EventList.self, from: data) {
+                    self.evnetsEventList = list.result
+                    self.menuTableView.reloadData()
+                } else if let error = try? JSONDecoder().decode(APIError.self, from: data) {
+                    self.view.show(error: error.message)
+                }
+            }, failure: { [weak self] error in
+                guard let self = self else { return }
+                self.view.hideLoader()
+                self.view.show(error: error.localizedDescription)
+        })
     }
 
     func numberOfSections(in _: UITableView) -> Int {
@@ -40,7 +64,7 @@ final class WorkshopViewController: FujiFilmViewController, UITableViewDataSourc
     }
 
     func tableView(_: UITableView, numberOfRowsInSection _: Int) -> Int {
-        return menuTitles.count
+        return evnetsEventList.count
     }
 
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
@@ -52,6 +76,9 @@ final class WorkshopViewController: FujiFilmViewController, UITableViewDataSourc
         cell.scan = { [weak self] in
             self?.scanQR()
         }
+
+        let result = self.evnetsEventList[indexPath.row]
+        cell.display(result: result)
 
         return cell
     }

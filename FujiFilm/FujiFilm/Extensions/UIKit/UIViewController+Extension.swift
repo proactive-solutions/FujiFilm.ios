@@ -74,13 +74,25 @@ extension UIViewController {
         return controller
     }
 
-    func logout() {
-        /*
-        let storyboardName = StoryBoardNames.login
-        guard let controller = storyboardName.instatiateController() as? LoginViewController else {
+    @discardableResult
+    func showWarranty(_: String) -> WarrantyViewController {
+        let storyboardName = StoryBoardNames.Warranty
+
+        guard let controller = storyboardName.instatiateController() as? WarrantyViewController else {
             fatalError(controllerCastingErrorMessage)
         }
-        navigationController?.setViewControllers([controller], animated: true)
+
+        navigationController?.pushViewController(controller, animated: true)
+        return controller
+    }
+
+    func logout() {
+        /*
+         let storyboardName = StoryBoardNames.login
+         guard let controller = storyboardName.instatiateController() as? LoginViewController else {
+         fatalError(controllerCastingErrorMessage)
+         }
+         navigationController?.setViewControllers([controller], animated: true)
          */
     }
 

@@ -23,6 +23,7 @@ final class DashboardViewController: FujiFilmViewController, UITableViewDataSour
         menuTableView.registerNib(.dashboad)
         menuTableView.calculateCellHeight(estimatedHeight: 80.0)
         menuTableView.hideEmptyAndExtraRows()
+        menuTableView.addExtraScrollAt(top: 20.0)
 
         navigationItem.hidesBackButton = true
         navigationItem.leftBarButtonItem = UIBarButtonItem(
@@ -57,9 +58,7 @@ final class DashboardViewController: FujiFilmViewController, UITableViewDataSour
         if indexPath.row == 0 {
             showWorkshop()
         } else if indexPath.row == 1 {
-            showWorkshop()
         } else if indexPath.row == 2 {
-            showWorkshop()
         }
     }
 }

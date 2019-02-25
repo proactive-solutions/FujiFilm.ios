@@ -1,17 +1,17 @@
 
 import Foundation
 
-struct EvetnList: Codable {
+struct EventList: Codable {
     let code: Int
     let success: Bool
     let message: String
     let result: [Result]
 
     enum CodingKeys: String, CodingKey {
-        case code = "code"
-        case success = "success"
-        case message = "message"
-        case result = "result"
+        case code
+        case success
+        case message
+        case result
     }
 
     struct Result: Codable {
@@ -70,6 +70,3 @@ struct EvetnList: Codable {
         }
     }
 }
-
-
-

@@ -45,7 +45,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
         if let _ = UserDefaults.standard.userDetails {
             let controller = StoryBoardNames.dashboard.initialController()
-            (self.window?.rootViewController as? UINavigationController)?.setViewControllers([controller], animated: false)
+            (window?.rootViewController as? UINavigationController)?.setViewControllers([controller], animated: false)
         }
 
         return true

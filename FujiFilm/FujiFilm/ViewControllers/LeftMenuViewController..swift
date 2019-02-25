@@ -9,8 +9,8 @@
 import UIKit
 
 final class MenuHeaderView: UITableViewHeaderFooterView {
-    @IBOutlet weak var nameLabel: FujiFilmLabel!
-    @IBOutlet weak var locationlabel: FujiFilmLabel!
+    @IBOutlet var nameLabel: FujiFilmLabel!
+    @IBOutlet var locationlabel: FujiFilmLabel!
 }
 
 final class LeftMenuViewController: FujiFilmViewController, UITableViewDataSource, UITableViewDelegate {
@@ -20,7 +20,7 @@ final class LeftMenuViewController: FujiFilmViewController, UITableViewDataSourc
     private lazy var menus: [StoryBoardNames] = [
         StoryBoardNames.dashboard,
         StoryBoardNames.workshop,
-        StoryBoardNames.dashboard,
+        StoryBoardNames.Warranty,
         StoryBoardNames.workshop,
     ]
 
@@ -37,7 +37,7 @@ final class LeftMenuViewController: FujiFilmViewController, UITableViewDataSourc
         #imageLiteral(resourceName: "loan_program_icon"),
         #imageLiteral(resourceName: "warranty_icon"),
         #imageLiteral(resourceName: "change_password_icon"),
-        #imageLiteral(resourceName: "logout_icon")
+        #imageLiteral(resourceName: "logout_icon"),
     ]
 
     override func viewDidLoad() {
@@ -50,8 +50,8 @@ final class LeftMenuViewController: FujiFilmViewController, UITableViewDataSourc
         leftmenuTAbleView.sectionHeaderHeight = 300.0
 
         if let details = UserDefaults.standard.userDetails {
-            self.headerView.nameLabel.text = details.result.fldFirstname + details.result.fldFamilyname
-            self.headerView.locationlabel.text = details.result.fldAddress + details.result.fldAddress1
+            headerView.nameLabel.text = details.result.fldFirstname + details.result.fldFamilyname
+            headerView.locationlabel.text = details.result.fldAddress + details.result.fldAddress1
         }
     }
 
@@ -79,10 +79,10 @@ final class LeftMenuViewController: FujiFilmViewController, UITableViewDataSourc
         tableView.deselectRow(at: indexPath, animated: false)
         if indexPath.row <= 3 {
             let controller = menus[indexPath.row].initialController()
-            self.navigationController?.pushViewController(controller, animated: true)
+            navigationController?.pushViewController(controller, animated: true)
         } else {
             UserDefaults.standard.userDetails = nil
-            self.logout()
+            logout()
         }
     }
 }
