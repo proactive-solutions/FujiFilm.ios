@@ -22,14 +22,14 @@
         <tableViewCell contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="none" indentationWidth="10" rowHeight="419" id="KGk-i7-Jjw" customClass="WorkshopCell" customModule="FujiFilm" customModuleProvider="target">
             <rect key="frame" x="0.0" y="0.0" width="320" height="419"/>
             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-            <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="KGk-i7-Jjw" id="H2p-sc-9uM">
+            <tableViewCellContentView key="contentView" opaque="NO" multipleTouchEnabled="YES" contentMode="center" tableViewCell="KGk-i7-Jjw" id="H2p-sc-9uM">
                 <rect key="frame" x="0.0" y="0.0" width="320" height="418.5"/>
                 <autoresizingMask key="autoresizingMask"/>
                 <subviews>
                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="e0k-jZ-7Dx">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="200"/>
                         <subviews>
-                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="bS2-51-C52" customClass="FujiFilmImageView" customModule="FujiFilm" customModuleProvider="target">
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="workshop_placeholder" translatesAutoresizingMaskIntoConstraints="NO" id="bS2-51-C52" customClass="FujiFilmImageView" customModule="FujiFilm" customModuleProvider="target">
                                 <rect key="frame" x="0.0" y="0.0" width="320" height="200"/>
                                 <color key="backgroundColor" red="0.065899103880000004" green="0.065985687079999994" blue="0.065912492569999995" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <userDefinedRuntimeAttributes>
@@ -64,22 +64,22 @@
                                 <rect key="frame" x="0.0" y="0.0" width="106.5" height="50"/>
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" text="Date:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumScaleFactor="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="TqY-QG-OUc" customClass="FujiFilmLabel" customModule="FujiFilm" customModuleProvider="target">
-                                        <rect key="frame" x="0.0" y="17.5" width="8" height="15.5"/>
-                                        <fontDescription key="fontDescription" name="Raleway-SemiBold" family="Raleway" pointSize="13"/>
+                                        <rect key="frame" x="2" y="19" width="24.5" height="12"/>
+                                        <fontDescription key="fontDescription" name="Raleway-SemiBold" family="Raleway" pointSize="10"/>
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="249" verticalHuggingPriority="249" horizontalCompressionResistancePriority="751" verticalCompressionResistancePriority="751" text="Fir 20 Feb 2019" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumScaleFactor="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="N7q-9g-MzW" customClass="FujiFilmLabel" customModule="FujiFilm" customModuleProvider="target">
-                                        <rect key="frame" x="16" y="17.5" width="90.5" height="15.5"/>
-                                        <fontDescription key="fontDescription" name="Raleway-Regular" family="Raleway" pointSize="13"/>
+                                        <rect key="frame" x="27.5" y="19" width="79" height="12"/>
+                                        <fontDescription key="fontDescription" name="Raleway-Regular" family="Raleway" pointSize="10"/>
                                         <nil key="highlightedColor"/>
                                     </label>
                                 </subviews>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <constraints>
                                     <constraint firstItem="TqY-QG-OUc" firstAttribute="centerY" secondItem="KSd-Ot-xC3" secondAttribute="centerY" id="FmB-dR-Vbb"/>
-                                    <constraint firstItem="TqY-QG-OUc" firstAttribute="leading" secondItem="KSd-Ot-xC3" secondAttribute="leading" id="SFU-9T-ALp"/>
+                                    <constraint firstItem="TqY-QG-OUc" firstAttribute="leading" secondItem="KSd-Ot-xC3" secondAttribute="leading" constant="2" id="SFU-9T-ALp"/>
                                     <constraint firstItem="N7q-9g-MzW" firstAttribute="centerY" secondItem="TqY-QG-OUc" secondAttribute="centerY" id="SZa-29-0gc"/>
-                                    <constraint firstItem="N7q-9g-MzW" firstAttribute="leading" secondItem="TqY-QG-OUc" secondAttribute="trailing" constant="8" id="X9d-NX-WvD"/>
+                                    <constraint firstItem="N7q-9g-MzW" firstAttribute="leading" secondItem="TqY-QG-OUc" secondAttribute="trailing" constant="1" id="X9d-NX-WvD"/>
                                     <constraint firstAttribute="trailing" secondItem="N7q-9g-MzW" secondAttribute="trailing" id="laR-tT-g0c"/>
                                 </constraints>
                             </view>
@@ -87,46 +87,46 @@
                                 <rect key="frame" x="106.5" y="0.0" width="107" height="50"/>
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" text="Date:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumScaleFactor="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="c5N-Yf-OQA" customClass="FujiFilmLabel" customModule="FujiFilm" customModuleProvider="target">
-                                        <rect key="frame" x="0.0" y="17.5" width="8.5" height="15.5"/>
-                                        <fontDescription key="fontDescription" name="Raleway-SemiBold" family="Raleway" pointSize="13"/>
+                                        <rect key="frame" x="2" y="19" width="24.5" height="12"/>
+                                        <fontDescription key="fontDescription" name="Raleway-SemiBold" family="Raleway" pointSize="10"/>
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="249" verticalHuggingPriority="249" horizontalCompressionResistancePriority="751" verticalCompressionResistancePriority="751" text="Fir 20 Feb 2019" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumScaleFactor="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="7I6-aY-yIY" customClass="FujiFilmLabel" customModule="FujiFilm" customModuleProvider="target">
-                                        <rect key="frame" x="16.5" y="17.5" width="90.5" height="15.5"/>
-                                        <fontDescription key="fontDescription" name="Raleway-Regular" family="Raleway" pointSize="13"/>
+                                        <rect key="frame" x="27.5" y="19" width="79.5" height="12"/>
+                                        <fontDescription key="fontDescription" name="Raleway-Regular" family="Raleway" pointSize="10"/>
                                         <nil key="highlightedColor"/>
                                     </label>
                                 </subviews>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <constraints>
-                                    <constraint firstItem="7I6-aY-yIY" firstAttribute="leading" secondItem="c5N-Yf-OQA" secondAttribute="trailing" constant="8" id="395-Bd-Rpb"/>
+                                    <constraint firstItem="7I6-aY-yIY" firstAttribute="leading" secondItem="c5N-Yf-OQA" secondAttribute="trailing" constant="1" id="395-Bd-Rpb"/>
                                     <constraint firstItem="c5N-Yf-OQA" firstAttribute="centerY" secondItem="vqL-uy-55V" secondAttribute="centerY" id="Bp4-Or-p6W"/>
                                     <constraint firstAttribute="trailing" secondItem="7I6-aY-yIY" secondAttribute="trailing" id="gf8-jQ-CYj"/>
                                     <constraint firstItem="7I6-aY-yIY" firstAttribute="centerY" secondItem="c5N-Yf-OQA" secondAttribute="centerY" id="nBI-Dz-Jt4"/>
-                                    <constraint firstItem="c5N-Yf-OQA" firstAttribute="leading" secondItem="vqL-uy-55V" secondAttribute="leading" id="oyv-aK-nAO"/>
+                                    <constraint firstItem="c5N-Yf-OQA" firstAttribute="leading" secondItem="vqL-uy-55V" secondAttribute="leading" constant="2" id="oyv-aK-nAO"/>
                                 </constraints>
                             </view>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="usp-nA-5CX">
                                 <rect key="frame" x="213.5" y="0.0" width="106.5" height="50"/>
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" text="Date:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumScaleFactor="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="93O-pJ-gk3" customClass="FujiFilmLabel" customModule="FujiFilm" customModuleProvider="target">
-                                        <rect key="frame" x="0.0" y="17.5" width="8" height="15.5"/>
-                                        <fontDescription key="fontDescription" name="Raleway-SemiBold" family="Raleway" pointSize="13"/>
+                                        <rect key="frame" x="2" y="19" width="24.5" height="12"/>
+                                        <fontDescription key="fontDescription" name="Raleway-SemiBold" family="Raleway" pointSize="10"/>
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="249" verticalHuggingPriority="249" horizontalCompressionResistancePriority="751" verticalCompressionResistancePriority="751" text="Fir 20 Feb 2019" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumScaleFactor="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="nHE-Lc-LKF" customClass="FujiFilmLabel" customModule="FujiFilm" customModuleProvider="target">
-                                        <rect key="frame" x="16" y="17.5" width="90.5" height="15.5"/>
-                                        <fontDescription key="fontDescription" name="Raleway-Regular" family="Raleway" pointSize="13"/>
+                                        <rect key="frame" x="27.5" y="19" width="79" height="12"/>
+                                        <fontDescription key="fontDescription" name="Raleway-Regular" family="Raleway" pointSize="10"/>
                                         <nil key="highlightedColor"/>
                                     </label>
                                 </subviews>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <constraints>
-                                    <constraint firstItem="93O-pJ-gk3" firstAttribute="leading" secondItem="usp-nA-5CX" secondAttribute="leading" id="8A8-NV-lm0"/>
+                                    <constraint firstItem="93O-pJ-gk3" firstAttribute="leading" secondItem="usp-nA-5CX" secondAttribute="leading" constant="2" id="8A8-NV-lm0"/>
                                     <constraint firstItem="nHE-Lc-LKF" firstAttribute="centerY" secondItem="93O-pJ-gk3" secondAttribute="centerY" id="SFN-wV-yDv"/>
                                     <constraint firstItem="93O-pJ-gk3" firstAttribute="centerY" secondItem="usp-nA-5CX" secondAttribute="centerY" id="TJb-ZZ-lCI"/>
                                     <constraint firstAttribute="trailing" secondItem="nHE-Lc-LKF" secondAttribute="trailing" id="Xtc-3E-qZ3"/>
-                                    <constraint firstItem="nHE-Lc-LKF" firstAttribute="leading" secondItem="93O-pJ-gk3" secondAttribute="trailing" constant="8" id="mzb-Af-YUc"/>
+                                    <constraint firstItem="nHE-Lc-LKF" firstAttribute="leading" secondItem="93O-pJ-gk3" secondAttribute="trailing" constant="1" id="mzb-Af-YUc"/>
                                 </constraints>
                             </view>
                         </subviews>
@@ -140,13 +140,13 @@
                             <view contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" translatesAutoresizingMaskIntoConstraints="NO" id="bJB-Kt-qzG">
                                 <rect key="frame" x="0.0" y="0.0" width="151" height="25"/>
                                 <subviews>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" text="Date:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumScaleFactor="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="Bcz-og-Vp1" customClass="FujiFilmLabel" customModule="FujiFilm" customModuleProvider="target">
-                                        <rect key="frame" x="8" y="5" width="32" height="15.5"/>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" text="Attendee -" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumScaleFactor="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="Bcz-og-Vp1" customClass="FujiFilmLabel" customModule="FujiFilm" customModuleProvider="target">
+                                        <rect key="frame" x="8" y="5" width="66" height="15.5"/>
                                         <fontDescription key="fontDescription" name="Raleway-SemiBold" family="Raleway" pointSize="13"/>
                                         <nil key="highlightedColor"/>
                                     </label>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="249" verticalHuggingPriority="249" horizontalCompressionResistancePriority="751" verticalCompressionResistancePriority="752" text="Fir 20 Feb 2019" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumScaleFactor="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="YA7-a9-Zl9" customClass="FujiFilmLabel" customModule="FujiFilm" customModuleProvider="target">
-                                        <rect key="frame" x="48" y="5" width="90.5" height="15.5"/>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="249" verticalHuggingPriority="249" horizontalCompressionResistancePriority="751" verticalCompressionResistancePriority="752" text="40" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumScaleFactor="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="YA7-a9-Zl9" customClass="FujiFilmLabel" customModule="FujiFilm" customModuleProvider="target">
+                                        <rect key="frame" x="82" y="5" width="15.5" height="15.5"/>
                                         <fontDescription key="fontDescription" name="Raleway-Regular" family="Raleway" pointSize="13"/>
                                         <nil key="highlightedColor"/>
                                     </label>
@@ -164,13 +164,13 @@
                             <view contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Vh7-Jy-OXl">
                                 <rect key="frame" x="0.0" y="25" width="151" height="25"/>
                                 <subviews>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" text="Date:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumScaleFactor="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="gv9-DW-DeK" customClass="FujiFilmLabel" customModule="FujiFilm" customModuleProvider="target">
-                                        <rect key="frame" x="8" y="5" width="32" height="15.5"/>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" text="Present - " textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumScaleFactor="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="gv9-DW-DeK" customClass="FujiFilmLabel" customModule="FujiFilm" customModuleProvider="target">
+                                        <rect key="frame" x="8" y="5" width="59" height="15.5"/>
                                         <fontDescription key="fontDescription" name="Raleway-SemiBold" family="Raleway" pointSize="13"/>
                                         <nil key="highlightedColor"/>
                                     </label>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="249" verticalHuggingPriority="249" horizontalCompressionResistancePriority="751" verticalCompressionResistancePriority="752" text="Fir 20 Feb 2019" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumScaleFactor="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="e20-tU-aeb" customClass="FujiFilmLabel" customModule="FujiFilm" customModuleProvider="target">
-                                        <rect key="frame" x="48" y="5" width="90.5" height="15.5"/>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="249" verticalHuggingPriority="249" horizontalCompressionResistancePriority="751" verticalCompressionResistancePriority="752" text="30" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumScaleFactor="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="e20-tU-aeb" customClass="FujiFilmLabel" customModule="FujiFilm" customModuleProvider="target">
+                                        <rect key="frame" x="75" y="5" width="15" height="15.5"/>
                                         <fontDescription key="fontDescription" name="Raleway-Regular" family="Raleway" pointSize="13"/>
                                         <nil key="highlightedColor"/>
                                     </label>
@@ -187,13 +187,13 @@
                             <view contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" translatesAutoresizingMaskIntoConstraints="NO" id="WmP-sa-P4D">
                                 <rect key="frame" x="0.0" y="50" width="151" height="25"/>
                                 <subviews>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" text="Date:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumScaleFactor="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="FDI-fR-faB" customClass="FujiFilmLabel" customModule="FujiFilm" customModuleProvider="target">
-                                        <rect key="frame" x="8" y="5" width="32" height="15.5"/>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" text="Absent - " textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumScaleFactor="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="FDI-fR-faB" customClass="FujiFilmLabel" customModule="FujiFilm" customModuleProvider="target">
+                                        <rect key="frame" x="8" y="5" width="55.5" height="15.5"/>
                                         <fontDescription key="fontDescription" name="Raleway-SemiBold" family="Raleway" pointSize="13"/>
                                         <nil key="highlightedColor"/>
                                     </label>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="249" verticalHuggingPriority="249" horizontalCompressionResistancePriority="751" verticalCompressionResistancePriority="752" text="Fir 20 Feb 2019" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumScaleFactor="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="N1p-0k-3BO" customClass="FujiFilmLabel" customModule="FujiFilm" customModuleProvider="target">
-                                        <rect key="frame" x="48" y="5" width="90.5" height="15.5"/>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="249" verticalHuggingPriority="249" horizontalCompressionResistancePriority="751" verticalCompressionResistancePriority="752" text="10" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumScaleFactor="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="N1p-0k-3BO" customClass="FujiFilmLabel" customModule="FujiFilm" customModuleProvider="target">
+                                        <rect key="frame" x="71.5" y="5" width="14" height="15.5"/>
                                         <fontDescription key="fontDescription" name="Raleway-Regular" family="Raleway" pointSize="13"/>
                                         <nil key="highlightedColor"/>
                                     </label>
@@ -249,5 +249,6 @@
     </objects>
     <resources>
         <image name="small_scan" width="72.333335876464844" height="30"/>
+        <image name="workshop_placeholder" width="323.33334350585938" height="162"/>
     </resources>
 </document>

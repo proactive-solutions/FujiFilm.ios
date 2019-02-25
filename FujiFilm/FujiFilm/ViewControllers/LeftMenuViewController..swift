@@ -32,6 +32,14 @@ final class LeftMenuViewController: FujiFilmViewController, UITableViewDataSourc
         "Logout",
     ]
 
+    private let menuicons: [UIImage] = [
+        #imageLiteral(resourceName: "Workshop_icon"),
+        #imageLiteral(resourceName: "loan_program_icon"),
+        #imageLiteral(resourceName: "warranty_icon"),
+        #imageLiteral(resourceName: "change_password_icon"),
+        #imageLiteral(resourceName: "logout_icon")
+    ]
+
     override func viewDidLoad() {
         super.viewDidLoad()
 
@@ -62,6 +70,7 @@ final class LeftMenuViewController: FujiFilmViewController, UITableViewDataSourc
         ) as? FujiFilmLeftMenuCell else { return FujiFilmLeftMenuCell() }
 
         cell.menuTitleLabel.text = menuTitles[indexPath.row]
+        cell.menuIconImageView.image = menuicons[indexPath.row]
 
         return cell
     }
