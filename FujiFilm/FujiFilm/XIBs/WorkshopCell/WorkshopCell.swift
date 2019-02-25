@@ -49,9 +49,9 @@ class WorkshopCell: UITableViewCell {
     }
 
     func display(result: EventList.Result) {
-        self.dateLabel1.text = result.fldEventDate
-        self.dateLabel2.text = result.fldEventStarttime
-        self.dateLabel3.text = result.fldEventEndtime
+        self.dateLabel1.text = result.date
+        self.dateLabel2.text = (result.startTime ?? "") + "-" + (result.endTime ?? "")
+        self.dateLabel3.text = result.fldEventDuration + " hour"
         self.nameLabel.text = result.fldEventTitle
         self.presentLabel.text = "\(result.attendanceCount)"
         self.attendeeLabel.text = result.fldEventSeat

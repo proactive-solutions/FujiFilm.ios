@@ -14,7 +14,7 @@ struct EventList: Codable {
         case result
     }
 
-    struct Result: Codable {
+    struct Result: Codable, TimestampToDateConvertible {
         let fldEventID: String
         let fldEventSlug: String
         let fldEventTitle: String

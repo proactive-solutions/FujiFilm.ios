@@ -19,9 +19,9 @@ final class LeftMenuViewController: FujiFilmViewController, UITableViewDataSourc
 
     private lazy var menus: [StoryBoardNames] = [
         StoryBoardNames.dashboard,
-        StoryBoardNames.workshop,
         StoryBoardNames.Warranty,
-        StoryBoardNames.workshop,
+        StoryBoardNames.Warranty,
+        StoryBoardNames.Warranty,
     ]
 
     private let menuTitles: [String] = [
@@ -80,6 +80,7 @@ final class LeftMenuViewController: FujiFilmViewController, UITableViewDataSourc
         if indexPath.row <= 3 {
             let controller = menus[indexPath.row].initialController()
             navigationController?.pushViewController(controller, animated: true)
+            controller.title = menuTitles[indexPath.row]
         } else {
             UserDefaults.standard.userDetails = nil
             logout()

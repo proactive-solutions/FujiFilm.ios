@@ -92,6 +92,7 @@
 		F2F9639C22245E44001F51D5 /* WarrantyViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F2F9639B22245E44001F51D5 /* WarrantyViewController.swift */; };
 		F2F9639F22245F09001F51D5 /* WarrantyCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = F2F9639D22245F09001F51D5 /* WarrantyCell.swift */; };
 		F2F963A022245F09001F51D5 /* WarrantyCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = F2F9639E22245F09001F51D5 /* WarrantyCell.xib */; };
+		F2F963A322246AFE001F51D5 /* File.swift in Sources */ = {isa = PBXBuildFile; fileRef = F2F963A222246AFE001F51D5 /* File.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -184,6 +185,7 @@
 		F2F9639B22245E44001F51D5 /* WarrantyViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WarrantyViewController.swift; sourceTree = "<group>"; };
 		F2F9639D22245F09001F51D5 /* WarrantyCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WarrantyCell.swift; sourceTree = "<group>"; };
 		F2F9639E22245F09001F51D5 /* WarrantyCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = WarrantyCell.xib; sourceTree = "<group>"; };
+		F2F963A222246AFE001F51D5 /* File.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = File.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -250,6 +252,7 @@
 				F2B1F743222284B700CBEA40 /* LaunchScreen.storyboard */,
 				F2B1F746222284B700CBEA40 /* Info.plist */,
 				F2B1F7AD222288EE00CBEA40 /* GeneralConstant.swift */,
+				F2F963A222246AFE001F51D5 /* File.swift */,
 			);
 			path = FujiFilm;
 			sourceTree = "<group>";
@@ -654,6 +657,7 @@
 				F2B1F780222285D200CBEA40 /* FujiFilmTableView.swift in Sources */,
 				F2B1F783222285D200CBEA40 /* FujiFilmImageView.swift in Sources */,
 				F2F9639F22245F09001F51D5 /* WarrantyCell.swift in Sources */,
+				F2F963A322246AFE001F51D5 /* File.swift in Sources */,
 				F2D8D752222336F500B15CC7 /* EventList.swift in Sources */,
 				F2B1F7A42222866800CBEA40 /* CellXibs.swift in Sources */,
 			);

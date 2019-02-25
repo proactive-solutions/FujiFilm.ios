@@ -63,13 +63,13 @@
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="KSd-Ot-xC3">
                                 <rect key="frame" x="0.0" y="0.0" width="106.5" height="50"/>
                                 <subviews>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" text="Date:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumScaleFactor="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="TqY-QG-OUc" customClass="FujiFilmLabel" customModule="FujiFilm" customModuleProvider="target">
-                                        <rect key="frame" x="2" y="19" width="24.5" height="12"/>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="247" verticalHuggingPriority="247" horizontalCompressionResistancePriority="753" verticalCompressionResistancePriority="753" text="Date:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumScaleFactor="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="TqY-QG-OUc" customClass="FujiFilmLabel" customModule="FujiFilm" customModuleProvider="target">
+                                        <rect key="frame" x="2" y="19" width="34" height="12"/>
                                         <fontDescription key="fontDescription" name="Raleway-SemiBold" family="Raleway" pointSize="10"/>
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="249" verticalHuggingPriority="249" horizontalCompressionResistancePriority="751" verticalCompressionResistancePriority="751" text="Fir 20 Feb 2019" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumScaleFactor="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="N7q-9g-MzW" customClass="FujiFilmLabel" customModule="FujiFilm" customModuleProvider="target">
-                                        <rect key="frame" x="27.5" y="19" width="79" height="12"/>
+                                        <rect key="frame" x="37" y="19" width="69.5" height="12"/>
                                         <fontDescription key="fontDescription" name="Raleway-Regular" family="Raleway" pointSize="10"/>
                                         <nil key="highlightedColor"/>
                                     </label>
@@ -86,13 +86,13 @@
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="vqL-uy-55V">
                                 <rect key="frame" x="106.5" y="0.0" width="107" height="50"/>
                                 <subviews>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" text="Date:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumScaleFactor="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="c5N-Yf-OQA" customClass="FujiFilmLabel" customModule="FujiFilm" customModuleProvider="target">
-                                        <rect key="frame" x="2" y="19" width="24.5" height="12"/>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="248" verticalHuggingPriority="248" horizontalCompressionResistancePriority="751" verticalCompressionResistancePriority="751" text="Time" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumScaleFactor="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="c5N-Yf-OQA" customClass="FujiFilmLabel" customModule="FujiFilm" customModuleProvider="target">
+                                        <rect key="frame" x="2" y="19" width="24" height="12"/>
                                         <fontDescription key="fontDescription" name="Raleway-SemiBold" family="Raleway" pointSize="10"/>
                                         <nil key="highlightedColor"/>
                                     </label>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="249" verticalHuggingPriority="249" horizontalCompressionResistancePriority="751" verticalCompressionResistancePriority="751" text="Fir 20 Feb 2019" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumScaleFactor="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="7I6-aY-yIY" customClass="FujiFilmLabel" customModule="FujiFilm" customModuleProvider="target">
-                                        <rect key="frame" x="27.5" y="19" width="79.5" height="12"/>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="249" verticalHuggingPriority="249" text="Fir 20 Feb 2019" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumScaleFactor="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="7I6-aY-yIY" customClass="FujiFilmLabel" customModule="FujiFilm" customModuleProvider="target">
+                                        <rect key="frame" x="27" y="19" width="69.5" height="12"/>
                                         <fontDescription key="fontDescription" name="Raleway-Regular" family="Raleway" pointSize="10"/>
                                         <nil key="highlightedColor"/>
                                     </label>
@@ -101,7 +101,7 @@
                                 <constraints>
                                     <constraint firstItem="7I6-aY-yIY" firstAttribute="leading" secondItem="c5N-Yf-OQA" secondAttribute="trailing" constant="1" id="395-Bd-Rpb"/>
                                     <constraint firstItem="c5N-Yf-OQA" firstAttribute="centerY" secondItem="vqL-uy-55V" secondAttribute="centerY" id="Bp4-Or-p6W"/>
-                                    <constraint firstAttribute="trailing" secondItem="7I6-aY-yIY" secondAttribute="trailing" id="gf8-jQ-CYj"/>
+                                    <constraint firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="7I6-aY-yIY" secondAttribute="trailing" id="gf8-jQ-CYj"/>
                                     <constraint firstItem="7I6-aY-yIY" firstAttribute="centerY" secondItem="c5N-Yf-OQA" secondAttribute="centerY" id="nBI-Dz-Jt4"/>
                                     <constraint firstItem="c5N-Yf-OQA" firstAttribute="leading" secondItem="vqL-uy-55V" secondAttribute="leading" constant="2" id="oyv-aK-nAO"/>
                                 </constraints>
@@ -109,13 +109,13 @@
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="usp-nA-5CX">
                                 <rect key="frame" x="213.5" y="0.0" width="106.5" height="50"/>
                                 <subviews>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" text="Date:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumScaleFactor="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="93O-pJ-gk3" customClass="FujiFilmLabel" customModule="FujiFilm" customModuleProvider="target">
-                                        <rect key="frame" x="2" y="19" width="24.5" height="12"/>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalCompressionResistancePriority="751" verticalCompressionResistancePriority="751" text="Duration:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumScaleFactor="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="93O-pJ-gk3" customClass="FujiFilmLabel" customModule="FujiFilm" customModuleProvider="target">
+                                        <rect key="frame" x="2" y="19" width="43" height="12"/>
                                         <fontDescription key="fontDescription" name="Raleway-SemiBold" family="Raleway" pointSize="10"/>
                                         <nil key="highlightedColor"/>
                                     </label>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="249" verticalHuggingPriority="249" horizontalCompressionResistancePriority="751" verticalCompressionResistancePriority="751" text="Fir 20 Feb 2019" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumScaleFactor="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="nHE-Lc-LKF" customClass="FujiFilmLabel" customModule="FujiFilm" customModuleProvider="target">
-                                        <rect key="frame" x="27.5" y="19" width="79" height="12"/>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" text="Fir 20 Feb 2019" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumScaleFactor="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="nHE-Lc-LKF" customClass="FujiFilmLabel" customModule="FujiFilm" customModuleProvider="target">
+                                        <rect key="frame" x="46" y="19" width="60.5" height="12"/>
                                         <fontDescription key="fontDescription" name="Raleway-Regular" family="Raleway" pointSize="10"/>
                                         <nil key="highlightedColor"/>
                                     </label>
@@ -125,7 +125,7 @@
                                     <constraint firstItem="93O-pJ-gk3" firstAttribute="leading" secondItem="usp-nA-5CX" secondAttribute="leading" constant="2" id="8A8-NV-lm0"/>
                                     <constraint firstItem="nHE-Lc-LKF" firstAttribute="centerY" secondItem="93O-pJ-gk3" secondAttribute="centerY" id="SFN-wV-yDv"/>
                                     <constraint firstItem="93O-pJ-gk3" firstAttribute="centerY" secondItem="usp-nA-5CX" secondAttribute="centerY" id="TJb-ZZ-lCI"/>
-                                    <constraint firstAttribute="trailing" secondItem="nHE-Lc-LKF" secondAttribute="trailing" id="Xtc-3E-qZ3"/>
+                                    <constraint firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="nHE-Lc-LKF" secondAttribute="trailing" id="Xtc-3E-qZ3"/>
                                     <constraint firstItem="nHE-Lc-LKF" firstAttribute="leading" secondItem="93O-pJ-gk3" secondAttribute="trailing" constant="1" id="mzb-Af-YUc"/>
                                 </constraints>
                             </view>
