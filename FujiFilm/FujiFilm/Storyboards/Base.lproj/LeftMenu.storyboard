@@ -51,27 +51,41 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="U0l-gD-Yfy" userLabel="First Responder" sceneMemberID="firstResponder"/>
                 <view contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="fp1-EZ-zE2" customClass="MenuHeaderView" customModule="FujiFilm" customModuleProvider="target">
-                    <rect key="frame" x="0.0" y="0.0" width="337" height="200"/>
+                    <rect key="frame" x="0.0" y="0.0" width="320" height="200"/>
                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                     <subviews>
-                        <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillProportionally" translatesAutoresizingMaskIntoConstraints="NO" id="t0c-jV-H09">
-                            <rect key="frame" x="0.0" y="60" width="337" height="140"/>
+                        <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" translatesAutoresizingMaskIntoConstraints="NO" id="t0c-jV-H09">
+                            <rect key="frame" x="0.0" y="60" width="320" height="140"/>
                             <subviews>
                                 <imageView opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" image="Logo" translatesAutoresizingMaskIntoConstraints="NO" id="Fs3-MM-WdH">
-                                    <rect key="frame" x="0.0" y="0.0" width="337" height="49.5"/>
+                                    <rect key="frame" x="0.0" y="0.0" width="320" height="70"/>
                                 </imageView>
-                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" text="John Doe" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ltl-pO-C4C" customClass="FujiFilmLabel" customModule="FujiFilm" customModuleProvider="target">
-                                    <rect key="frame" x="0.0" y="49.5" width="337" height="53.5"/>
-                                    <fontDescription key="fontDescription" name="Raleway-SemiBold" family="Raleway" pointSize="22"/>
-                                    <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                    <nil key="highlightedColor"/>
-                                </label>
-                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" text="Lebanon" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="FVF-uj-PAG" customClass="FujiFilmLabel" customModule="FujiFilm" customModuleProvider="target">
-                                    <rect key="frame" x="0.0" y="103" width="337" height="37"/>
-                                    <fontDescription key="fontDescription" name="Raleway-Medium" family="Raleway" pointSize="15"/>
-                                    <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                    <nil key="highlightedColor"/>
-                                </label>
+                                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="XhM-8u-FhQ">
+                                    <rect key="frame" x="0.0" y="70" width="320" height="70"/>
+                                    <subviews>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" text="John Doe" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ltl-pO-C4C" customClass="FujiFilmLabel" customModule="FujiFilm" customModuleProvider="target">
+                                            <rect key="frame" x="0.0" y="0.0" width="320" height="26"/>
+                                            <fontDescription key="fontDescription" name="Raleway-SemiBold" family="Raleway" pointSize="22"/>
+                                            <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" text="Lebanon" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="FVF-uj-PAG" customClass="FujiFilmLabel" customModule="FujiFilm" customModuleProvider="target">
+                                            <rect key="frame" x="0.0" y="34" width="320" height="18"/>
+                                            <fontDescription key="fontDescription" name="Raleway-Medium" family="Raleway" pointSize="15"/>
+                                            <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                    </subviews>
+                                    <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                    <constraints>
+                                        <constraint firstItem="ltl-pO-C4C" firstAttribute="top" secondItem="XhM-8u-FhQ" secondAttribute="top" id="JLN-4Z-Wr5"/>
+                                        <constraint firstItem="FVF-uj-PAG" firstAttribute="top" secondItem="ltl-pO-C4C" secondAttribute="bottom" constant="8" id="May-nC-Sa5"/>
+                                        <constraint firstAttribute="trailing" secondItem="FVF-uj-PAG" secondAttribute="trailing" id="fk6-po-gax"/>
+                                        <constraint firstItem="ltl-pO-C4C" firstAttribute="leading" secondItem="XhM-8u-FhQ" secondAttribute="leading" id="p1x-4h-IcG"/>
+                                        <constraint firstItem="FVF-uj-PAG" firstAttribute="leading" secondItem="XhM-8u-FhQ" secondAttribute="leading" id="uE3-hN-9wY"/>
+                                        <constraint firstAttribute="trailing" secondItem="ltl-pO-C4C" secondAttribute="trailing" id="uPj-vk-TNa"/>
+                                    </constraints>
+                                </view>
                             </subviews>
                         </stackView>
                     </subviews>

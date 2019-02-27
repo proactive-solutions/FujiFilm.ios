@@ -61,14 +61,14 @@ extension UIViewController {
     }
 
     @discardableResult
-    func showQRScanResult(_ result: String) -> QRScanResultViewController {
+    func showQRScanResult(_ result: String, event: EventList.Result) -> QRScanResultViewController {
         let storyboardName = StoryBoardNames.QRScanResult
 
         guard let controller = storyboardName.instatiateController() as? QRScanResultViewController else {
             fatalError(controllerCastingErrorMessage)
         }
 
-        controller.qrResult = result
+        controller.data = (result, event)
 
         navigationController?.pushViewController(controller, animated: true)
         return controller

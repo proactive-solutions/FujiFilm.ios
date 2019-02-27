@@ -47,11 +47,21 @@ final class LeftMenuViewController: FujiFilmViewController, UITableViewDataSourc
         leftmenuTAbleView.calculateCellHeight(estimatedHeight: 80.0)
         leftmenuTAbleView.hideEmptyAndExtraRows()
         leftmenuTAbleView.tableHeaderView = headerView
-        leftmenuTAbleView.sectionHeaderHeight = 300.0
+        leftmenuTAbleView.sectionHeaderHeight = 100.0
 
         if let details = UserDefaults.standard.userDetails {
-            headerView.nameLabel.text = details.result.fldFirstname + details.result.fldFamilyname
-            headerView.locationlabel.text = details.result.fldAddress + details.result.fldAddress1
+            headerView.nameLabel.text = details.result.fldFirstname + " " + details.result.fldFamilyname
+            headerView.locationlabel.text = (details.result.fldAddress + details.result.fldAddress1)
+        }
+
+        navigationController?.isNavigationBarHidden = true
+    }
+
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        if let details = UserDefaults.standard.userDetails {
+            headerView.nameLabel.text = details.result.fldFirstname + " " + details.result.fldFamilyname
+            headerView.locationlabel.text = (details.result.fldAddress + details.result.fldAddress1)
         }
     }
 

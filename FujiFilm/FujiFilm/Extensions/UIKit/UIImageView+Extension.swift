@@ -9,7 +9,11 @@ import UIKit.UIImageView
 extension UIImageView {
     func from(url: String, completion: ((UIImage) -> Void)?) {
         let imageURL = URL(string: url)
-        sd_setImage(with: imageURL) { image, _, _, _ in
+        sd_setImage(
+            with: imageURL,
+            placeholderImage: #imageLiteral(resourceName: "workshop_placeholder"),
+            options: SDWebImageOptions.continueInBackground) {
+            image, _, _, _ in
             if let theImage = image {
                 completion?(theImage)
             }

@@ -31,12 +31,16 @@ final class WorkshopViewController: FujiFilmViewController, UITableViewDataSourc
         menuTableView.hideEmptyAndExtraRows()
 
         menuTableView.addExtraScrollAt(top: 20.0)
+    }
+
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
         getWorkshop()
     }
 
     private func getWorkshop() {
         guard let user = UserDefaults.standard.userDetails else { return }
-        self.view.showLoader()
+        view.showLoader()
         APIManager().request(
             path: APIPaths.getDistributorWorkshop,
             method: .get,
@@ -47,6 +51,7 @@ final class WorkshopViewController: FujiFilmViewController, UITableViewDataSourc
                 guard let self = self else { return }
                 self.view.hideLoader()
                 if let list = try? JSONDecoder().decode(EventList.self, from: data) {
+                    self.evnetsEventList.removeAll()
                     self.evnetsEventList = list.result
                     self.menuTableView.reloadData()
                 } else if let error = try? JSONDecoder().decode(APIError.self, from: data) {
@@ -73,11 +78,12 @@ final class WorkshopViewController: FujiFilmViewController, UITableViewDataSourc
             for: indexPath
         ) as? WorkshopCell else { return WorkshopCell() }
 
+        let result = evnetsEventList[indexPath.row]
+
         cell.scan = { [weak self] in
-            self?.scanQR()
+            self?.scanQR(event: result)
         }
 
-        let result = self.evnetsEventList[indexPath.row]
         cell.display(result: result)
 
         return cell
@@ -87,13 +93,13 @@ final class WorkshopViewController: FujiFilmViewController, UITableViewDataSourc
         tableView.deselectRow(at: indexPath, animated: false)
     }
 
-    private func scanQR() {
+    private func scanQR(event: EventList.Result) {
         readerVC.delegate = self
 
         // Or by using the closure pattern
         readerVC.completionBlock = { [weak self] (result: QRCodeReaderResult?) in
             if let _result = result?.value {
-                self?.showQRScanResult(_result)
+                self?.showQRScanResult(_result, event: event)
             }
         }
 

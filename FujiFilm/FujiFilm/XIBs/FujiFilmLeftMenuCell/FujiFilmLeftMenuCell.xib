@@ -23,15 +23,15 @@
                 <rect key="frame" x="0.0" y="0.0" width="320" height="85.5"/>
                 <autoresizingMask key="autoresizingMask"/>
                 <subviews>
-                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" image="jg_hud_error.png" translatesAutoresizingMaskIntoConstraints="NO" id="cQI-n9-FZQ" customClass="FujiFilmImageView" customModule="FujiFilm" customModuleProvider="target">
-                        <rect key="frame" x="8" y="10" width="40" height="40"/>
+                    <imageView userInteractionEnabled="NO" contentMode="center" translatesAutoresizingMaskIntoConstraints="NO" id="cQI-n9-FZQ" customClass="FujiFilmImageView" customModule="FujiFilm" customModuleProvider="target">
+                        <rect key="frame" x="16" y="10" width="40" height="40"/>
                         <constraints>
                             <constraint firstAttribute="height" constant="40" id="QwR-wH-KOB"/>
                             <constraint firstAttribute="width" secondItem="cQI-n9-FZQ" secondAttribute="height" multiplier="1:1" id="c4b-cg-Unl"/>
                         </constraints>
                     </imageView>
                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" text="Welcome to" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="VwW-WC-m2x" customClass="FujiFilmLabel" customModule="FujiFilm" customModuleProvider="target">
-                        <rect key="frame" x="62" y="33" width="250" height="20"/>
+                        <rect key="frame" x="70" y="33" width="242" height="20"/>
                         <fontDescription key="fontDescription" name="Raleway-SemiBold" family="Raleway" pointSize="17"/>
                         <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <nil key="highlightedColor"/>
@@ -43,7 +43,7 @@
                     <constraint firstItem="VwW-WC-m2x" firstAttribute="leading" secondItem="cQI-n9-FZQ" secondAttribute="trailing" constant="14" id="MvM-tg-zcT"/>
                     <constraint firstAttribute="trailing" secondItem="VwW-WC-m2x" secondAttribute="trailing" constant="8" id="eiF-0v-q1a"/>
                     <constraint firstAttribute="bottom" relation="greaterThanOrEqual" secondItem="cQI-n9-FZQ" secondAttribute="bottom" constant="10" id="lip-GK-e8u"/>
-                    <constraint firstItem="cQI-n9-FZQ" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="8" id="qcF-q4-yBz"/>
+                    <constraint firstItem="cQI-n9-FZQ" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="16" id="qcF-q4-yBz"/>
                     <constraint firstItem="VwW-WC-m2x" firstAttribute="centerY" secondItem="H2p-sc-9uM" secondAttribute="centerY" id="x9j-V6-fOm"/>
                 </constraints>
             </tableViewCellContentView>
@@ -55,7 +55,4 @@
             <point key="canvasLocation" x="41.600000000000001" y="65.667166416791616"/>
         </tableViewCell>
     </objects>
-    <resources>
-        <image name="jg_hud_error.png" width="33" height="33"/>
-    </resources>
 </document>

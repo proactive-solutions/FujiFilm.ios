@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		E054A06463E128B5D39D0700 /* Pods_FujiFilm.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4331B429E0D452ACAD1E20FA /* Pods_FujiFilm.framework */; };
+		F225D4212224F97200332293 /* QRSaveSuccess.swift in Sources */ = {isa = PBXBuildFile; fileRef = F225D4202224F97200332293 /* QRSaveSuccess.swift */; };
 		F2B1F73B222284B500CBEA40 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F2B1F73A222284B500CBEA40 /* AppDelegate.swift */; };
 		F2B1F73D222284B500CBEA40 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F2B1F73C222284B500CBEA40 /* LoginViewController.swift */; };
 		F2B1F740222284B500CBEA40 /* Login.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F2B1F73E222284B500CBEA40 /* Login.storyboard */; };
@@ -92,13 +93,14 @@
 		F2F9639C22245E44001F51D5 /* WarrantyViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F2F9639B22245E44001F51D5 /* WarrantyViewController.swift */; };
 		F2F9639F22245F09001F51D5 /* WarrantyCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = F2F9639D22245F09001F51D5 /* WarrantyCell.swift */; };
 		F2F963A022245F09001F51D5 /* WarrantyCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = F2F9639E22245F09001F51D5 /* WarrantyCell.xib */; };
-		F2F963A322246AFE001F51D5 /* File.swift in Sources */ = {isa = PBXBuildFile; fileRef = F2F963A222246AFE001F51D5 /* File.swift */; };
+		F2F963A322246AFE001F51D5 /* TimestampToDateConvertible.swift in Sources */ = {isa = PBXBuildFile; fileRef = F2F963A222246AFE001F51D5 /* TimestampToDateConvertible.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		4331B429E0D452ACAD1E20FA /* Pods_FujiFilm.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_FujiFilm.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		B9AC35523AD33718DC5ED1ED /* Pods-FujiFilm.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-FujiFilm.debug.xcconfig"; path = "Pods/Target Support Files/Pods-FujiFilm/Pods-FujiFilm.debug.xcconfig"; sourceTree = "<group>"; };
 		BE451DCF4657DD3DFFE8386D /* Pods-FujiFilm.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-FujiFilm.release.xcconfig"; path = "Pods/Target Support Files/Pods-FujiFilm/Pods-FujiFilm.release.xcconfig"; sourceTree = "<group>"; };
+		F225D4202224F97200332293 /* QRSaveSuccess.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QRSaveSuccess.swift; sourceTree = "<group>"; };
 		F2B1F737222284B500CBEA40 /* FujiFilm.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = FujiFilm.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		F2B1F73A222284B500CBEA40 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		F2B1F73C222284B500CBEA40 /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
@@ -185,7 +187,7 @@
 		F2F9639B22245E44001F51D5 /* WarrantyViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WarrantyViewController.swift; sourceTree = "<group>"; };
 		F2F9639D22245F09001F51D5 /* WarrantyCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WarrantyCell.swift; sourceTree = "<group>"; };
 		F2F9639E22245F09001F51D5 /* WarrantyCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = WarrantyCell.xib; sourceTree = "<group>"; };
-		F2F963A222246AFE001F51D5 /* File.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = File.swift; sourceTree = "<group>"; };
+		F2F963A222246AFE001F51D5 /* TimestampToDateConvertible.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TimestampToDateConvertible.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -252,7 +254,7 @@
 				F2B1F743222284B700CBEA40 /* LaunchScreen.storyboard */,
 				F2B1F746222284B700CBEA40 /* Info.plist */,
 				F2B1F7AD222288EE00CBEA40 /* GeneralConstant.swift */,
-				F2F963A222246AFE001F51D5 /* File.swift */,
+				F2F963A222246AFE001F51D5 /* TimestampToDateConvertible.swift */,
 			);
 			path = FujiFilm;
 			sourceTree = "<group>";
@@ -443,6 +445,7 @@
 				F2D8D74D2223261400B15CC7 /* APIError.swift */,
 				F2D8D74F222327F100B15CC7 /* UserDetails.swift */,
 				F2D8D751222336F500B15CC7 /* EventList.swift */,
+				F225D4202224F97200332293 /* QRSaveSuccess.swift */,
 			);
 			path = models;
 			sourceTree = "<group>";
@@ -652,12 +655,13 @@
 				F2B1F772222285D200CBEA40 /* UIApplication+Extension.swift in Sources */,
 				F2B1F785222285D200CBEA40 /* FujiFilmTextView.swift in Sources */,
 				F2B1F774222285D200CBEA40 /* UIFont+Extension.swift in Sources */,
+				F225D4212224F97200332293 /* QRSaveSuccess.swift in Sources */,
 				F2B1F76F222285D200CBEA40 /* NSObject+Extension.swift in Sources */,
 				F2B1F79E2222866800CBEA40 /* CustomFontStyle.swift in Sources */,
 				F2B1F780222285D200CBEA40 /* FujiFilmTableView.swift in Sources */,
 				F2B1F783222285D200CBEA40 /* FujiFilmImageView.swift in Sources */,
 				F2F9639F22245F09001F51D5 /* WarrantyCell.swift in Sources */,
-				F2F963A322246AFE001F51D5 /* File.swift in Sources */,
+				F2F963A322246AFE001F51D5 /* TimestampToDateConvertible.swift in Sources */,
 				F2D8D752222336F500B15CC7 /* EventList.swift in Sources */,
 				F2B1F7A42222866800CBEA40 /* CellXibs.swift in Sources */,
 			);
