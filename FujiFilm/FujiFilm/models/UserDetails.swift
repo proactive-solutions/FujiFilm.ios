@@ -42,6 +42,10 @@ struct UserDetails: Codable {
         let fldCurrency: String
         let fldCreatedat: String
 
+        var fullName: String {
+            return (fldFirstname + " " + fldFamilyname)
+        }
+
         enum CodingKeys: String, CodingKey {
             case fldDid = "fld_did"
             case fldSlug = "fld_slug"

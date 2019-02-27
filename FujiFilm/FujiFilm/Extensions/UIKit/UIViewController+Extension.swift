@@ -87,13 +87,10 @@ extension UIViewController {
     }
 
     func logout() {
-        /*
-         let storyboardName = StoryBoardNames.login
-         guard let controller = storyboardName.instatiateController() as? LoginViewController else {
-         fatalError(controllerCastingErrorMessage)
-         }
-         navigationController?.setViewControllers([controller], animated: true)
-         */
+        UserDefaults.standard.userDetails = nil
+        let storyboardName = StoryBoardNames.login
+        let controller = storyboardName.initialController()
+        AppDelegate.shared.window?.rootViewController = controller
     }
 
     @objc

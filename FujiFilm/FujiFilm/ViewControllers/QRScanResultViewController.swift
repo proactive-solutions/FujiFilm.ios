@@ -47,8 +47,10 @@ class QRScanResultViewController: FujiFilmViewController {
                 self.view.hideLoader()
                 if let success = try? JSONDecoder().decode(QRSaveSuccess.self, from: data) {
                     self.view.show(success: success.message)
-                    self.nameLabel.text = "\(success.result.attendanceCount)"
-                    self.cityLabel.text = success.result.eventCount
+                    self.nameLabel.text = "\(success.result.user.fldFullname)"
+                    self.cityLabel.text = success.result.user.fldCity
+                    self.dateLabel.text = success.result.user.date
+                    self.timeLabel.text = success.result.user.startTime
                 } else if let fail = try? JSONDecoder().decode(APIError.self, from: data) {
                     self.view.show(error: fail.message)
                     DispatchQueue.main.asyncAfter(deadline: DispatchTime.now() + 1.5) { [weak self] in

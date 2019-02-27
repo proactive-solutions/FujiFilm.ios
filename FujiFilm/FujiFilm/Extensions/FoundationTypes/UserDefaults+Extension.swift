@@ -21,6 +21,8 @@ extension UserDefaults {
             if let details = newValue, let data = try? JSONEncoder().encode(details) {
                 set(data, forKey: UserDefaultKeys.userDetails.rawValue)
                 synchronize()
+            } else {
+                set(nil, forKey: UserDefaultKeys.userDetails.rawValue)
             }
         }
     }

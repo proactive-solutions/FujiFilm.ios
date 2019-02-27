@@ -25,10 +25,10 @@ final class LeftMenuViewController: FujiFilmViewController, UITableViewDataSourc
     ]
 
     private let menuTitles: [String] = [
-        "Workshop",
+        "Workshops",
         "Loan Program",
         "Warranty",
-        "Change Password",
+        // "Change Password",
         "Logout",
     ]
 
@@ -36,7 +36,7 @@ final class LeftMenuViewController: FujiFilmViewController, UITableViewDataSourc
         #imageLiteral(resourceName: "Workshop_icon"),
         #imageLiteral(resourceName: "loan_program_icon"),
         #imageLiteral(resourceName: "warranty_icon"),
-        #imageLiteral(resourceName: "change_password_icon"),
+        // #imageLiteral(resourceName: "change_password_icon"),
         #imageLiteral(resourceName: "logout_icon"),
     ]
 
@@ -50,8 +50,8 @@ final class LeftMenuViewController: FujiFilmViewController, UITableViewDataSourc
         leftmenuTAbleView.sectionHeaderHeight = 100.0
 
         if let details = UserDefaults.standard.userDetails {
-            headerView.nameLabel.text = details.result.fldFirstname + " " + details.result.fldFamilyname
-            headerView.locationlabel.text = (details.result.fldAddress + details.result.fldAddress1)
+            headerView.nameLabel.text = details.result.fullName
+            headerView.locationlabel.text = details.result.fldCity
         }
 
         navigationController?.isNavigationBarHidden = true
@@ -60,8 +60,8 @@ final class LeftMenuViewController: FujiFilmViewController, UITableViewDataSourc
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
         if let details = UserDefaults.standard.userDetails {
-            headerView.nameLabel.text = details.result.fldFirstname + " " + details.result.fldFamilyname
-            headerView.locationlabel.text = (details.result.fldAddress + details.result.fldAddress1)
+            headerView.nameLabel.text = details.result.fullName
+            headerView.locationlabel.text = details.result.fldCity
         }
     }
 
@@ -87,12 +87,12 @@ final class LeftMenuViewController: FujiFilmViewController, UITableViewDataSourc
 
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         tableView.deselectRow(at: indexPath, animated: false)
-        if indexPath.row <= 3 {
+        if indexPath.row <= 2 {
             let controller = menus[indexPath.row].initialController()
             navigationController?.pushViewController(controller, animated: true)
             controller.title = menuTitles[indexPath.row]
         } else {
-            UserDefaults.standard.userDetails = nil
+            dismiss(animated: false, completion: nil)
             logout()
         }
     }

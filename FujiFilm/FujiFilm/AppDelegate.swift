@@ -19,29 +19,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
         IQKeyboardManager.shared().isEnabled = true
 
-        // Define the menus
-        let menuLeftNavigationController = UISideMenuNavigationController(
-            rootViewController: StoryBoardNames.leftMenu.initialController()
-        )
-        // UISideMenuNavigationController is a subclass of UINavigationController, so do any additional configuration
-        // of it here like setting its viewControllers. If you're using storyboards, you'll want to do something like:
-        // let menuLeftNavigationController = storyboard!.instantiateViewController(withIdentifier: "LeftMenuNavigationController") as! UISideMenuNavigationController
-        SideMenuManager.default.menuLeftNavigationController = menuLeftNavigationController
-
-        let menuRightNavigationController = UISideMenuNavigationController(rootViewController: UIViewController())
-        // UISideMenuNavigationController is a subclass of UINavigationController, so do any additional configuration
-        // of it here like setting its viewControllers. If you're using storyboards, you'll want to do something like:
-        // let menuRightNavigationController = storyboard!.instantiateViewController(withIdentifier: "RightMenuNavigationController") as! UISideMenuNavigationController
-        SideMenuManager.default.menuRightNavigationController = menuRightNavigationController
-
-        // (Optional) Enable gestures. The left and/or right menus must be set up above for these to work.
-        // Note that these continue to work on the Navigation Controller independent of the view controller it displays!
-        // SideMenuManager.default.menuAddPanGestureToPresent(toView: self.navigationController!.navigationBar)
-        // SideMenuManager.default.menuAddScreenEdgePanGesturesToPresent(toView: self.navigationController!.view)
-
-        // (Optional) Prevent status bar area from turning black when menu appears:
-        SideMenuManager.default.menuFadeStatusBar = false
-        SideMenuManager.default.menuWidth = (window?.widthValue ?? 320) * 0.8
+        sidemenuSetup()
 
         if let _ = UserDefaults.standard.userDetails {
             let controller = StoryBoardNames.dashboard.initialController()
@@ -71,5 +49,35 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
     func applicationWillTerminate(_: UIApplication) {
         // Called when the application is about to terminate. Save data if appropriate. See also applicationDidEnterBackground:.
+    }
+
+    func sidemenuSetup() {
+        // Define the menus
+        let menuLeftNavigationController = UISideMenuNavigationController(
+            rootViewController: StoryBoardNames.leftMenu.initialController()
+        )
+        // UISideMenuNavigationController is a subclass of UINavigationController, so do any additional configuration
+        // of it here like setting its viewControllers. If you're using storyboards, you'll want to do something like:
+        // let menuLeftNavigationController = storyboard!.instantiateViewController(withIdentifier: "LeftMenuNavigationController") as! UISideMenuNavigationController
+        SideMenuManager.default.menuLeftNavigationController = menuLeftNavigationController
+
+        let menuRightNavigationController = UISideMenuNavigationController(rootViewController: UIViewController())
+        // UISideMenuNavigationController is a subclass of UINavigationController, so do any additional configuration
+        // of it here like setting its viewControllers. If you're using storyboards, you'll want to do something like:
+        // let menuRightNavigationController = storyboard!.instantiateViewController(withIdentifier: "RightMenuNavigationController") as! UISideMenuNavigationController
+        SideMenuManager.default.menuRightNavigationController = menuRightNavigationController
+
+        // (Optional) Enable gestures. The left and/or right menus must be set up above for these to work.
+        // Note that these continue to work on the Navigation Controller independent of the view controller it displays!
+        // SideMenuManager.default.menuAddPanGestureToPresent(toView: self.navigationController!.navigationBar)
+        // SideMenuManager.default.menuAddScreenEdgePanGesturesToPresent(toView: self.navigationController!.view)
+
+        // (Optional) Prevent status bar area from turning black when menu appears:
+        SideMenuManager.default.menuFadeStatusBar = false
+        SideMenuManager.default.menuWidth = (window?.widthValue ?? 320) * 0.8
+    }
+
+    class var shared: AppDelegate {
+        return (UIApplication.shared.delegate as! AppDelegate)
     }
 }
