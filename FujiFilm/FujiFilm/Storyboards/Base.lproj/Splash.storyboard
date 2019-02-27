@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14460.31" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BTM-Lc-qzG">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14460.20"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Navigation Controller-->
+        <scene sceneID="TjE-gO-FpI">
+            <objects>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Ze9-eB-8EE" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="BTM-Lc-qzG" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" translucent="NO" id="jYH-8W-1hl" customClass="FujiFilmNavigationBar" customModule="FujiFilm" customModuleProvider="target">
+                        <rect key="frame" x="0.0" y="20" width="375" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                        <color key="backgroundColor" red="1" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <color key="barTintColor" cocoaTouchSystemColor="darkTextColor"/>
+                        <textAttributes key="largeTitleTextAttributes">
+                            <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        </textAttributes>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="7Bn-HO-NXO" kind="relationship" relationship="rootViewController" id="gZO-Rj-2Ag"/>
+                    </connections>
+                </navigationController>
+            </objects>
+            <point key="canvasLocation" x="606" y="35"/>
+        </scene>
+        <!--Splash View Controller-->
+        <scene sceneID="6Bb-5t-l3j">
+            <objects>
+                <viewController storyboardIdentifier="SplashViewController" id="7Bn-HO-NXO" customClass="SplashViewController" customModule="FujiFilm" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="IF2-mk-6bw">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="splash_image" translatesAutoresizingMaskIntoConstraints="NO" id="JJD-kb-Slt">
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                            </imageView>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Logo" translatesAutoresizingMaskIntoConstraints="NO" id="Lka-Zh-tZM">
+                                <rect key="frame" x="126.5" y="100" width="122" height="24"/>
+                            </imageView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="JJD-kb-Slt" firstAttribute="leading" secondItem="IF2-mk-6bw" secondAttribute="leading" id="Efx-eP-jC6"/>
+                            <constraint firstAttribute="bottom" secondItem="JJD-kb-Slt" secondAttribute="bottom" id="I08-Ch-6Nq"/>
+                            <constraint firstItem="Lka-Zh-tZM" firstAttribute="top" secondItem="4uU-BE-6So" secondAttribute="top" constant="80" id="MmF-D6-Lxo"/>
+                            <constraint firstItem="Lka-Zh-tZM" firstAttribute="centerX" secondItem="IF2-mk-6bw" secondAttribute="centerX" id="aUn-kZ-8OP"/>
+                            <constraint firstItem="JJD-kb-Slt" firstAttribute="top" secondItem="IF2-mk-6bw" secondAttribute="top" id="tBk-rs-aVb"/>
+                            <constraint firstAttribute="trailing" secondItem="JJD-kb-Slt" secondAttribute="trailing" id="zd1-Ku-gRH"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="4uU-BE-6So"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="b3v-jh-Hyd"/>
+                    <nil key="simulatedTopBarMetrics"/>
+                    <nil key="simulatedBottomBarMetrics"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="SgS-h5-a0g" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1356" y="35"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="Logo" width="122.5" height="24"/>
+        <image name="splash_image" width="360" height="640"/>
+    </resources>
+</document>

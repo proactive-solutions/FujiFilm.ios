@@ -15,6 +15,7 @@ extension String {
 }
 
 class WorkshopCell: UITableViewCell {
+    @IBOutlet private var outerWrapperView: UIView!
     @IBOutlet private var iconImageView: FujiFilmImageView!
     @IBOutlet private var nameLabel: FujiFilmLabel!
     @IBOutlet private var dateLabel1: FujiFilmLabel!
@@ -28,17 +29,29 @@ class WorkshopCell: UITableViewCell {
 
     override func awakeFromNib() {
         super.awakeFromNib()
+
+        applyShadoEffect()
+
+        outerWrapperView.addShadow()
     }
 
     override func prepareForReuse() {
         super.prepareForReuse()
         iconImageView.cancelImageDownload()
+        applyShadoEffect()
     }
 
     override func setSelected(_ selected: Bool, animated: Bool) {
         super.setSelected(selected, animated: animated)
 
         // Configure the view for the selected state
+    }
+
+    private func applyShadoEffect() {
+        DispatchQueue.main.asyncAfter(deadline: DispatchTime.now() + 0.2) { [weak self] in
+            guard let self = self else { return }
+            self.outerWrapperView.addShadow()
+        }
     }
 
     @IBAction private func scanQRCode(_: UIButton) {

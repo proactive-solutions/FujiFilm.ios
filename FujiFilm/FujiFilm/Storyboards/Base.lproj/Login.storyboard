@@ -160,6 +160,7 @@
         <!--Navigation Controller-->
         <scene sceneID="TjE-gO-FpI">
             <objects>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Ze9-eB-8EE" userLabel="First Responder" sceneMemberID="firstResponder"/>
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="BTM-Lc-qzG" sceneMemberID="viewController">
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" translucent="NO" id="jYH-8W-1hl" customClass="FujiFilmNavigationBar" customModule="FujiFilm" customModuleProvider="target">
@@ -174,10 +175,9 @@
                     </navigationBar>
                     <nil name="viewControllers"/>
                     <connections>
-                        <segue destination="BYZ-38-t0r" kind="relationship" relationship="rootViewController" id="bi4-pj-L2q"/>
+                        <segue destination="BYZ-38-t0r" kind="relationship" relationship="rootViewController" id="huY-gt-skA"/>
                     </connections>
                 </navigationController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="Ze9-eB-8EE" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="610" y="25"/>
         </scene>

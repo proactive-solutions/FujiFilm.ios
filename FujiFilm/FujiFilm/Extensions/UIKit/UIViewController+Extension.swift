@@ -15,6 +15,20 @@ extension UIViewController {
         )
         present(ac, animated: true, completion: nil)
     }
+
+    func add(_ child: UIViewController) {
+        addChild(child)
+        view.addSubview(child.view)
+        child.didMove(toParent: self)
+    }
+
+    func remove() {
+        guard let _ = parent else { return }
+
+        willMove(toParent: nil)
+        removeFromParent()
+        view.removeFromSuperview()
+    }
 }
 
 // MARK: - Navigation

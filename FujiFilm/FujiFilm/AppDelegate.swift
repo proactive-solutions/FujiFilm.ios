@@ -21,11 +21,6 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
         sidemenuSetup()
 
-        if let _ = UserDefaults.standard.userDetails {
-            let controller = StoryBoardNames.dashboard.initialController()
-            (window?.rootViewController as? UINavigationController)?.setViewControllers([controller], animated: false)
-        }
-
         return true
     }
 

@@ -9,6 +9,8 @@
 /* Begin PBXBuildFile section */
 		E054A06463E128B5D39D0700 /* Pods_FujiFilm.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4331B429E0D452ACAD1E20FA /* Pods_FujiFilm.framework */; };
 		F225D4212224F97200332293 /* QRSaveSuccess.swift in Sources */ = {isa = PBXBuildFile; fileRef = F225D4202224F97200332293 /* QRSaveSuccess.swift */; };
+		F2653E5C2227036800BD0C1A /* SplashViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F2653E5B2227036800BD0C1A /* SplashViewController.swift */; };
+		F2653E5F222703BA00BD0C1A /* Splash.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F2653E5D222703BA00BD0C1A /* Splash.storyboard */; };
 		F2B1F73B222284B500CBEA40 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F2B1F73A222284B500CBEA40 /* AppDelegate.swift */; };
 		F2B1F73D222284B500CBEA40 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F2B1F73C222284B500CBEA40 /* LoginViewController.swift */; };
 		F2B1F740222284B500CBEA40 /* Login.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F2B1F73E222284B500CBEA40 /* Login.storyboard */; };
@@ -101,6 +103,8 @@
 		B9AC35523AD33718DC5ED1ED /* Pods-FujiFilm.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-FujiFilm.debug.xcconfig"; path = "Pods/Target Support Files/Pods-FujiFilm/Pods-FujiFilm.debug.xcconfig"; sourceTree = "<group>"; };
 		BE451DCF4657DD3DFFE8386D /* Pods-FujiFilm.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-FujiFilm.release.xcconfig"; path = "Pods/Target Support Files/Pods-FujiFilm/Pods-FujiFilm.release.xcconfig"; sourceTree = "<group>"; };
 		F225D4202224F97200332293 /* QRSaveSuccess.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QRSaveSuccess.swift; sourceTree = "<group>"; };
+		F2653E5B2227036800BD0C1A /* SplashViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SplashViewController.swift; sourceTree = "<group>"; };
+		F2653E5E222703BA00BD0C1A /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Splash.storyboard; sourceTree = "<group>"; };
 		F2B1F737222284B500CBEA40 /* FujiFilm.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = FujiFilm.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		F2B1F73A222284B500CBEA40 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		F2B1F73C222284B500CBEA40 /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
@@ -383,6 +387,7 @@
 				F2B1F7DE2222A5EB00CBEA40 /* ForgotPasswordViewController.swift */,
 				F2B1F7E62222E6AF00CBEA40 /* LeftMenuViewController..swift */,
 				F2B1F73C222284B500CBEA40 /* LoginViewController.swift */,
+				F2653E5B2227036800BD0C1A /* SplashViewController.swift */,
 			);
 			path = ViewControllers;
 			sourceTree = "<group>";
@@ -392,6 +397,7 @@
 			children = (
 				F2D8D7382223005800B15CC7 /* Workshop.storyboard */,
 				F2D8D72A2222F5BE00B15CC7 /* Dashboard.storyboard */,
+				F2653E5D222703BA00BD0C1A /* Splash.storyboard */,
 				F2F9639822245E1E001F51D5 /* Warranty.storyboard */,
 				F2B1F7E32222E62B00CBEA40 /* LeftMenu.storyboard */,
 				F2B1F73E222284B500CBEA40 /* Login.storyboard */,
@@ -539,6 +545,7 @@
 				F2B1F7C92222996C00CBEA40 /* Raleway-ExtraLight.ttf in Resources */,
 				F2D8D745222304B300B15CC7 /* WorkshopCell.xib in Resources */,
 				F2B1F7CE2222996C00CBEA40 /* Raleway-ExtraBoldItalic.ttf in Resources */,
+				F2653E5F222703BA00BD0C1A /* Splash.storyboard in Resources */,
 				F2B1F7C82222996C00CBEA40 /* Raleway-ThinItalic.ttf in Resources */,
 				F2D8D72C2222F5BE00B15CC7 /* Dashboard.storyboard in Resources */,
 				F2B1F7CF2222996C00CBEA40 /* Raleway-Regular.ttf in Resources */,
@@ -626,6 +633,7 @@
 				F2B1F78A222285D200CBEA40 /* FujiFilmLabel.swift in Sources */,
 				F2D8D74B22231CB500B15CC7 /* QRScanResultViewController.swift in Sources */,
 				F2B1F776222285D200CBEA40 /* UILabel+Extension.swift in Sources */,
+				F2653E5C2227036800BD0C1A /* SplashViewController.swift in Sources */,
 				F2B1F777222285D200CBEA40 /* UIButton+Extension.swift in Sources */,
 				F2B1F773222285D200CBEA40 /* UIImageView+Extension.swift in Sources */,
 				F2D8D74E2223261400B15CC7 /* APIError.swift in Sources */,
@@ -670,6 +678,14 @@
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXVariantGroup section */
+		F2653E5D222703BA00BD0C1A /* Splash.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				F2653E5E222703BA00BD0C1A /* Base */,
+			);
+			name = Splash.storyboard;
+			sourceTree = "<group>";
+		};
 		F2B1F73E222284B500CBEA40 /* Login.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
