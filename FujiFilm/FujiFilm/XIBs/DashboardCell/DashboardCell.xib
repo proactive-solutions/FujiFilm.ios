@@ -31,12 +31,14 @@
                         </userDefinedRuntimeAttributes>
                     </imageView>
                 </subviews>
+                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                 <constraints>
                     <constraint firstItem="M2u-Mt-ryb" firstAttribute="centerY" secondItem="H2p-sc-9uM" secondAttribute="centerY" id="6VA-ly-a0z"/>
                     <constraint firstItem="M2u-Mt-ryb" firstAttribute="centerX" secondItem="H2p-sc-9uM" secondAttribute="centerX" id="SSh-Mo-RMk"/>
                     <constraint firstItem="M2u-Mt-ryb" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="topMargin" id="uCm-jg-npE"/>
                 </constraints>
             </tableViewCellContentView>
+            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
             <connections>
                 <outlet property="logoImageView" destination="M2u-Mt-ryb" id="plr-ec-HZl"/>
             </connections>

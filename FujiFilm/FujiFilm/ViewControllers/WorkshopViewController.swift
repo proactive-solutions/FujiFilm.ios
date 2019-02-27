@@ -94,20 +94,20 @@ final class WorkshopViewController: FujiFilmViewController, UITableViewDataSourc
     }
 
     private func scanQR(event: EventList.Result) {
-        self.showQRScanResult("ABC123", event: event)
+//        self.showQRScanResult("ABC123", event: event)
 
-//        readerVC.delegate = self
-//
-//        // Or by using the closure pattern
-//        readerVC.completionBlock = { [weak self] (result: QRCodeReaderResult?) in
-//            if let _result = result?.value {
-//                self?.showQRScanResult(_result, event: event)
-//            }
-//        }
-//
-//        // Presents the readerVC as modal form sheet
-//        readerVC.modalPresentationStyle = .formSheet
-//        present(readerVC, animated: true, completion: nil)
+        readerVC.delegate = self
+
+        // Or by using the closure pattern
+        readerVC.completionBlock = { [weak self] (result: QRCodeReaderResult?) in
+            if let _result = result?.value {
+                self?.showQRScanResult(_result, event: event)
+            }
+        }
+
+        // Presents the readerVC as modal form sheet
+        readerVC.modalPresentationStyle = .formSheet
+        present(readerVC, animated: true, completion: nil)
     }
 
     func reader(_ reader: QRCodeReaderViewController, didScanResult _: QRCodeReaderResult) {
