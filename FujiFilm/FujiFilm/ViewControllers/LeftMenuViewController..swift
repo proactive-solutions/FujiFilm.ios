@@ -20,7 +20,7 @@ final class LeftMenuViewController: FujiFilmViewController, UITableViewDataSourc
     private lazy var menus: [StoryBoardNames] = [
         StoryBoardNames.dashboard,
         StoryBoardNames.Warranty,
-        StoryBoardNames.Warranty,
+        StoryBoardNames.WarrantySearch,
         StoryBoardNames.Warranty,
     ]
 

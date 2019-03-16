@@ -68,6 +68,7 @@ final class DashboardViewController: FujiFilmViewController, UITableViewDataSour
             showWorkshop()
         } else if indexPath.row == 1 {
         } else if indexPath.row == 2 {
+            showWarrantySearch()
         }
     }
 }

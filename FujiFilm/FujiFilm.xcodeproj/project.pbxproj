@@ -91,6 +91,8 @@
 		F2D8D74E2223261400B15CC7 /* APIError.swift in Sources */ = {isa = PBXBuildFile; fileRef = F2D8D74D2223261400B15CC7 /* APIError.swift */; };
 		F2D8D750222327F100B15CC7 /* UserDetails.swift in Sources */ = {isa = PBXBuildFile; fileRef = F2D8D74F222327F100B15CC7 /* UserDetails.swift */; };
 		F2D8D752222336F500B15CC7 /* EventList.swift in Sources */ = {isa = PBXBuildFile; fileRef = F2D8D751222336F500B15CC7 /* EventList.swift */; };
+		F2E6E36D223D79CA00382BFF /* WarrantySearchViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F2E6E36C223D79CA00382BFF /* WarrantySearchViewController.swift */; };
+		F2E6E370223D7A0700382BFF /* WarrantySearch.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F2E6E36E223D7A0700382BFF /* WarrantySearch.storyboard */; };
 		F2F9639A22245E1E001F51D5 /* Warranty.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F2F9639822245E1E001F51D5 /* Warranty.storyboard */; };
 		F2F9639C22245E44001F51D5 /* WarrantyViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F2F9639B22245E44001F51D5 /* WarrantyViewController.swift */; };
 		F2F9639F22245F09001F51D5 /* WarrantyCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = F2F9639D22245F09001F51D5 /* WarrantyCell.swift */; };
@@ -187,6 +189,8 @@
 		F2D8D74D2223261400B15CC7 /* APIError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIError.swift; sourceTree = "<group>"; };
 		F2D8D74F222327F100B15CC7 /* UserDetails.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserDetails.swift; sourceTree = "<group>"; };
 		F2D8D751222336F500B15CC7 /* EventList.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EventList.swift; sourceTree = "<group>"; };
+		F2E6E36C223D79CA00382BFF /* WarrantySearchViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WarrantySearchViewController.swift; sourceTree = "<group>"; };
+		F2E6E36F223D7A0700382BFF /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/WarrantySearch.storyboard; sourceTree = "<group>"; };
 		F2F9639922245E1E001F51D5 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Warranty.storyboard; sourceTree = "<group>"; };
 		F2F9639B22245E44001F51D5 /* WarrantyViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WarrantyViewController.swift; sourceTree = "<group>"; };
 		F2F9639D22245F09001F51D5 /* WarrantyCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WarrantyCell.swift; sourceTree = "<group>"; };
@@ -388,6 +392,7 @@
 				F2B1F7E62222E6AF00CBEA40 /* LeftMenuViewController..swift */,
 				F2B1F73C222284B500CBEA40 /* LoginViewController.swift */,
 				F2653E5B2227036800BD0C1A /* SplashViewController.swift */,
+				F2E6E36C223D79CA00382BFF /* WarrantySearchViewController.swift */,
 			);
 			path = ViewControllers;
 			sourceTree = "<group>";
@@ -395,6 +400,7 @@
 		F2B1F7DA2222A5A200CBEA40 /* Storyboards */ = {
 			isa = PBXGroup;
 			children = (
+				F2E6E36E223D7A0700382BFF /* WarrantySearch.storyboard */,
 				F2D8D7382223005800B15CC7 /* Workshop.storyboard */,
 				F2D8D72A2222F5BE00B15CC7 /* Dashboard.storyboard */,
 				F2653E5D222703BA00BD0C1A /* Splash.storyboard */,
@@ -525,6 +531,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				F2E6E370223D7A0700382BFF /* WarrantySearch.storyboard in Resources */,
 				F2B1F7D12222996C00CBEA40 /* Raleway-SemiBoldItalic.ttf in Resources */,
 				F2B1F7D72222996C00CBEA40 /* Raleway-Italic.ttf in Resources */,
 				F2B1F745222284B700CBEA40 /* LaunchScreen.storyboard in Resources */,
@@ -617,6 +624,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				F2E6E36D223D79CA00382BFF /* WarrantySearchViewController.swift in Sources */,
 				F2B1F770222285D200CBEA40 /* String+Extension.swift in Sources */,
 				F2D8D72E2222FAF000B15CC7 /* DashboardViewController.swift in Sources */,
 				F2B1F779222285D200CBEA40 /* UIViewController+Extension.swift in Sources */,
@@ -740,6 +748,14 @@
 				F2D8D74822231C7F00B15CC7 /* Base */,
 			);
 			name = QRScanResult.storyboard;
+			sourceTree = "<group>";
+		};
+		F2E6E36E223D7A0700382BFF /* WarrantySearch.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				F2E6E36F223D7A0700382BFF /* Base */,
+			);
+			name = WarrantySearch.storyboard;
 			sourceTree = "<group>";
 		};
 		F2F9639822245E1E001F51D5 /* Warranty.storyboard */ = {

@@ -92,7 +92,19 @@ extension UIViewController {
     func showWarranty(_: String) -> WarrantyViewController {
         let storyboardName = StoryBoardNames.Warranty
 
-        guard let controller = storyboardName.instatiateController() as? WarrantyViewController else {
+        guard let controller = storyboardName.initialController() as? WarrantyViewController else {
+            fatalError(controllerCastingErrorMessage)
+        }
+
+        navigationController?.pushViewController(controller, animated: true)
+        return controller
+    }
+
+    @discardableResult
+    func showWarrantySearch() -> WarrantySearchViewController {
+        let storyboardName = StoryBoardNames.WarrantySearch
+
+        guard let controller = storyboardName.initialController() as? WarrantySearchViewController else {
             fatalError(controllerCastingErrorMessage)
         }
 

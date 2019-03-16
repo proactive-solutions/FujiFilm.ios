@@ -22,8 +22,6 @@ class FujiFilmViewController: UIViewController {
         observeLanguageChangeNotification()
         navigationController?.interactivePopGestureRecognizer?.isEnabled = false
         navigationController?.isNavigationBarHidden = false
-        // navigationItem.titleView = UIImageView(image: #imageLiteral(resourceName: "Logo-Black"))
-        navigationItem.titleView = nil
         updateText()
 
         let item = UIBarButtonItem(
