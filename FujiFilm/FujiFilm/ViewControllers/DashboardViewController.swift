@@ -27,10 +27,20 @@ final class DashboardViewController: FujiFilmViewController, UITableViewDataSour
         navigationItem.hidesBackButton = true
         navigationItem.leftBarButtonItem = UIBarButtonItem(
             image: #imageLiteral(resourceName: "toggle_icon"),
-            style: UIBarButtonItem.Style.plain,
+            style: .plain,
             target: self,
             action: #selector(showSideMenu)
         )
+
+        let iv = UIImageView.init(image: #imageLiteral(resourceName: "dashboard_logo"))
+        iv.contentMode = .scaleAspectFit
+        iv.sizeToFit()
+        navigationItem.rightBarButtonItem = UIBarButtonItem.init(customView: iv)
+    }
+
+    override func viewDidAppear(_ animated: Bool) {
+        super.viewDidAppear(animated)
+        self.title = nil
     }
 
     func numberOfSections(in _: UITableView) -> Int {

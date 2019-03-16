@@ -19,6 +19,11 @@ final class ForgotPasswordViewController: FujiFilmViewController {
         }
     }
 
+    override func viewDidAppear(_ animated: Bool) {
+        super.viewDidAppear(animated)
+        self.title = "Forgot Password"
+    }
+
     @IBAction func submitAction(_: FujiFilmButton) {
         if emailTextField.text?.trimmed.count == 0 {
             view.show(error: "Please enter your email address")

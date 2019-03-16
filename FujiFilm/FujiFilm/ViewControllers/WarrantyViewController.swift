@@ -27,6 +27,12 @@ final class WarrantyViewController: FujiFilmViewController, UITableViewDataSourc
         menuTableView.addExtraScrollAt(top: 20.0)
     }
 
+    override func viewDidAppear(_ animated: Bool) {
+        super.viewDidAppear(animated)
+        self.title = "Warranty"
+    }
+
+
     func numberOfSections(in _: UITableView) -> Int {
         return 1
     }

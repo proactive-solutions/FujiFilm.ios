@@ -35,7 +35,7 @@
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="e0k-jZ-7Dx">
                                         <rect key="frame" x="0.0" y="0.0" width="317" height="200"/>
                                         <subviews>
-                                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="workshop_placeholder" translatesAutoresizingMaskIntoConstraints="NO" id="bS2-51-C52" customClass="FujiFilmImageView" customModule="FujiFilm" customModuleProvider="target">
+                                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="workshop_placeholder" translatesAutoresizingMaskIntoConstraints="NO" id="bS2-51-C52" customClass="FujiFilmImageView" customModule="FujiFilm" customModuleProvider="target">
                                                 <rect key="frame" x="0.0" y="0.0" width="317" height="200"/>
                                                 <userDefinedRuntimeAttributes>
                                                     <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
@@ -140,10 +140,10 @@
                                         </constraints>
                                     </stackView>
                                     <stackView opaque="NO" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" axis="vertical" distribution="fillEqually" translatesAutoresizingMaskIntoConstraints="NO" id="EKL-Io-QH4">
-                                        <rect key="frame" x="10" y="235" width="118" height="75"/>
+                                        <rect key="frame" x="10" y="235" width="138" height="75"/>
                                         <subviews>
                                             <view contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" translatesAutoresizingMaskIntoConstraints="NO" id="bJB-Kt-qzG">
-                                                <rect key="frame" x="0.0" y="0.0" width="118" height="25"/>
+                                                <rect key="frame" x="0.0" y="0.0" width="138" height="25"/>
                                                 <subviews>
                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" text="Attendee - " textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumScaleFactor="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="Bcz-og-Vp1" customClass="FujiFilmLabel" customModule="FujiFilm" customModuleProvider="target">
                                                         <rect key="frame" x="0.0" y="5" width="69.5" height="15.5"/>
@@ -167,7 +167,7 @@
                                                 </constraints>
                                             </view>
                                             <view contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Vh7-Jy-OXl">
-                                                <rect key="frame" x="0.0" y="25" width="118" height="25"/>
+                                                <rect key="frame" x="0.0" y="25" width="138" height="25"/>
                                                 <subviews>
                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" text="Present - " textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumScaleFactor="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="gv9-DW-DeK" customClass="FujiFilmLabel" customModule="FujiFilm" customModuleProvider="target">
                                                         <rect key="frame" x="0.0" y="5" width="59" height="15.5"/>
@@ -190,7 +190,7 @@
                                                 </constraints>
                                             </view>
                                             <view contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" translatesAutoresizingMaskIntoConstraints="NO" id="WmP-sa-P4D">
-                                                <rect key="frame" x="0.0" y="50" width="118" height="25"/>
+                                                <rect key="frame" x="0.0" y="50" width="138" height="25"/>
                                                 <subviews>
                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" text="Absent - " textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumScaleFactor="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="FDI-fR-faB" customClass="FujiFilmLabel" customModule="FujiFilm" customModuleProvider="target">
                                                         <rect key="frame" x="0.0" y="5" width="55.5" height="15.5"/>
@@ -215,7 +215,7 @@
                                         </subviews>
                                     </stackView>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="KFZ-LS-Krh">
-                                        <rect key="frame" x="157" y="235" width="120" height="75"/>
+                                        <rect key="frame" x="177" y="235" width="120" height="75"/>
                                         <subviews>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Hgt-Bp-WBT">
                                                 <rect key="frame" x="48" y="45" width="72" height="30"/>
@@ -238,7 +238,7 @@
                                     <constraint firstItem="e0k-jZ-7Dx" firstAttribute="top" secondItem="uHY-9t-4vJ" secondAttribute="top" id="1g6-XX-K5b"/>
                                     <constraint firstItem="KFZ-LS-Krh" firstAttribute="top" secondItem="9eB-AQ-6zv" secondAttribute="bottom" id="7gI-PN-ORP"/>
                                     <constraint firstItem="9eB-AQ-6zv" firstAttribute="trailing" secondItem="e0k-jZ-7Dx" secondAttribute="trailing" constant="-10" id="ON2-gQ-DHB"/>
-                                    <constraint firstAttribute="trailing" secondItem="KFZ-LS-Krh" secondAttribute="trailing" constant="40" id="OuV-Do-Ywf"/>
+                                    <constraint firstAttribute="trailing" secondItem="KFZ-LS-Krh" secondAttribute="trailing" constant="20" id="OuV-Do-Ywf"/>
                                     <constraint firstAttribute="bottom" secondItem="EKL-Io-QH4" secondAttribute="bottom" constant="20" id="RBT-sQ-5Kv"/>
                                     <constraint firstItem="EKL-Io-QH4" firstAttribute="leading" secondItem="9eB-AQ-6zv" secondAttribute="leading" id="Tne-ah-U7a"/>
                                     <constraint firstAttribute="trailing" secondItem="e0k-jZ-7Dx" secondAttribute="trailing" id="bZW-ft-Na8"/>

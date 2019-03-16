@@ -90,7 +90,6 @@ final class LeftMenuViewController: FujiFilmViewController, UITableViewDataSourc
         if indexPath.row <= 2 {
             let controller = menus[indexPath.row].initialController()
             navigationController?.pushViewController(controller, animated: true)
-            controller.title = menuTitles[indexPath.row]
         } else {
             dismiss(animated: false, completion: nil)
             logout()

@@ -10,10 +10,10 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--Dashboard-->
+        <!--Dashboard View Controller-->
         <scene sceneID="bJ7-Xr-IHO">
             <objects>
-                <viewController storyboardIdentifier="DashboardViewController" title="Dashboard" automaticallyAdjustsScrollViewInsets="NO" id="cal-Rp-o0J" customClass="DashboardViewController" customModule="FujiFilm" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="DashboardViewController" automaticallyAdjustsScrollViewInsets="NO" id="cal-Rp-o0J" customClass="DashboardViewController" customModule="FujiFilm" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="Rsz-ZY-wVx">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
