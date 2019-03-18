@@ -112,6 +112,30 @@ extension UIViewController {
         return controller
     }
 
+    @discardableResult
+    func showWarrantySearchResultViewController() -> WarrantySearchResultViewController {
+        let storyboardName = StoryBoardNames.WarrantySearchResult
+
+        guard let controller = storyboardName.initialController() as? WarrantySearchResultViewController else {
+            fatalError(controllerCastingErrorMessage)
+        }
+
+        navigationController?.pushViewController(controller, animated: true)
+        return controller
+    }
+
+    @discardableResult
+    func showProductDetailsController() -> ProductDetailsController {
+        let storyboardName = StoryBoardNames.ProductDetails
+
+        guard let controller = storyboardName.initialController() as? ProductDetailsController else {
+            fatalError(controllerCastingErrorMessage)
+        }
+
+        navigationController?.pushViewController(controller, animated: true)
+        return controller
+    }
+
     func logout() {
         UserDefaults.standard.userDetails = nil
         let storyboardName = StoryBoardNames.login

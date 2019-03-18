@@ -1,0 +1,185 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14460.31" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14460.20"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <customFonts key="customFonts">
+        <array key="Raleway-Medium.ttf">
+            <string>Raleway-Medium</string>
+        </array>
+    </customFonts>
+    <scenes>
+        <!--Search-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController storyboardIdentifier="WarrantySearchViewController" title="Search" id="BYZ-38-t0r" customClass="WarrantySearchViewController" customModule="FujiFilm" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" delaysContentTouches="NO" translatesAutoresizingMaskIntoConstraints="NO" id="2po-rn-yrU">
+                                <rect key="frame" x="0.0" y="20" width="375" height="647"/>
+                                <subviews>
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="fiz-S4-1Ll">
+                                        <rect key="frame" x="0.0" y="0.0" width="375" height="647"/>
+                                        <subviews>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" text="Search by" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="qJN-Hh-HzA" customClass="FujiFilmLabel" customModule="FujiFilm" customModuleProvider="target">
+                                                <rect key="frame" x="30" y="30" width="93.5" height="24"/>
+                                                <fontDescription key="fontDescription" name="Raleway-Medium" family="Raleway" pointSize="20"/>
+                                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="wn2-9M-Oju" customClass="FujiFilmButton" customModule="FujiFilm" customModuleProvider="target">
+                                                <rect key="frame" x="30" y="64" width="180" height="40"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="height" constant="40" id="2Ot-88-rSz"/>
+                                                    <constraint firstAttribute="width" constant="180" id="tWv-eO-Y2o"/>
+                                                </constraints>
+                                                <inset key="titleEdgeInsets" minX="5" minY="0.0" maxX="0.0" maxY="0.0"/>
+                                                <state key="normal" title="Serial Number" image="successfully_icon">
+                                                    <color key="titleColor" cocoaTouchSystemColor="darkTextColor"/>
+                                                </state>
+                                                <state key="selected" image="successfully_icon"/>
+                                            </button>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="pZ1-D5-Xqp" customClass="FujiFilmButton" customModule="FujiFilm" customModuleProvider="target">
+                                                <rect key="frame" x="242" y="64" width="110" height="40"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="height" constant="40" id="WdG-ed-gTE"/>
+                                                    <constraint firstAttribute="width" constant="110" id="hFj-mX-yfY"/>
+                                                </constraints>
+                                                <inset key="titleEdgeInsets" minX="5" minY="0.0" maxX="0.0" maxY="0.0"/>
+                                                <state key="normal" title="Email" image="successfully_icon">
+                                                    <color key="titleColor" cocoaTouchSystemColor="darkTextColor"/>
+                                                </state>
+                                                <state key="selected" image="successfully_icon"/>
+                                            </button>
+                                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="5DD-m0-pip">
+                                                <rect key="frame" x="30" y="124" width="322" height="40"/>
+                                                <subviews>
+                                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Enter Here" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Huy-PW-yCj" customClass="FujiFilmTextField" customModule="FujiFilm" customModuleProvider="target">
+                                                        <rect key="frame" x="10" y="0.0" width="312" height="40"/>
+                                                        <nil key="textColor"/>
+                                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                                        <textInputTraits key="textInputTraits"/>
+                                                    </textField>
+                                                </subviews>
+                                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="trailing" secondItem="Huy-PW-yCj" secondAttribute="trailing" id="2Li-9A-2fR"/>
+                                                    <constraint firstItem="Huy-PW-yCj" firstAttribute="top" secondItem="5DD-m0-pip" secondAttribute="top" id="3yW-kj-XB8"/>
+                                                    <constraint firstAttribute="bottom" secondItem="Huy-PW-yCj" secondAttribute="bottom" id="4kd-Re-TWr"/>
+                                                    <constraint firstAttribute="height" constant="40" id="UbH-46-Pt9"/>
+                                                    <constraint firstItem="Huy-PW-yCj" firstAttribute="leading" secondItem="5DD-m0-pip" secondAttribute="leading" constant="10" id="dDI-Ug-LiO"/>
+                                                </constraints>
+                                                <userDefinedRuntimeAttributes>
+                                                    <userDefinedRuntimeAttribute type="number" keyPath="borderWidth">
+                                                        <real key="value" value="1"/>
+                                                    </userDefinedRuntimeAttribute>
+                                                    <userDefinedRuntimeAttribute type="color" keyPath="borderColor">
+                                                        <color key="value" white="0.66666666669999997" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                    </userDefinedRuntimeAttribute>
+                                                </userDefinedRuntimeAttributes>
+                                            </view>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="07X-No-QiN" customClass="FujiFilmButton" customModule="FujiFilm" customModuleProvider="target">
+                                                <rect key="frame" x="135.5" y="184" width="104" height="33"/>
+                                                <inset key="titleEdgeInsets" minX="5" minY="0.0" maxX="0.0" maxY="0.0"/>
+                                                <state key="normal" image="Warranty-Search">
+                                                    <color key="titleColor" cocoaTouchSystemColor="darkTextColor"/>
+                                                </state>
+                                                <connections>
+                                                    <action selector="searchWarranty:" destination="BYZ-38-t0r" eventType="touchUpInside" id="01C-Rk-PAw"/>
+                                                </connections>
+                                            </button>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Z38-Ur-IlH" customClass="FujiFilmButton" customModule="FujiFilm" customModuleProvider="target">
+                                                <rect key="frame" x="147" y="574" width="81" height="33"/>
+                                                <inset key="titleEdgeInsets" minX="5" minY="0.0" maxX="0.0" maxY="0.0"/>
+                                                <state key="normal" image="Scan">
+                                                    <color key="titleColor" cocoaTouchSystemColor="darkTextColor"/>
+                                                </state>
+                                                <connections>
+                                                    <action selector="scanQR" destination="BYZ-38-t0r" eventType="touchUpInside" id="B3k-oy-SFx"/>
+                                                </connections>
+                                            </button>
+                                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="7pF-qm-k5c">
+                                                <rect key="frame" x="30" y="237" width="322" height="317"/>
+                                                <subviews>
+                                                    <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="scanner" translatesAutoresizingMaskIntoConstraints="NO" id="MDc-ln-mvD" customClass="FujiFilmImageView" customModule="FujiFilm" customModuleProvider="target">
+                                                        <rect key="frame" x="48" y="46" width="226" height="225"/>
+                                                    </imageView>
+                                                </subviews>
+                                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                <constraints>
+                                                    <constraint firstItem="MDc-ln-mvD" firstAttribute="centerY" secondItem="7pF-qm-k5c" secondAttribute="centerY" id="2Jy-F4-3US"/>
+                                                    <constraint firstItem="MDc-ln-mvD" firstAttribute="centerX" secondItem="7pF-qm-k5c" secondAttribute="centerX" id="Rlk-XX-KSM"/>
+                                                    <constraint firstItem="MDc-ln-mvD" firstAttribute="top" relation="greaterThanOrEqual" secondItem="7pF-qm-k5c" secondAttribute="top" constant="8" id="bdA-Be-2at"/>
+                                                    <constraint firstItem="MDc-ln-mvD" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="7pF-qm-k5c" secondAttribute="leading" constant="8" id="nDg-Sf-2iG"/>
+                                                </constraints>
+                                            </view>
+                                        </subviews>
+                                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <constraints>
+                                            <constraint firstItem="7pF-qm-k5c" firstAttribute="trailing" secondItem="5DD-m0-pip" secondAttribute="trailing" id="11W-nB-Bnx"/>
+                                            <constraint firstItem="pZ1-D5-Xqp" firstAttribute="leading" secondItem="wn2-9M-Oju" secondAttribute="trailing" constant="32" id="Azn-E0-McZ"/>
+                                            <constraint firstItem="pZ1-D5-Xqp" firstAttribute="bottom" secondItem="wn2-9M-Oju" secondAttribute="bottom" id="B6X-ck-SA7"/>
+                                            <constraint firstItem="wn2-9M-Oju" firstAttribute="leading" secondItem="qJN-Hh-HzA" secondAttribute="leading" id="Bsp-EC-0i0"/>
+                                            <constraint firstItem="5DD-m0-pip" firstAttribute="trailing" secondItem="pZ1-D5-Xqp" secondAttribute="trailing" id="EYx-nS-atZ"/>
+                                            <constraint firstItem="pZ1-D5-Xqp" firstAttribute="top" secondItem="wn2-9M-Oju" secondAttribute="top" id="HrH-Om-zlU"/>
+                                            <constraint firstItem="wn2-9M-Oju" firstAttribute="top" secondItem="qJN-Hh-HzA" secondAttribute="bottom" constant="10" id="Q7R-WB-BYZ"/>
+                                            <constraint firstItem="Z38-Ur-IlH" firstAttribute="centerX" secondItem="fiz-S4-1Ll" secondAttribute="centerX" id="TKj-Gg-amn"/>
+                                            <constraint firstItem="7pF-qm-k5c" firstAttribute="leading" secondItem="5DD-m0-pip" secondAttribute="leading" id="U4P-DY-7pE"/>
+                                            <constraint firstItem="qJN-Hh-HzA" firstAttribute="leading" secondItem="fiz-S4-1Ll" secondAttribute="leading" constant="30" id="dtJ-IT-OfH"/>
+                                            <constraint firstAttribute="bottom" secondItem="Z38-Ur-IlH" secondAttribute="bottom" constant="40" id="ewT-JB-iG1"/>
+                                            <constraint firstItem="7pF-qm-k5c" firstAttribute="top" secondItem="07X-No-QiN" secondAttribute="bottom" constant="20" id="goY-Uo-uMZ"/>
+                                            <constraint firstItem="Z38-Ur-IlH" firstAttribute="top" secondItem="7pF-qm-k5c" secondAttribute="bottom" constant="20" id="iGH-9x-Rwe"/>
+                                            <constraint firstItem="qJN-Hh-HzA" firstAttribute="top" secondItem="fiz-S4-1Ll" secondAttribute="top" constant="30" id="kcL-f4-qrL"/>
+                                            <constraint firstItem="5DD-m0-pip" firstAttribute="top" secondItem="wn2-9M-Oju" secondAttribute="bottom" constant="20" id="l2t-BE-9Nf"/>
+                                            <constraint firstItem="07X-No-QiN" firstAttribute="centerX" secondItem="fiz-S4-1Ll" secondAttribute="centerX" id="lc3-gU-80Y"/>
+                                            <constraint firstItem="5DD-m0-pip" firstAttribute="leading" secondItem="wn2-9M-Oju" secondAttribute="leading" id="pPh-0J-NBI"/>
+                                            <constraint firstItem="07X-No-QiN" firstAttribute="top" secondItem="5DD-m0-pip" secondAttribute="bottom" constant="20" id="wjR-49-RIh"/>
+                                        </constraints>
+                                    </view>
+                                </subviews>
+                                <constraints>
+                                    <constraint firstItem="fiz-S4-1Ll" firstAttribute="top" secondItem="2po-rn-yrU" secondAttribute="top" id="DbP-Iu-9mW"/>
+                                    <constraint firstAttribute="bottom" secondItem="fiz-S4-1Ll" secondAttribute="bottom" id="JIp-DW-l8v"/>
+                                    <constraint firstItem="fiz-S4-1Ll" firstAttribute="centerY" secondItem="2po-rn-yrU" secondAttribute="centerY" placeholder="YES" id="Lpk-jI-UyO"/>
+                                    <constraint firstAttribute="trailing" secondItem="fiz-S4-1Ll" secondAttribute="trailing" id="TNN-yI-mBc"/>
+                                    <constraint firstItem="fiz-S4-1Ll" firstAttribute="centerX" secondItem="2po-rn-yrU" secondAttribute="centerX" id="jkU-mN-nMP"/>
+                                    <constraint firstItem="fiz-S4-1Ll" firstAttribute="leading" secondItem="2po-rn-yrU" secondAttribute="leading" id="wrF-Nu-cLF"/>
+                                </constraints>
+                            </scrollView>
+                        </subviews>
+                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="2po-rn-yrU" firstAttribute="trailing" secondItem="6Tk-OE-BBY" secondAttribute="trailing" id="9EX-pw-23n"/>
+                            <constraint firstItem="2po-rn-yrU" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="cfB-vg-WWu"/>
+                            <constraint firstItem="2po-rn-yrU" firstAttribute="bottom" secondItem="6Tk-OE-BBY" secondAttribute="bottom" id="mgJ-Ut-Qew"/>
+                            <constraint firstItem="2po-rn-yrU" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" id="znQ-xh-iNQ"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                    </view>
+                    <userDefinedRuntimeAttributes>
+                        <userDefinedRuntimeAttribute type="string" keyPath="localeTextKey" value="Search"/>
+                    </userDefinedRuntimeAttributes>
+                    <connections>
+                        <outlet property="searchTextField" destination="Huy-PW-yCj" id="DSI-WW-Qdd"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1372" y="24.7376311844078"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="Scan" width="81" height="33.333332061767578"/>
+        <image name="Warranty-Search" width="104.33333587646484" height="33.333332061767578"/>
+        <image name="scanner" width="226.66667175292969" height="225.66667175292969"/>
+        <image name="successfully_icon" width="53" height="53"/>
+    </resources>
+</document>

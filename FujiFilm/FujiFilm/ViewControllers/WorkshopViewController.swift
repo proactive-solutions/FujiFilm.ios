@@ -94,7 +94,7 @@ final class WorkshopViewController: FujiFilmViewController, UITableViewDataSourc
     }
 
     private func scanQR(event: EventList.Result) {
-//        self.showQRScanResult("ABC123", event: event)
+        // self.showQRScanResult("ABC123", event: event)
 
         readerVC.delegate = self
 

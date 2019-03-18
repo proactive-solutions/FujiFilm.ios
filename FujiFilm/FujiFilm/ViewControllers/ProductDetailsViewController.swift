@@ -8,7 +8,7 @@
 
 import UIKit
 
-final class WarrantyViewController: FujiFilmViewController, UITableViewDataSource, UITableViewDelegate {
+final class ProductDetailsController: FujiFilmViewController, UITableViewDataSource, UITableViewDelegate {
     @IBOutlet private var menuTableView: UITableView!
 
     private let menuTitles: [String] = [
@@ -52,6 +52,5 @@ final class WarrantyViewController: FujiFilmViewController, UITableViewDataSourc
 
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         tableView.deselectRow(at: indexPath, animated: false)
-        self.showWarrantySearchResultViewController()
     }
 }
