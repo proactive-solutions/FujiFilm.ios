@@ -46,6 +46,9 @@
                                                     <color key="titleColor" cocoaTouchSystemColor="darkTextColor"/>
                                                 </state>
                                                 <state key="selected" image="successfully_icon"/>
+                                                <connections>
+                                                    <action selector="searchViaSerianNumber:" destination="BYZ-38-t0r" eventType="touchUpInside" id="kXb-01-9Fb"/>
+                                                </connections>
                                             </button>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="pZ1-D5-Xqp" customClass="FujiFilmButton" customModule="FujiFilm" customModuleProvider="target">
                                                 <rect key="frame" x="242" y="64" width="110" height="40"/>
@@ -58,6 +61,9 @@
                                                     <color key="titleColor" cocoaTouchSystemColor="darkTextColor"/>
                                                 </state>
                                                 <state key="selected" image="successfully_icon"/>
+                                                <connections>
+                                                    <action selector="searhViaEmail:" destination="BYZ-38-t0r" eventType="touchUpInside" id="zs2-S9-9Bl"/>
+                                                </connections>
                                             </button>
                                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="5DD-m0-pip">
                                                 <rect key="frame" x="30" y="124" width="322" height="40"/>
@@ -93,6 +99,7 @@
                                                     <color key="titleColor" cocoaTouchSystemColor="darkTextColor"/>
                                                 </state>
                                                 <connections>
+                                                    <action selector="seachWarranty:" destination="BYZ-38-t0r" eventType="touchUpInside" id="LMg-N4-ixn"/>
                                                     <action selector="searchWarranty:" destination="BYZ-38-t0r" eventType="touchUpInside" id="01C-Rk-PAw"/>
                                                 </connections>
                                             </button>
@@ -103,6 +110,7 @@
                                                     <color key="titleColor" cocoaTouchSystemColor="darkTextColor"/>
                                                 </state>
                                                 <connections>
+                                                    <action selector="scan:" destination="BYZ-38-t0r" eventType="touchUpInside" id="KZv-bo-Dse"/>
                                                     <action selector="scanQR" destination="BYZ-38-t0r" eventType="touchUpInside" id="B3k-oy-SFx"/>
                                                 </connections>
                                             </button>
@@ -168,7 +176,9 @@
                         <userDefinedRuntimeAttribute type="string" keyPath="localeTextKey" value="Search"/>
                     </userDefinedRuntimeAttributes>
                     <connections>
-                        <outlet property="searchTextField" destination="Huy-PW-yCj" id="DSI-WW-Qdd"/>
+                        <outlet property="emailButton" destination="pZ1-D5-Xqp" id="QFG-Df-EiF"/>
+                        <outlet property="serialNumber" destination="wn2-9M-Oju" id="6AQ-bD-Wva"/>
+                        <outlet property="textField" destination="Huy-PW-yCj" id="R4K-XM-Ehh"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
