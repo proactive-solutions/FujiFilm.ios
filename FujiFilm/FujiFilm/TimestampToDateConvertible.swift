@@ -8,6 +8,15 @@ protocol TimestampToDateConvertible {
 }
 
 extension TimestampToDateConvertible {
+    func convertToDate(_ dateStr: String) -> String? {
+        PPDateFormatter.shared.formatter.dateFormat = "yyyy-mm-dd"
+        if let theDate = PPDateFormatter.shared.formatter.date(from: dateStr) {
+            PPDateFormatter.shared.formatter.dateFormat = "E, MMM d yyyy"
+            return PPDateFormatter.shared.formatter.string(from: theDate)
+        }
+        return nil
+    }
+
     var date: String? {
         PPDateFormatter.shared.formatter.dateFormat = "yyyy-mm-dd"
         if let theDate = PPDateFormatter.shared.formatter.date(from: fldEventDate) {

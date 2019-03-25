@@ -20,7 +20,19 @@ struct ProductWarrantyDetails: Codable {
             case product
         }
 
-        struct Product: Codable {
+        struct Product: Codable, TimestampToDateConvertible {
+            var fldEventStarttime: String {
+                return self.fldPurchaseDate
+            }
+
+            var fldEventEndtime: String {
+                return self.fldPWarrantyDate
+            }
+
+            var fldEventDate: String {
+                return self.fldPWarrantyDate
+            }
+
             let fldModelName: String
             let fldPName: String
             let fldPurchaseDate: String
@@ -49,9 +61,9 @@ struct ProductWarrantyDetails: Codable {
                 list.append((title: "Customer Name", subTitle: self.clientName))
                 list.append((title: "Model Name", subTitle: self.fldModelName))
                 list.append((title: "Serial Number", subTitle: self.fldSerialNumber))
-                list.append((title: "Purchase Date", subTitle: self.fldPurchaseDate))
+                list.append((title: "Purchase Date", subTitle: self.convertToDate(self.fldPurchaseDate) ?? self.fldPurchaseDate))
                 list.append((title: "Warranty Remaining", subTitle: self.dayLeft.description + " days"))
-                list.append((title: "Purchase From", subTitle: self.fldPWarrantyDate))
+                list.append((title: "Purchase From", subTitle: self.convertToDate(self.fldPWarrantyDate) ?? self.fldPWarrantyDate))
                 list.append((title: "Purchase City", subTitle: self.city))
 
                 return list
