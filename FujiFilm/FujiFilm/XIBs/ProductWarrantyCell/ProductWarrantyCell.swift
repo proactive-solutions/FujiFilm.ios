@@ -2,6 +2,10 @@ import UIKit
 
 class ProductWarrantyCell: UITableViewCell {
 
+    @IBOutlet weak var titleLabelText: FujiFilmLabel!
+    @IBOutlet weak var subTitleLabelText: FujiFilmLabel!
+
+
     override func awakeFromNib() {
         super.awakeFromNib()
         // Initialization code

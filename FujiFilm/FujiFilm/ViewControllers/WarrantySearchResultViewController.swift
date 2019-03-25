@@ -3,7 +3,7 @@ import UIKit
 class WarrantySearchResultViewController: FujiFilmViewController, UITableViewDataSource, UITableViewDelegate {
     @IBOutlet weak var resultTableView: UITableView!
 
-    private var result: ProductWarrantyDetails? {
+    var result: ProductWarrantyDetails? {
         didSet {
             resultTableView?.reloadData()
         }
@@ -23,20 +23,32 @@ class WarrantySearchResultViewController: FujiFilmViewController, UITableViewDat
     }
 
     func tableView(_: UITableView, numberOfRowsInSection _: Int) -> Int {
-        return 1
+        return result?.result.product.count ?? 0
     }
 
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         guard let cell = tableView.dequeueReusableCell(
-            withIdentifier: TableViewCellXibs.WarrantyCell.rawValue,
+            withIdentifier: TableViewCellXibs.ProductWarrantyCell.rawValue,
             for: indexPath
-        ) as? WarrantyCell else { return WarrantyCell() }
+        ) as? ProductWarrantyCell else { return ProductWarrantyCell() }
+
+
+        cell.titleLabelText.text = "Model Name"
+        cell.subTitleLabelText.text = result?.result.product[indexPath.row].fldModelName
+
+        cell.accessoryType = .disclosureIndicator
 
         return cell
     }
 
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         tableView.deselectRow(at: indexPath, animated: false)
+
+        guard let detail = self.result?.result.product[indexPath.row].fulldetails else {
+            return
+        }
+
+        self.showProductDetailsController(details: detail)
     }
     
 }

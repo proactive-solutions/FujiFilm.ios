@@ -125,12 +125,14 @@ extension UIViewController {
     }
 
     @discardableResult
-    func showProductDetailsController() -> ProductDetailsController {
+    func showProductDetailsController(details: [(title: String, subTitle: String)]) -> ProductDetailsController {
         let storyboardName = StoryBoardNames.ProductDetails
 
         guard let controller = storyboardName.initialController() as? ProductDetailsController else {
             fatalError(controllerCastingErrorMessage)
         }
+
+        controller.details = details
 
         navigationController?.pushViewController(controller, animated: true)
         return controller

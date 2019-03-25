@@ -6,6 +6,7 @@ enum APIPaths: String {
     case forgotPassword = "/ForgotPassword"
     case getDistributorWorkshop = "/getDistributorWorkshop"
     case scanQrCodeByDistributor = "/scanQrCodeByDistributor"
+    case getProductWarrantyDetails = "/getProductWarrantyDetails"
 
     var version: String {
         return "V1"
