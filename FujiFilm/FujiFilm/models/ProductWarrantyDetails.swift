@@ -63,7 +63,7 @@ struct ProductWarrantyDetails: Codable {
                 list.append((title: "Serial Number", subTitle: self.fldSerialNumber))
                 list.append((title: "Purchase Date", subTitle: self.convertToDate(self.fldPurchaseDate) ?? self.fldPurchaseDate))
                 list.append((title: "Warranty Remaining", subTitle: self.dayLeft.description + " days"))
-                list.append((title: "Purchase From", subTitle: self.convertToDate(self.fldPWarrantyDate) ?? self.fldPWarrantyDate))
+                list.append((title: "Purchase From", subTitle: self.distributorName))
                 list.append((title: "Purchase City", subTitle: self.city))
 
                 return list

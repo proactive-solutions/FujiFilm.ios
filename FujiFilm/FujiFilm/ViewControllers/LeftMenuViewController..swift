@@ -19,14 +19,14 @@ final class LeftMenuViewController: FujiFilmViewController, UITableViewDataSourc
 
     private lazy var menus: [StoryBoardNames] = [
         StoryBoardNames.dashboard,
-        StoryBoardNames.Warranty,
+        // StoryBoardNames.Warranty,
         StoryBoardNames.WarrantySearch,
         StoryBoardNames.Warranty,
     ]
 
     private let menuTitles: [String] = [
         "Workshops",
-        "Loan Program",
+        // "Loan Program",
         "Warranty",
         // "Change Password",
         "Logout",
@@ -34,7 +34,7 @@ final class LeftMenuViewController: FujiFilmViewController, UITableViewDataSourc
 
     private let menuicons: [UIImage] = [
         #imageLiteral(resourceName: "Workshop_icon"),
-        #imageLiteral(resourceName: "loan_program_icon"),
+        // #imageLiteral(resourceName: "loan_program_icon"),
         #imageLiteral(resourceName: "warranty_icon"),
         // #imageLiteral(resourceName: "change_password_icon"),
         #imageLiteral(resourceName: "logout_icon"),
@@ -87,7 +87,7 @@ final class LeftMenuViewController: FujiFilmViewController, UITableViewDataSourc
 
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         tableView.deselectRow(at: indexPath, animated: false)
-        if indexPath.row <= 2 {
+        if indexPath.row <= 1 {
             let controller = menus[indexPath.row].initialController()
             navigationController?.pushViewController(controller, animated: true)
         } else {

@@ -13,7 +13,7 @@ final class DashboardViewController: FujiFilmViewController, UITableViewDataSour
 
     private let menuTitles: [UIImage] = [
         #imageLiteral(resourceName: "workshop_image"),
-        #imageLiteral(resourceName: "loan_program_image"),
+        // #imageLiteral(resourceName: "loan_program_image"),
         #imageLiteral(resourceName: "warranty_image"),
     ]
 
@@ -67,6 +67,7 @@ final class DashboardViewController: FujiFilmViewController, UITableViewDataSour
         if indexPath.row == 0 {
             showWorkshop()
         } else if indexPath.row == 1 {
+            showWarrantySearch()
         } else if indexPath.row == 2 {
             showWarrantySearch()
         }
