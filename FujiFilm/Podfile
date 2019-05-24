@@ -13,5 +13,6 @@ target 'FujiFilm' do
   pod 'Alamofire'
   pod 'SideMenu'
   pod 'IQKeyboardManager'
+  pod 'R.swift'
 
 end

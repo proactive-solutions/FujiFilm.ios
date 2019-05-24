@@ -77,6 +77,7 @@
 		F2B1F7E72222E6AF00CBEA40 /* LeftMenuViewController..swift in Sources */ = {isa = PBXBuildFile; fileRef = F2B1F7E62222E6AF00CBEA40 /* LeftMenuViewController..swift */; };
 		F2B1F7EB2222E87000CBEA40 /* FujiFilmLeftMenuCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = F2B1F7E92222E87000CBEA40 /* FujiFilmLeftMenuCell.swift */; };
 		F2B1F7EC2222E87000CBEA40 /* FujiFilmLeftMenuCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = F2B1F7EA2222E87000CBEA40 /* FujiFilmLeftMenuCell.xib */; };
+		F2CF468A22985DC800FFE595 /* R.generated.swift in Sources */ = {isa = PBXBuildFile; fileRef = F2CF468922985DC800FFE595 /* R.generated.swift */; };
 		F2D8D72C2222F5BE00B15CC7 /* Dashboard.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F2D8D72A2222F5BE00B15CC7 /* Dashboard.storyboard */; };
 		F2D8D72E2222FAF000B15CC7 /* DashboardViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F2D8D72D2222FAF000B15CC7 /* DashboardViewController.swift */; };
 		F2D8D7312222FBC800B15CC7 /* DashboardCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = F2D8D72F2222FBC800B15CC7 /* DashboardCell.swift */; };
@@ -182,6 +183,7 @@
 		F2B1F7E62222E6AF00CBEA40 /* LeftMenuViewController..swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LeftMenuViewController..swift; sourceTree = "<group>"; };
 		F2B1F7E92222E87000CBEA40 /* FujiFilmLeftMenuCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FujiFilmLeftMenuCell.swift; sourceTree = "<group>"; };
 		F2B1F7EA2222E87000CBEA40 /* FujiFilmLeftMenuCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = FujiFilmLeftMenuCell.xib; sourceTree = "<group>"; };
+		F2CF468922985DC800FFE595 /* R.generated.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = R.generated.swift; sourceTree = "<group>"; };
 		F2D8D72B2222F5BE00B15CC7 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Dashboard.storyboard; sourceTree = "<group>"; };
 		F2D8D72D2222FAF000B15CC7 /* DashboardViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DashboardViewController.swift; sourceTree = "<group>"; };
 		F2D8D72F2222FBC800B15CC7 /* DashboardCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DashboardCell.swift; sourceTree = "<group>"; };
@@ -244,6 +246,7 @@
 		F2B1F72E222284B500CBEA40 = {
 			isa = PBXGroup;
 			children = (
+				F2CF468922985DC800FFE595 /* R.generated.swift */,
 				F2B1F739222284B500CBEA40 /* FujiFilm */,
 				F2B1F738222284B500CBEA40 /* Products */,
 				B3E84245E9E1AC4D5180D3EA /* Pods */,
@@ -508,6 +511,7 @@
 			buildConfigurationList = F2B1F749222284B700CBEA40 /* Build configuration list for PBXNativeTarget "FujiFilm" */;
 			buildPhases = (
 				21C7C5D435AD6915FBF66038 /* [CP] Check Pods Manifest.lock */,
+				F2CF468822985B3100FFE595 /* ShellScript */,
 				F2B1F733222284B500CBEA40 /* Sources */,
 				F2B1F734222284B500CBEA40 /* Frameworks */,
 				F2B1F735222284B500CBEA40 /* Resources */,
@@ -632,6 +636,7 @@
 				"${BUILT_PRODUCTS_DIR}/IQKeyboardManager/IQKeyboardManager.framework",
 				"${BUILT_PRODUCTS_DIR}/JGProgressHUD/JGProgressHUD.framework",
 				"${BUILT_PRODUCTS_DIR}/QRCodeReader.swift/QRCodeReader.framework",
+				"${BUILT_PRODUCTS_DIR}/R.swift.Library/Rswift.framework",
 				"${BUILT_PRODUCTS_DIR}/SDWebImage/SDWebImage.framework",
 				"${BUILT_PRODUCTS_DIR}/SideMenu/SideMenu.framework",
 			);
@@ -641,6 +646,7 @@
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/IQKeyboardManager.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/JGProgressHUD.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/QRCodeReader.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Rswift.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SDWebImage.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SideMenu.framework",
 			);
@@ -648,6 +654,21 @@
 			shellPath = /bin/sh;
 			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-FujiFilm/Pods-FujiFilm-frameworks.sh\"\n";
 			showEnvVarsInLog = 0;
+		};
+		F2CF468822985B3100FFE595 /* ShellScript */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"$TEMP_DIR/rswift-lastrun",
+			);
+			outputPaths = (
+				$SRCROOT/R.generated.swift,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "# Type a script or drag a script file from your workspace to insert its path.\n\"$PODS_ROOT/R.swift/rswift\" generate \"$SRCROOT/R.generated.swift\"\n";
 		};
 /* End PBXShellScriptBuildPhase section */
 
@@ -682,6 +703,7 @@
 				F2B1F77A222285D200CBEA40 /* UISegmentedControl+Extension.swift in Sources */,
 				F2B1F77D222285D200CBEA40 /* UIScrollView+Content.swift in Sources */,
 				F2B1F77E222285D200CBEA40 /* UITextField+Extension.swift in Sources */,
+				F2CF468A22985DC800FFE595 /* R.generated.swift in Sources */,
 				F2B1F78D222285D200CBEA40 /* FujiFilmShadowView.swift in Sources */,
 				F2D8D7372223004D00B15CC7 /* WorkshopViewController.swift in Sources */,
 				F2B1F784222285D200CBEA40 /* FujiFilmTabBarItem.swift in Sources */,
