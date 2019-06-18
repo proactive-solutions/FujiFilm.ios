@@ -3,7 +3,7 @@ import Foundation
 
 struct GeneralConstant {
     static var languageChangeNotification: String {
-        return " com.fujifilm-xmea.team:ApplangDidChange"
+        return "com.fujifilm-xmea.team:ApplangDidChange"
     }
 
     static var PASSWORD_MIN_LENGTH = 8
