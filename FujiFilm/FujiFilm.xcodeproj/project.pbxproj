@@ -12,6 +12,7 @@
 		F223B1D422BA9EBF00E96388 /* AttendenceCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = F223B1D222BA9EBF00E96388 /* AttendenceCell.xib */; };
 		F223B1D522BA9EBF00E96388 /* AttendenceCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = F223B1D322BA9EBF00E96388 /* AttendenceCell.swift */; };
 		F223B1D822BA9EF400E96388 /* Attendence.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F223B1D622BA9EF400E96388 /* Attendence.storyboard */; };
+		F223B1DA22BAA1CB00E96388 /* Attendees.swift in Sources */ = {isa = PBXBuildFile; fileRef = F223B1D922BAA1CB00E96388 /* Attendees.swift */; };
 		F225D4212224F97200332293 /* QRSaveSuccess.swift in Sources */ = {isa = PBXBuildFile; fileRef = F225D4202224F97200332293 /* QRSaveSuccess.swift */; };
 		F2653E5C2227036800BD0C1A /* SplashViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F2653E5B2227036800BD0C1A /* SplashViewController.swift */; };
 		F2653E5F222703BA00BD0C1A /* Splash.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F2653E5D222703BA00BD0C1A /* Splash.storyboard */; };
@@ -120,6 +121,7 @@
 		F223B1D222BA9EBF00E96388 /* AttendenceCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = AttendenceCell.xib; sourceTree = "<group>"; };
 		F223B1D322BA9EBF00E96388 /* AttendenceCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AttendenceCell.swift; sourceTree = "<group>"; };
 		F223B1D722BA9EF400E96388 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Attendence.storyboard; sourceTree = "<group>"; };
+		F223B1D922BAA1CB00E96388 /* Attendees.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Attendees.swift; sourceTree = "<group>"; };
 		F225D4202224F97200332293 /* QRSaveSuccess.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QRSaveSuccess.swift; sourceTree = "<group>"; };
 		F2653E5B2227036800BD0C1A /* SplashViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SplashViewController.swift; sourceTree = "<group>"; };
 		F2653E5E222703BA00BD0C1A /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Splash.storyboard; sourceTree = "<group>"; };
@@ -497,6 +499,7 @@
 			isa = PBXGroup;
 			children = (
 				F2D8D74D2223261400B15CC7 /* APIError.swift */,
+				F223B1D922BAA1CB00E96388 /* Attendees.swift */,
 				F2D8D74F222327F100B15CC7 /* UserDetails.swift */,
 				F2D8D751222336F500B15CC7 /* EventList.swift */,
 				F225D4202224F97200332293 /* QRSaveSuccess.swift */,
@@ -706,6 +709,7 @@
 				F2B1F77F222285D200CBEA40 /* UITableView+Extension.swift in Sources */,
 				F2D8D7352222FEEA00B15CC7 /* APIManager.swift in Sources */,
 				F2B1F7A32222866800CBEA40 /* StoryboardNames.swift in Sources */,
+				F223B1DA22BAA1CB00E96388 /* Attendees.swift in Sources */,
 				F2F9639C22245E44001F51D5 /* WarrantyViewController.swift in Sources */,
 				F2D8D746222304B300B15CC7 /* WorkshopCell.swift in Sources */,
 				F2B1F781222285D200CBEA40 /* FujiFilmTextField.swift in Sources */,

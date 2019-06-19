@@ -1,11 +1,3 @@
-//
-//  ViewController.swift
-//  FujiFilm
-//
-//  Created by Pawan Sharma on 24/02/19.
-//  Copyright © 2019 Pawan Sharma. All rights reserved.
-//
-
 import AVFoundation
 import QRCodeReader
 import UIKit
@@ -82,6 +74,11 @@ final class WorkshopViewController: FujiFilmViewController, UITableViewDataSourc
 
         cell.scan = { [weak self] in
             self?.scanQR(event: result)
+        }
+
+        cell.viewAttendees = { [weak self] in
+            guard let self = self else { return }
+            self.showAttendanceController(event: self.evnetsEventList[indexPath.row])
         }
 
         cell.display(result: result)

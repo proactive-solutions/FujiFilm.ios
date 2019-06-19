@@ -1,11 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="14460.31" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="14490.70" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
     <device id="retina4_7" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14460.20"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14490.49"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <customFonts key="customFonts">
@@ -27,10 +27,10 @@
                 <autoresizingMask key="autoresizingMask"/>
                 <subviews>
                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="zcW-LN-XUf">
-                        <rect key="frame" x="0.0" y="0.0" width="320" height="333"/>
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="353"/>
                         <subviews>
                             <view clipsSubviews="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="uHY-9t-4vJ">
-                                <rect key="frame" x="1.5" y="1.5" width="317" height="330"/>
+                                <rect key="frame" x="1.5" y="1.5" width="317" height="350"/>
                                 <subviews>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="e0k-jZ-7Dx">
                                         <rect key="frame" x="0.0" y="0.0" width="317" height="200"/>
@@ -218,7 +218,7 @@
                                         <rect key="frame" x="177" y="235" width="120" height="75"/>
                                         <subviews>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Hgt-Bp-WBT">
-                                                <rect key="frame" x="48" y="45" width="72" height="30"/>
+                                                <rect key="frame" x="47.5" y="45" width="72.5" height="30"/>
                                                 <state key="normal" image="small_scan"/>
                                                 <connections>
                                                     <action selector="scanQRCode:" destination="KGk-i7-Jjw" eventType="touchUpInside" id="hCH-2u-XaX"/>
@@ -232,22 +232,39 @@
                                             <constraint firstAttribute="width" constant="120" id="rtk-Km-NcR"/>
                                         </constraints>
                                     </view>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" text="View Attendee" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumScaleFactor="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="Ogc-E3-wve" customClass="FujiFilmLabel" customModule="FujiFilm" customModuleProvider="target">
+                                        <rect key="frame" x="113.5" y="315" width="90" height="30"/>
+                                        <fontDescription key="fontDescription" name="Raleway-SemiBold" family="Raleway" pointSize="13"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="HFW-0E-phh">
+                                        <rect key="frame" x="113.5" y="315" width="90" height="30"/>
+                                        <connections>
+                                            <action selector="viewAttendees:" destination="KGk-i7-Jjw" eventType="touchUpInside" id="aoi-2r-9f6"/>
+                                        </connections>
+                                    </button>
                                 </subviews>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <constraints>
                                     <constraint firstItem="e0k-jZ-7Dx" firstAttribute="top" secondItem="uHY-9t-4vJ" secondAttribute="top" id="1g6-XX-K5b"/>
+                                    <constraint firstItem="HFW-0E-phh" firstAttribute="bottom" secondItem="Ogc-E3-wve" secondAttribute="bottom" id="2Em-42-KKn"/>
+                                    <constraint firstItem="Ogc-E3-wve" firstAttribute="top" secondItem="KFZ-LS-Krh" secondAttribute="bottom" constant="5" id="5MX-H8-YYC"/>
                                     <constraint firstItem="KFZ-LS-Krh" firstAttribute="top" secondItem="9eB-AQ-6zv" secondAttribute="bottom" id="7gI-PN-ORP"/>
+                                    <constraint firstItem="HFW-0E-phh" firstAttribute="trailing" secondItem="Ogc-E3-wve" secondAttribute="trailing" id="Lhv-iH-gtI"/>
                                     <constraint firstItem="9eB-AQ-6zv" firstAttribute="trailing" secondItem="e0k-jZ-7Dx" secondAttribute="trailing" constant="-10" id="ON2-gQ-DHB"/>
                                     <constraint firstAttribute="trailing" secondItem="KFZ-LS-Krh" secondAttribute="trailing" constant="20" id="OuV-Do-Ywf"/>
-                                    <constraint firstAttribute="bottom" secondItem="EKL-Io-QH4" secondAttribute="bottom" constant="20" id="RBT-sQ-5Kv"/>
+                                    <constraint firstAttribute="bottom" secondItem="EKL-Io-QH4" secondAttribute="bottom" constant="40" id="RBT-sQ-5Kv"/>
+                                    <constraint firstItem="HFW-0E-phh" firstAttribute="leading" secondItem="Ogc-E3-wve" secondAttribute="leading" id="TKT-Do-L4B"/>
                                     <constraint firstItem="EKL-Io-QH4" firstAttribute="leading" secondItem="9eB-AQ-6zv" secondAttribute="leading" id="Tne-ah-U7a"/>
                                     <constraint firstAttribute="trailing" secondItem="e0k-jZ-7Dx" secondAttribute="trailing" id="bZW-ft-Na8"/>
                                     <constraint firstItem="EKL-Io-QH4" firstAttribute="top" secondItem="KFZ-LS-Krh" secondAttribute="top" id="fwu-Fn-N1M"/>
+                                    <constraint firstItem="Ogc-E3-wve" firstAttribute="centerX" secondItem="uHY-9t-4vJ" secondAttribute="centerX" id="mG6-PR-MhP"/>
                                     <constraint firstItem="9eB-AQ-6zv" firstAttribute="top" secondItem="e0k-jZ-7Dx" secondAttribute="bottom" constant="5" id="neo-hQ-IqD"/>
                                     <constraint firstItem="KFZ-LS-Krh" firstAttribute="bottom" secondItem="EKL-Io-QH4" secondAttribute="bottom" id="nfL-dY-Fhy"/>
                                     <constraint firstItem="9eB-AQ-6zv" firstAttribute="leading" secondItem="e0k-jZ-7Dx" secondAttribute="leading" constant="10" id="qXB-d3-RDG"/>
                                     <constraint firstItem="KFZ-LS-Krh" firstAttribute="leading" secondItem="EKL-Io-QH4" secondAttribute="trailing" constant="29" id="tFx-0S-iWN"/>
                                     <constraint firstItem="e0k-jZ-7Dx" firstAttribute="leading" secondItem="uHY-9t-4vJ" secondAttribute="leading" id="tPW-zA-2jL"/>
+                                    <constraint firstItem="HFW-0E-phh" firstAttribute="top" secondItem="Ogc-E3-wve" secondAttribute="top" id="z4v-Tp-mQ7"/>
                                 </constraints>
                                 <userDefinedRuntimeAttributes>
                                     <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
@@ -288,6 +305,6 @@
     </objects>
     <resources>
         <image name="small_scan" width="72.333335876464844" height="30"/>
-        <image name="workshop_placeholder" width="323.33334350585938" height="162"/>
+        <image name="workshop_placeholder" width="485" height="243"/>
     </resources>
 </document>

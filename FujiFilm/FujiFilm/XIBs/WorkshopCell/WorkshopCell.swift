@@ -26,12 +26,12 @@ class WorkshopCell: UITableViewCell {
     @IBOutlet private var absentLabel: FujiFilmLabel!
 
     var scan: (() -> Void)?
+    var viewAttendees: (() -> Void)?
 
     override func awakeFromNib() {
         super.awakeFromNib()
 
         applyShadoEffect()
-
         outerWrapperView.addShadow()
     }
 
@@ -56,6 +56,10 @@ class WorkshopCell: UITableViewCell {
 
     @IBAction private func scanQRCode(_: UIButton) {
         scan?()
+    }
+
+    @IBAction private func viewAttendees(_: UIButton) {
+        viewAttendees?()
     }
 
     func display(result: EventList.Result) {

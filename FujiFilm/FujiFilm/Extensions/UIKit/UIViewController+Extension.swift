@@ -138,6 +138,19 @@ extension UIViewController {
         return controller
     }
 
+    @discardableResult
+    func showAttendanceController(event: EventList.Result) -> AttendenceViewController {
+        let storyboardName = StoryBoardNames.Attendence
+
+        guard let controller = storyboardName.initialController() as? AttendenceViewController else {
+            fatalError(controllerCastingErrorMessage)
+        }
+        controller.eventDetails = event
+
+        navigationController?.pushViewController(controller, animated: true)
+        return controller
+    }
+
     func logout() {
         UserDefaults.standard.userDetails = nil
         let storyboardName = StoryBoardNames.login

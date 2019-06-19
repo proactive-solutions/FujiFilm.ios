@@ -1,14 +1,11 @@
-//
-//  AttendenceCell.swift
-//  StoryboardingDemo
-//
-//  Created by rails gr4 on 19/06/19.
-//  Copyright © 2019 Deqode. All rights reserved.
-//
-
 import UIKit
 
 class AttendenceCell: UITableViewCell {
+
+    @IBOutlet weak var nameLabel: FujiFilmLabel!
+    @IBOutlet weak var markPresentButton: UIButton!
+
+    var markPresent: (() -> Void)?
 
     override func awakeFromNib() {
         super.awakeFromNib()
@@ -20,5 +17,8 @@ class AttendenceCell: UITableViewCell {
 
         // Configure the view for the selected state
     }
-    
+
+    @IBAction func markPresent(_ sender: UIButton) {
+        markPresent?()
+    }
 }
