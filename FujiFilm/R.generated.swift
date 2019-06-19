@@ -407,8 +407,10 @@ struct R: Rswift.Validatable {
     fileprivate init() {}
   }
   
-  /// This `R.nib` struct is generated, and contains static references to 5 nibs.
+  /// This `R.nib` struct is generated, and contains static references to 6 nibs.
   struct nib {
+    /// Nib `AttendenceCell`.
+    static let attendenceCell = _R.nib._AttendenceCell()
     /// Nib `DashboardCell`.
     static let dashboardCell = _R.nib._DashboardCell()
     /// Nib `FujiFilmLeftMenuCell`.
@@ -419,6 +421,12 @@ struct R: Rswift.Validatable {
     static let warrantyCell = _R.nib._WarrantyCell()
     /// Nib `WorkshopCell`.
     static let workshopCell = _R.nib._WorkshopCell()
+    
+    /// `UINib(name: "AttendenceCell", in: bundle)`
+    @available(*, deprecated, message: "Use UINib(resource: R.nib.attendenceCell) instead")
+    static func attendenceCell(_: Void = ()) -> UIKit.UINib {
+      return UIKit.UINib(resource: R.nib.attendenceCell)
+    }
     
     /// `UINib(name: "DashboardCell", in: bundle)`
     @available(*, deprecated, message: "Use UINib(resource: R.nib.dashboardCell) instead")
@@ -450,6 +458,10 @@ struct R: Rswift.Validatable {
       return UIKit.UINib(resource: R.nib.workshopCell)
     }
     
+    static func attendenceCell(owner ownerOrNil: AnyObject?, options optionsOrNil: [UINib.OptionsKey : Any]? = nil) -> AttendenceCell? {
+      return R.nib.attendenceCell.instantiate(withOwner: ownerOrNil, options: optionsOrNil)[0] as? AttendenceCell
+    }
+    
     static func dashboardCell(owner ownerOrNil: AnyObject?, options optionsOrNil: [UINib.OptionsKey : Any]? = nil) -> DashboardCell? {
       return R.nib.dashboardCell.instantiate(withOwner: ownerOrNil, options: optionsOrNil)[0] as? DashboardCell
     }
@@ -473,8 +485,10 @@ struct R: Rswift.Validatable {
     fileprivate init() {}
   }
   
-  /// This `R.storyboard` struct is generated, and contains static references to 12 storyboards.
+  /// This `R.storyboard` struct is generated, and contains static references to 13 storyboards.
   struct storyboard {
+    /// Storyboard `Attendence`.
+    static let attendence = _R.storyboard.attendence()
     /// Storyboard `Dashboard`.
     static let dashboard = _R.storyboard.dashboard()
     /// Storyboard `ForgotPassword`.
@@ -499,6 +513,11 @@ struct R: Rswift.Validatable {
     static let warranty = _R.storyboard.warranty()
     /// Storyboard `Workshop`.
     static let workshop = _R.storyboard.workshop()
+    
+    /// `UIStoryboard(name: "Attendence", bundle: ...)`
+    static func attendence(_: Void = ()) -> UIKit.UIStoryboard {
+      return UIKit.UIStoryboard(resource: R.storyboard.attendence)
+    }
     
     /// `UIStoryboard(name: "Dashboard", bundle: ...)`
     static func dashboard(_: Void = ()) -> UIKit.UIStoryboard {
@@ -588,6 +607,17 @@ struct _R: Rswift.Validatable {
       try _WorkshopCell.validate()
     }
     
+    struct _AttendenceCell: Rswift.NibResourceType {
+      let bundle = R.hostingBundle
+      let name = "AttendenceCell"
+      
+      func firstView(owner ownerOrNil: AnyObject?, options optionsOrNil: [UINib.OptionsKey : Any]? = nil) -> AttendenceCell? {
+        return instantiate(withOwner: ownerOrNil, options: optionsOrNil)[0] as? AttendenceCell
+      }
+      
+      fileprivate init() {}
+    }
+    
     struct _DashboardCell: Rswift.NibResourceType, Rswift.Validatable {
       let bundle = R.hostingBundle
       let name = "DashboardCell"
@@ -661,6 +691,7 @@ struct _R: Rswift.Validatable {
   
   struct storyboard: Rswift.Validatable {
     static func validate() throws {
+      try attendence.validate()
       try dashboard.validate()
       try forgotPassword.validate()
       try launchScreen.validate()
@@ -673,6 +704,26 @@ struct _R: Rswift.Validatable {
       try warrantySearch.validate()
       try warrantySearchResult.validate()
       try workshop.validate()
+    }
+    
+    struct attendence: Rswift.StoryboardResourceWithInitialControllerType, Rswift.Validatable {
+      typealias InitialController = AttendenceViewController
+      
+      let attendenceViewController = StoryboardViewControllerResource<AttendenceViewController>(identifier: "AttendenceViewController")
+      let bundle = R.hostingBundle
+      let name = "Attendence"
+      
+      func attendenceViewController(_: Void = ()) -> AttendenceViewController? {
+        return UIKit.UIStoryboard(resource: self).instantiateViewController(withResource: attendenceViewController)
+      }
+      
+      static func validate() throws {
+        if #available(iOS 11.0, *) {
+        }
+        if _R.storyboard.attendence().attendenceViewController() == nil { throw Rswift.ValidationError(description:"[R.swift] ViewController with identifier 'attendenceViewController' could not be loaded from storyboard 'Attendence' as 'AttendenceViewController'.") }
+      }
+      
+      fileprivate init() {}
     }
     
     struct dashboard: Rswift.StoryboardResourceWithInitialControllerType, Rswift.Validatable {

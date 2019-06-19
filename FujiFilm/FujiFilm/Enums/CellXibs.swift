@@ -10,6 +10,7 @@ enum TableViewCellXibs: String {
     case workshop = "WorkshopCell"
     case WarrantyCell
     case ProductWarrantyCell
+    case AttendenceCell
 }
 
 enum CollectionViewCellXibs: String {
