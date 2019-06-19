@@ -43,9 +43,9 @@ final class WorkshopViewController: FujiFilmViewController, UITableViewDataSourc
         view.showLoader()
         APIManager().request(
             path: APIPaths.getDistributorWorkshop,
-            method: .get,
-            extraParams: user.result.fldDid,
-            parameters: nil,
+            method: .post,
+            extraParams: nil,
+            parameters: ["distributor_id": user.result.fldDid],
             headers: nil,
             success: { [weak self] (data: Data, _: Int) in
                 guard let self = self else { return }

@@ -61,10 +61,10 @@ class WorkshopCell: UITableViewCell {
     func display(result: EventList.Result) {
         dateLabel1.text = result.date
         dateLabel2.text = (result.startTime ?? "") + "-" + (result.endTime ?? "")
-        dateLabel3.text = result.fldEventDuration + " hour"
+        dateLabel3.text = /*result.fldEventLong + */" hour" 
         nameLabel.text = result.fldEventTitle
         presentLabel.text = "\(result.attendanceCount)"
-        attendeeLabel.text = result.fldEventSeat
+        attendeeLabel.text = result.fldEventSeats
         absentLabel.text = "\(result.remainingAttendanceCount)"
         iconImageView.from(url: result.fldEventImage, completion: nil)
     }

@@ -38,10 +38,7 @@ struct QRSaveSuccess: Codable {
             }
 
             let fldUid: String
-            let fldSlug: String
-            let fldUsername: JSONNull?
             let fldFullname: String
-            let fldBusinessname: String
             let fldFamilyname: String
             let fldEmail: String
             let fldPassword: String
@@ -58,16 +55,13 @@ struct QRSaveSuccess: Codable {
             let fldArea: String
             let fldAddress: String
             let fldAddress1: String
+            let fldPo: JSONNull?
             let fldLandmark: String
             let fldZipcode: String
-            let fldPostalcode: String
-            let fldLat: String
-            let fldLong: String
             let fldGear: JSONNull?
             let fldFPSLevel: String
             let fldActivationLink: String
             let fldStatus: String
-            let fldUserType: String
             let fldUserKey: String
             let fldUserQr: String
             let fldCreatedBy: String
@@ -76,10 +70,7 @@ struct QRSaveSuccess: Codable {
 
             enum CodingKeys: String, CodingKey {
                 case fldUid = "fld_uid"
-                case fldSlug = "fld_slug"
-                case fldUsername = "fld_username"
                 case fldFullname = "fld_fullname"
-                case fldBusinessname = "fld_businessname"
                 case fldFamilyname = "fld_familyname"
                 case fldEmail = "fld_email"
                 case fldPassword = "fld_password"
@@ -96,16 +87,13 @@ struct QRSaveSuccess: Codable {
                 case fldArea = "fld_area"
                 case fldAddress = "fld_address"
                 case fldAddress1 = "fld_address1"
+                case fldPo = "fld_po"
                 case fldLandmark = "fld_landmark"
                 case fldZipcode = "fld_zipcode"
-                case fldPostalcode = "fld_postalcode"
-                case fldLat = "fld_lat"
-                case fldLong = "fld_long"
                 case fldGear = "fld_gear"
                 case fldFPSLevel = "fld_fps_level"
                 case fldActivationLink = "fld_activation_link"
                 case fldStatus = "fld_status"
-                case fldUserType = "fld_user_type"
                 case fldUserKey = "fld_user_key"
                 case fldUserQr = "fld_user_qr"
                 case fldCreatedBy = "fld_created_by"

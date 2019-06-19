@@ -26,32 +26,26 @@ struct ProductWarrantyDetails: Codable {
             }
 
             var fldEventEndtime: String {
-                return self.fldPWarrantyDate
+                return self.fldPurchaseDate
             }
 
             var fldEventDate: String {
-                return self.fldPWarrantyDate
+                return self.fldPurchaseDate
             }
 
             let fldModelName: String
-            let fldPName: String
             let fldPurchaseDate: String
-            let fldPWarrantyDate: String
-            let fldSerialNumber: String
+            let fldWarrantyEndDate: String
+            let fldSerial: String
             let clientName: String
-            let distributorName: String
-            let city: String
             let dayLeft: Int
 
             enum CodingKeys: String, CodingKey {
                 case fldModelName = "fld_model_name"
-                case fldPName = "fld_p_name"
                 case fldPurchaseDate = "fld_purchase_date"
-                case fldPWarrantyDate = "fld_p_warranty_date"
-                case fldSerialNumber = "fld_serial_number"
+                case fldWarrantyEndDate = "fld_warranty_end_date"
+                case fldSerial = "fld_serial"
                 case clientName = "client_name"
-                case distributorName = "distributor_name"
-                case city
                 case dayLeft
             }
 
@@ -60,11 +54,11 @@ struct ProductWarrantyDetails: Codable {
 
                 list.append((title: "Customer Name", subTitle: self.clientName))
                 list.append((title: "Model Name", subTitle: self.fldModelName))
-                list.append((title: "Serial Number", subTitle: self.fldSerialNumber))
+                list.append((title: "Serial Number", subTitle: self.fldSerial))
                 list.append((title: "Purchase Date", subTitle: self.convertToDate(self.fldPurchaseDate) ?? self.fldPurchaseDate))
                 list.append((title: "Warranty Remaining", subTitle: self.dayLeft.description + " days"))
-                list.append((title: "Purchase From", subTitle: self.distributorName))
-                list.append((title: "Purchase City", subTitle: self.city))
+                // list.append((title: "Purchase From", subTitle: self.distributorName))
+                // list.append((title: "Purchase City", subTitle: self.city))
 
                 return list
             }
