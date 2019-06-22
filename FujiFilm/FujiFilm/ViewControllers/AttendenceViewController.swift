@@ -78,19 +78,19 @@ class AttendenceViewController: FujiFilmViewController, UITableViewDataSource, U
                 guard let self = self else { return }
                 print(String.init(data: data, encoding: String.Encoding.utf8)!)
                 self.view.hideLoader()
-//                if let details = try? JSONDecoder().decode(Attendees.self, from: data) {
-//                    self.absents = details.result.attendence.filter {
-//                        $0.status.lowercased() == "Absent".lowercased()
-//                    }
-//
-//                    self.presents = details.result.attendence.filter {
-//                        $0.status.lowercased() == "Present".lowercased()
-//                    }
-//
-//                    self.attendenceTableView.reloadData()
-//                } else if let error = try? JSONDecoder().decode(APIError.self, from: data) {
-//                    self.view.show(error: error.message)
-//                }
+                if let details = try? JSONDecoder().decode(Attendees.self, from: data) {
+                    self.absents = details.result.attendence.filter {
+                        $0.status.lowercased() == "Absent".lowercased()
+                    }
+
+                    self.presents = details.result.attendence.filter {
+                        $0.status.lowercased() == "Present".lowercased()
+                    }
+
+                    self.attendenceTableView.reloadData()
+                } else if let error = try? JSONDecoder().decode(APIError.self, from: data) {
+                    self.view.show(error: error.message)
+                }
             }, failure: { [weak self] error in
                 guard let self = self else { return }
                 self.view.hideLoader()

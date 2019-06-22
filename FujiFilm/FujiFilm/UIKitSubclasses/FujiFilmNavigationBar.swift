@@ -17,7 +17,6 @@ final class FujiFilmNavigationBar: UINavigationBar {
     }
 
     private func customize() {
-        print("Customize your fucking nav bar")
         barStyle = .default
         backIndicatorImage = UIImage()
         backIndicatorTransitionMaskImage = UIImage()

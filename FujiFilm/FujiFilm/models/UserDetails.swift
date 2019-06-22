@@ -17,7 +17,7 @@ struct UserDetails: Codable {
     struct Result: Codable {
         let fldDid: String
         let fldParentID: String
-        let fldRole: String
+        let fldRole: String?
         let fldSlug: String
         let fldFirstname: String
         let fldFamilyname: String
