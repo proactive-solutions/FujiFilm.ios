@@ -184,8 +184,12 @@ struct R: Rswift.Validatable {
     fileprivate init() {}
   }
   
-  /// This `R.image` struct is generated, and contains static references to 31 images.
+  /// This `R.image` struct is generated, and contains static references to 33 images.
   struct image {
+    /// Image `Attendance-button`.
+    static let attendanceButton = Rswift.ImageResource(bundle: R.hostingBundle, name: "Attendance-button")
+    /// Image `Courses`.
+    static let courses = Rswift.ImageResource(bundle: R.hostingBundle, name: "Courses")
     /// Image `Logo-Black`.
     static let logoBlack = Rswift.ImageResource(bundle: R.hostingBundle, name: "Logo-Black")
     /// Image `Logo`.
@@ -248,6 +252,16 @@ struct R: Rswift.Validatable {
     static let workshop_image = Rswift.ImageResource(bundle: R.hostingBundle, name: "workshop_image")
     /// Image `workshop_placeholder`.
     static let workshop_placeholder = Rswift.ImageResource(bundle: R.hostingBundle, name: "workshop_placeholder")
+    
+    /// `UIImage(named: "Attendance-button", bundle: ..., traitCollection: ...)`
+    static func attendanceButton(compatibleWith traitCollection: UIKit.UITraitCollection? = nil) -> UIKit.UIImage? {
+      return UIKit.UIImage(resource: R.image.attendanceButton, compatibleWith: traitCollection)
+    }
+    
+    /// `UIImage(named: "Courses", bundle: ..., traitCollection: ...)`
+    static func courses(compatibleWith traitCollection: UIKit.UITraitCollection? = nil) -> UIKit.UIImage? {
+      return UIKit.UIImage(resource: R.image.courses, compatibleWith: traitCollection)
+    }
     
     /// `UIImage(named: "Logo", bundle: ..., traitCollection: ...)`
     static func logo(compatibleWith traitCollection: UIKit.UITraitCollection? = nil) -> UIKit.UIImage? {
@@ -407,10 +421,12 @@ struct R: Rswift.Validatable {
     fileprivate init() {}
   }
   
-  /// This `R.nib` struct is generated, and contains static references to 6 nibs.
+  /// This `R.nib` struct is generated, and contains static references to 7 nibs.
   struct nib {
     /// Nib `AttendenceCell`.
     static let attendenceCell = _R.nib._AttendenceCell()
+    /// Nib `CoursesCell`.
+    static let coursesCell = _R.nib._CoursesCell()
     /// Nib `DashboardCell`.
     static let dashboardCell = _R.nib._DashboardCell()
     /// Nib `FujiFilmLeftMenuCell`.
@@ -426,6 +442,12 @@ struct R: Rswift.Validatable {
     @available(*, deprecated, message: "Use UINib(resource: R.nib.attendenceCell) instead")
     static func attendenceCell(_: Void = ()) -> UIKit.UINib {
       return UIKit.UINib(resource: R.nib.attendenceCell)
+    }
+    
+    /// `UINib(name: "CoursesCell", in: bundle)`
+    @available(*, deprecated, message: "Use UINib(resource: R.nib.coursesCell) instead")
+    static func coursesCell(_: Void = ()) -> UIKit.UINib {
+      return UIKit.UINib(resource: R.nib.coursesCell)
     }
     
     /// `UINib(name: "DashboardCell", in: bundle)`
@@ -462,6 +484,10 @@ struct R: Rswift.Validatable {
       return R.nib.attendenceCell.instantiate(withOwner: ownerOrNil, options: optionsOrNil)[0] as? AttendenceCell
     }
     
+    static func coursesCell(owner ownerOrNil: AnyObject?, options optionsOrNil: [UINib.OptionsKey : Any]? = nil) -> CoursesCell? {
+      return R.nib.coursesCell.instantiate(withOwner: ownerOrNil, options: optionsOrNil)[0] as? CoursesCell
+    }
+    
     static func dashboardCell(owner ownerOrNil: AnyObject?, options optionsOrNil: [UINib.OptionsKey : Any]? = nil) -> DashboardCell? {
       return R.nib.dashboardCell.instantiate(withOwner: ownerOrNil, options: optionsOrNil)[0] as? DashboardCell
     }
@@ -485,10 +511,20 @@ struct R: Rswift.Validatable {
     fileprivate init() {}
   }
   
-  /// This `R.storyboard` struct is generated, and contains static references to 13 storyboards.
+  /// This `R.reuseIdentifier` struct is generated, and contains static references to 1 reuse identifiers.
+  struct reuseIdentifier {
+    /// Reuse identifier `CoursesCell`.
+    static let coursesCell: Rswift.ReuseIdentifier<CoursesCell> = Rswift.ReuseIdentifier(identifier: "CoursesCell")
+    
+    fileprivate init() {}
+  }
+  
+  /// This `R.storyboard` struct is generated, and contains static references to 14 storyboards.
   struct storyboard {
     /// Storyboard `Attendence`.
     static let attendence = _R.storyboard.attendence()
+    /// Storyboard `Courses`.
+    static let courses = _R.storyboard.courses()
     /// Storyboard `Dashboard`.
     static let dashboard = _R.storyboard.dashboard()
     /// Storyboard `ForgotPassword`.
@@ -517,6 +553,11 @@ struct R: Rswift.Validatable {
     /// `UIStoryboard(name: "Attendence", bundle: ...)`
     static func attendence(_: Void = ()) -> UIKit.UIStoryboard {
       return UIKit.UIStoryboard(resource: R.storyboard.attendence)
+    }
+    
+    /// `UIStoryboard(name: "Courses", bundle: ...)`
+    static func courses(_: Void = ()) -> UIKit.UIStoryboard {
+      return UIKit.UIStoryboard(resource: R.storyboard.courses)
     }
     
     /// `UIStoryboard(name: "Dashboard", bundle: ...)`
@@ -603,6 +644,7 @@ struct _R: Rswift.Validatable {
   
   struct nib: Rswift.Validatable {
     static func validate() throws {
+      try _CoursesCell.validate()
       try _DashboardCell.validate()
       try _WorkshopCell.validate()
     }
@@ -613,6 +655,27 @@ struct _R: Rswift.Validatable {
       
       func firstView(owner ownerOrNil: AnyObject?, options optionsOrNil: [UINib.OptionsKey : Any]? = nil) -> AttendenceCell? {
         return instantiate(withOwner: ownerOrNil, options: optionsOrNil)[0] as? AttendenceCell
+      }
+      
+      fileprivate init() {}
+    }
+    
+    struct _CoursesCell: Rswift.NibResourceType, Rswift.ReuseIdentifierType, Rswift.Validatable {
+      typealias ReusableType = CoursesCell
+      
+      let bundle = R.hostingBundle
+      let identifier = "CoursesCell"
+      let name = "CoursesCell"
+      
+      func firstView(owner ownerOrNil: AnyObject?, options optionsOrNil: [UINib.OptionsKey : Any]? = nil) -> CoursesCell? {
+        return instantiate(withOwner: ownerOrNil, options: optionsOrNil)[0] as? CoursesCell
+      }
+      
+      static func validate() throws {
+        if UIKit.UIImage(named: "Attendance-button", in: R.hostingBundle, compatibleWith: nil) == nil { throw Rswift.ValidationError(description: "[R.swift] Image named 'Attendance-button' is used in nib 'CoursesCell', but couldn't be loaded.") }
+        if UIKit.UIImage(named: "workshop_placeholder", in: R.hostingBundle, compatibleWith: nil) == nil { throw Rswift.ValidationError(description: "[R.swift] Image named 'workshop_placeholder' is used in nib 'CoursesCell', but couldn't be loaded.") }
+        if #available(iOS 11.0, *) {
+        }
       }
       
       fileprivate init() {}
@@ -692,6 +755,7 @@ struct _R: Rswift.Validatable {
   struct storyboard: Rswift.Validatable {
     static func validate() throws {
       try attendence.validate()
+      try courses.validate()
       try dashboard.validate()
       try forgotPassword.validate()
       try launchScreen.validate()
@@ -721,6 +785,26 @@ struct _R: Rswift.Validatable {
         if #available(iOS 11.0, *) {
         }
         if _R.storyboard.attendence().attendenceViewController() == nil { throw Rswift.ValidationError(description:"[R.swift] ViewController with identifier 'attendenceViewController' could not be loaded from storyboard 'Attendence' as 'AttendenceViewController'.") }
+      }
+      
+      fileprivate init() {}
+    }
+    
+    struct courses: Rswift.StoryboardResourceWithInitialControllerType, Rswift.Validatable {
+      typealias InitialController = CoursesViewController
+      
+      let bundle = R.hostingBundle
+      let coursesViewController = StoryboardViewControllerResource<CoursesViewController>(identifier: "CoursesViewController")
+      let name = "Courses"
+      
+      func coursesViewController(_: Void = ()) -> CoursesViewController? {
+        return UIKit.UIStoryboard(resource: self).instantiateViewController(withResource: coursesViewController)
+      }
+      
+      static func validate() throws {
+        if #available(iOS 11.0, *) {
+        }
+        if _R.storyboard.courses().coursesViewController() == nil { throw Rswift.ValidationError(description:"[R.swift] ViewController with identifier 'coursesViewController' could not be loaded from storyboard 'Courses' as 'CoursesViewController'.") }
       }
       
       fileprivate init() {}

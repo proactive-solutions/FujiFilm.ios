@@ -19,7 +19,7 @@
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
         <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
-        <tableViewCell contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="none" indentationWidth="10" rowHeight="419" id="KGk-i7-Jjw" customClass="WorkshopCell" customModule="FujiFilm" customModuleProvider="target">
+        <tableViewCell contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="none" indentationWidth="10" reuseIdentifier="CoursesCell" rowHeight="419" id="KGk-i7-Jjw" customClass="CoursesCell" customModule="FujiFilm" customModuleProvider="target">
             <rect key="frame" x="0.0" y="0.0" width="320" height="419"/>
             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
             <tableViewCellContentView key="contentView" opaque="NO" multipleTouchEnabled="YES" contentMode="center" tableViewCell="KGk-i7-Jjw" id="H2p-sc-9uM">
@@ -221,7 +221,7 @@
                                             <constraint firstAttribute="width" constant="120" id="rtk-Km-NcR"/>
                                         </constraints>
                                     </view>
-                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="HFW-0E-phh">
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="leading" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="HFW-0E-phh">
                                         <rect key="frame" x="10" y="315" width="100" height="30"/>
                                         <state key="normal" title="View Attendee"/>
                                         <connections>
@@ -229,8 +229,8 @@
                                         </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Hgt-Bp-WBT">
-                                        <rect key="frame" x="224.5" y="315" width="72.5" height="30"/>
-                                        <state key="normal" image="small_scan"/>
+                                        <rect key="frame" x="212" y="315" width="85" height="30"/>
+                                        <state key="normal" image="Attendance-button"/>
                                         <connections>
                                             <action selector="scanQRCode:" destination="KGk-i7-Jjw" eventType="touchUpInside" id="hCH-2u-XaX"/>
                                         </connections>
@@ -240,18 +240,18 @@
                                 <constraints>
                                     <constraint firstItem="e0k-jZ-7Dx" firstAttribute="top" secondItem="uHY-9t-4vJ" secondAttribute="top" id="1g6-XX-K5b"/>
                                     <constraint firstItem="KFZ-LS-Krh" firstAttribute="top" secondItem="9eB-AQ-6zv" secondAttribute="bottom" id="7gI-PN-ORP"/>
-                                    <constraint firstItem="HFW-0E-phh" firstAttribute="top" secondItem="KFZ-LS-Krh" secondAttribute="bottom" constant="5" id="HgY-kS-Mzi"/>
+                                    <constraint firstItem="Hgt-Bp-WBT" firstAttribute="trailing" secondItem="KFZ-LS-Krh" secondAttribute="trailing" id="B9C-pm-Fn6"/>
+                                    <constraint firstItem="Hgt-Bp-WBT" firstAttribute="top" secondItem="KFZ-LS-Krh" secondAttribute="bottom" constant="5" id="Bxq-1E-a3h"/>
                                     <constraint firstItem="9eB-AQ-6zv" firstAttribute="trailing" secondItem="e0k-jZ-7Dx" secondAttribute="trailing" constant="-10" id="ON2-gQ-DHB"/>
                                     <constraint firstAttribute="trailing" secondItem="KFZ-LS-Krh" secondAttribute="trailing" constant="20" id="OuV-Do-Ywf"/>
                                     <constraint firstAttribute="bottom" secondItem="EKL-Io-QH4" secondAttribute="bottom" constant="40" id="RBT-sQ-5Kv"/>
-                                    <constraint firstItem="Hgt-Bp-WBT" firstAttribute="trailing" secondItem="KFZ-LS-Krh" secondAttribute="trailing" id="RIf-3a-keb"/>
                                     <constraint firstItem="EKL-Io-QH4" firstAttribute="leading" secondItem="9eB-AQ-6zv" secondAttribute="leading" id="Tne-ah-U7a"/>
+                                    <constraint firstItem="HFW-0E-phh" firstAttribute="leading" secondItem="WmP-sa-P4D" secondAttribute="leading" id="WYe-Do-mqN"/>
                                     <constraint firstAttribute="trailing" secondItem="e0k-jZ-7Dx" secondAttribute="trailing" id="bZW-ft-Na8"/>
-                                    <constraint firstItem="HFW-0E-phh" firstAttribute="leading" secondItem="WmP-sa-P4D" secondAttribute="leading" id="fwB-gA-0GI"/>
                                     <constraint firstItem="EKL-Io-QH4" firstAttribute="top" secondItem="KFZ-LS-Krh" secondAttribute="top" id="fwu-Fn-N1M"/>
                                     <constraint firstItem="9eB-AQ-6zv" firstAttribute="top" secondItem="e0k-jZ-7Dx" secondAttribute="bottom" constant="5" id="neo-hQ-IqD"/>
                                     <constraint firstItem="KFZ-LS-Krh" firstAttribute="bottom" secondItem="EKL-Io-QH4" secondAttribute="bottom" id="nfL-dY-Fhy"/>
-                                    <constraint firstItem="Hgt-Bp-WBT" firstAttribute="top" secondItem="KFZ-LS-Krh" secondAttribute="bottom" constant="5" id="o9V-sH-fKS"/>
+                                    <constraint firstItem="HFW-0E-phh" firstAttribute="top" secondItem="KFZ-LS-Krh" secondAttribute="bottom" constant="5" id="q8M-jD-2Qm"/>
                                     <constraint firstItem="9eB-AQ-6zv" firstAttribute="leading" secondItem="e0k-jZ-7Dx" secondAttribute="leading" constant="10" id="qXB-d3-RDG"/>
                                     <constraint firstItem="KFZ-LS-Krh" firstAttribute="leading" secondItem="EKL-Io-QH4" secondAttribute="trailing" constant="29" id="tFx-0S-iWN"/>
                                     <constraint firstItem="e0k-jZ-7Dx" firstAttribute="leading" secondItem="uHY-9t-4vJ" secondAttribute="leading" id="tPW-zA-2jL"/>
@@ -294,7 +294,7 @@
         </tableViewCell>
     </objects>
     <resources>
-        <image name="small_scan" width="72.333335876464844" height="30"/>
+        <image name="Attendance-button" width="85" height="30"/>
         <image name="workshop_placeholder" width="485" height="243"/>
     </resources>
 </document>

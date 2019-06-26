@@ -18,6 +18,7 @@ enum StoryBoardNames: String {
     case WarrantySearchResult
     case ProductDetails
     case Attendence
+    case Courses
 }
 
 extension StoryBoardNames {

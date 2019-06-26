@@ -11,10 +11,7 @@ import UIKit
 class SplashViewController: FujiFilmViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
-        print("Born")
-
         navigationController?.isNavigationBarHidden = true
-
         DispatchQueue.main.asyncAfter(deadline: DispatchTime.now() + 2.0) { [weak self] in
             guard let self = self else { return }
 
@@ -27,9 +24,5 @@ class SplashViewController: FujiFilmViewController {
                 }
             }
         }
-    }
-
-    deinit {
-        print("Died")
     }
 }

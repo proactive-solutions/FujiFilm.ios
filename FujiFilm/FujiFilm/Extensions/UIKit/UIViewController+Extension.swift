@@ -63,6 +63,18 @@ extension UIViewController {
     }
 
     @discardableResult
+    func showCourses() -> CoursesViewController {
+        let storyboardName = StoryBoardNames.Courses
+
+        guard let controller = storyboardName.instatiateController() as? CoursesViewController else {
+            fatalError(controllerCastingErrorMessage)
+        }
+
+        navigationController?.pushViewController(controller, animated: true)
+        return controller
+    }
+
+    @discardableResult
     func showDashboard() -> DashboardViewController {
         let storyboardName = StoryBoardNames.dashboard
 

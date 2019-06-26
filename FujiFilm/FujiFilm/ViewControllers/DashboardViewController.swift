@@ -13,7 +13,7 @@ final class DashboardViewController: FujiFilmViewController, UITableViewDataSour
 
     private let menuTitles: [UIImage] = [
         #imageLiteral(resourceName: "workshop_image"),
-        // #imageLiteral(resourceName: "loan_program_image"),
+        #imageLiteral(resourceName: "Courses"),
         #imageLiteral(resourceName: "warranty_image"),
     ]
 
@@ -64,10 +64,11 @@ final class DashboardViewController: FujiFilmViewController, UITableViewDataSour
 
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         tableView.deselectRow(at: indexPath, animated: false)
+
         if indexPath.row == 0 {
             showWorkshop()
         } else if indexPath.row == 1 {
-            showWarrantySearch()
+            showCourses()
         } else if indexPath.row == 2 {
             showWarrantySearch()
         }
