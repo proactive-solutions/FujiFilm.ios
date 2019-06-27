@@ -41,6 +41,7 @@ struct Attendees: Codable {
 
         struct Attendence: Codable {
             let name: String
+            let phone: String?
             let eventID: String
             let status: String
             let city: String
@@ -48,6 +49,7 @@ struct Attendees: Codable {
 
             enum CodingKeys: String, CodingKey {
                 case name
+                case phone
                 case eventID = "event_id"
                 case status
                 case city

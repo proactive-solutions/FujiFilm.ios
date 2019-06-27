@@ -8,6 +8,12 @@
 
 import UIKit
 
+extension Date {
+    static func - (lhs: Date, rhs: Date) -> TimeInterval {
+        return lhs.timeIntervalSinceReferenceDate - rhs.timeIntervalSinceReferenceDate
+    }
+}
+
 extension String {
     var intVal: Int {
         return (self as NSString).integerValue
@@ -65,7 +71,15 @@ class WorkshopCell: UITableViewCell {
     func display(result: EventList.Result) {
         dateLabel1.text = result.date
         dateLabel2.text = (result.startTime ?? "") + "-" + (result.endTime ?? "")
-        dateLabel3.text = /*result.fldEventLong + */" hour" 
+
+        let dateFormatter = DateFormatter()
+        dateFormatter.dateFormat = "yyyy-mm-dd HH:mm:ss"
+        let eventDate = dateFormatter.date(from: result.fldEventDate + " " + result.fldEventStarttime) ?? Date()
+        let today = Date()
+        let delta = today - eventDate
+    
+        dateLabel3.text = /* result. + */ " hour"
+
         nameLabel.text = result.fldEventTitle
         presentLabel.text = "\(result.attendanceCount)"
         attendeeLabel.text = result.fldEventSeats

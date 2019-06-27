@@ -121,12 +121,14 @@ class AttendenceViewController: FujiFilmViewController, UITableViewDataSource, U
             cell.markPresentButton.isHidden = true
             if let data = self.presents?[indexPath.row] {
                 cell.nameLabel?.text = data.name
+                cell.phoneNumberButton.setTitle(data.phone, for: .normal)
             }
         } else {
             if let data = self.absents?[indexPath.row] {
                 guard let user = UserDefaults.standard.userDetails else { fatalError("user not found") }
 
                 cell.nameLabel?.text = data.name
+                cell.phoneNumberButton.setTitle(data.phone, for: .normal)
                 cell.markPresentButton.isHidden = false
                 cell.markPresent = { [weak self] in
                     guard let self = self else { return }
