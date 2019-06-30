@@ -73,12 +73,16 @@ class WorkshopCell: UITableViewCell {
         dateLabel2.text = (result.startTime ?? "") + "-" + (result.endTime ?? "")
 
         let dateFormatter = DateFormatter()
-        dateFormatter.dateFormat = "yyyy-mm-dd HH:mm:ss"
+        dateFormatter.dateFormat = "yyyy-MM-dd HH:mm:ss"
         let eventDate = dateFormatter.date(from: result.fldEventDate + " " + result.fldEventStarttime) ?? Date()
         let today = Date()
-        let delta = today - eventDate
-    
-        dateLabel3.text = /* result. + */ " hour"
+        let delta: TimeInterval = eventDate - today
+        let numberOfSecondsInAnHour: TimeInterval = 60 * 60
+
+        let numberOfHoursRemaining = delta/numberOfSecondsInAnHour
+        let durationText = numberOfHoursRemaining > 1 ? " hour(s)" : " minute(s)"
+
+        dateLabel3.text = String.init(format: "%0.2f", numberOfHoursRemaining) + durationText
 
         nameLabel.text = result.fldEventTitle
         presentLabel.text = "\(result.attendanceCount)"
