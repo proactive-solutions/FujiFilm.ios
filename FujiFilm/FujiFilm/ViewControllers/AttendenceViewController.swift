@@ -16,6 +16,7 @@ class AttendenceViewController: FujiFilmViewController, UITableViewDataSource, U
     var eventDetails: EventList.Result?
     private var absents: [Attendees.Result.Attendence]?
     private var presents: [Attendees.Result.Attendence]?
+    @IBOutlet var tabMenuButtons: [UIButton]!
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -26,7 +27,36 @@ class AttendenceViewController: FujiFilmViewController, UITableViewDataSource, U
             .calculateCellHeight(estimatedHeight: 80.0)
             .hideEmptyAndExtraRows()
 
+        addUnderLineLayer()
+
         getAttendees()
+    }
+
+    private func addUnderLineLayer() {
+        tabMenuButtons.forEach {
+            $0.addBottomBorderWithColor(color: .clear, width: 1.0)
+        }
+        tabMenuButtons?.first?.underLineColor = UIColor.blue.cgColor
+    }
+
+    @IBAction private func presentUser(_ sender: UIButton) {
+        tabMenuButtons.forEach { $0.underLineColor = UIColor.clear.cgColor }
+        sender.underLineColor = UIColor.blue.cgColor
+    }
+
+    @IBAction private func absentUser(_ sender: UIButton) {
+        tabMenuButtons.forEach { $0.underLineColor = UIColor.clear.cgColor }
+        sender.underLineColor = UIColor.blue.cgColor
+    }
+
+    @IBAction private func registeredUser(_ sender: UIButton) {
+        tabMenuButtons.forEach { $0.underLineColor = UIColor.clear.cgColor }
+        sender.underLineColor = UIColor.blue.cgColor
+    }
+
+    @IBAction private func waitingListUser(_ sender: UIButton) {
+        tabMenuButtons.forEach { $0.underLineColor = UIColor.clear.cgColor }
+        sender.underLineColor = UIColor.blue.cgColor
     }
 
     private func getAttendees() {

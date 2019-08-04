@@ -35,7 +35,7 @@ final class CoursesViewController: FujiFilmViewController, UITableViewDataSource
                 self.view.hideLoader()
                 if let list = try? JSONDecoder().decode(EventList.self, from: data) {
                     self.evnetsEventList.removeAll()
-                    self.evnetsEventList = list.result
+                    self.evnetsEventList = list.result.filter { $0.fldEventType == "C" }
                     self.menuTableView.reloadData()
                 } else if let error = try? JSONDecoder().decode(APIError.self, from: data) {
                     self.view.show(error: error.message)
