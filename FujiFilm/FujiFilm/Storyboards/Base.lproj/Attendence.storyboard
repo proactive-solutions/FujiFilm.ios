@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14490.70" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
-    <device id="retina5_5" orientation="portrait">
+    <device id="retina3_5" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
     <dependencies>
@@ -15,41 +15,41 @@
             <objects>
                 <viewController storyboardIdentifier="AttendenceViewController" title="Attendence" id="BYZ-38-t0r" customClass="AttendenceViewController" customModule="FujiFilm" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="480"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="F31-Zw-1dV">
-                                <rect key="frame" x="0.0" y="20" width="414" height="40"/>
+                                <rect key="frame" x="0.0" y="20" width="320" height="40"/>
                                 <subviews>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="wCd-jI-0E1">
-                                        <rect key="frame" x="0.0" y="0.0" width="414" height="40"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="320" height="40"/>
                                         <subviews>
                                             <stackView opaque="NO" contentMode="scaleToFill" distribution="fillProportionally" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="BFt-nF-1Bm">
-                                                <rect key="frame" x="8" y="0.0" width="398" height="40"/>
+                                                <rect key="frame" x="8" y="0.0" width="304" height="40"/>
                                                 <subviews>
                                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="N0Z-LU-PTz">
-                                                        <rect key="frame" x="0.0" y="0.0" width="76.666666666666671" height="40"/>
+                                                        <rect key="frame" x="0.0" y="0.0" width="58.5" height="40"/>
                                                         <state key="normal" title="Present"/>
                                                         <connections>
                                                             <action selector="presentUser:" destination="BYZ-38-t0r" eventType="touchUpInside" id="e2e-xQ-Bam"/>
                                                         </connections>
                                                     </button>
                                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="qAr-fr-ACG">
-                                                        <rect key="frame" x="84.666666666666671" y="0.0" width="71.000000000000014" height="40"/>
+                                                        <rect key="frame" x="66.5" y="0.0" width="54.5" height="40"/>
                                                         <state key="normal" title="Absent"/>
                                                         <connections>
                                                             <action selector="absentUser:" destination="BYZ-38-t0r" eventType="touchUpInside" id="FCF-VK-wiF"/>
                                                         </connections>
                                                     </button>
                                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ylE-bQ-kY2">
-                                                        <rect key="frame" x="163.66666666666666" y="0.0" width="106.99999999999997" height="40"/>
+                                                        <rect key="frame" x="129" y="0.0" width="81.5" height="40"/>
                                                         <state key="normal" title="Registered"/>
                                                         <connections>
                                                             <action selector="registeredUser:" destination="BYZ-38-t0r" eventType="touchUpInside" id="CgH-7l-Mac"/>
                                                         </connections>
                                                     </button>
                                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="SBe-0i-goN">
-                                                        <rect key="frame" x="278.66666666666669" y="0.0" width="119.33333333333331" height="40"/>
+                                                        <rect key="frame" x="218.5" y="0.0" width="85.5" height="40"/>
                                                         <state key="normal" title="Waiting list"/>
                                                         <connections>
                                                             <action selector="waitingListUser:" destination="BYZ-38-t0r" eventType="touchUpInside" id="Bzq-rV-RT9"/>
@@ -78,7 +78,7 @@
                                 </constraints>
                             </scrollView>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="tm7-V2-nKy" customClass="FujiFilmTableView" customModule="FujiFilm" customModuleProvider="target">
-                                <rect key="frame" x="0.0" y="60" width="414" height="676"/>
+                                <rect key="frame" x="0.0" y="60" width="320" height="420"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <connections>
                                     <outlet property="dataSource" destination="BYZ-38-t0r" id="X6n-7T-WUR"/>

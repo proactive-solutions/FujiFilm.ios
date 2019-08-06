@@ -57,7 +57,7 @@ class AttendenceViewController: FujiFilmViewController, UITableViewDataSource, U
         tabMenuButtons.forEach {
             $0.addBottomBorderWithColor(color: .clear, width: 1.0)
         }
-        tabMenuButtons?.first?.underLineColor = UIColor.blue.cgColor
+        tabMenuButtons?.first?.underLineColor = UIColor.defaultBlue.cgColor
     }
 
     @IBAction private func presentUser(_ sender: UIButton) {

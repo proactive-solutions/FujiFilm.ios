@@ -1,11 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14460.31" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
-    <device id="retina4_0" orientation="portrait">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14490.70" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina3_5" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14460.20"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14490.49"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -26,20 +26,20 @@
             <objects>
                 <viewController storyboardIdentifier="QRScanResultViewController" id="1JF-CR-cud" customClass="QRScanResultViewController" customModule="FujiFilm" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="Flg-OM-Oj7">
-                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="480"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" text="Scan successfully" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="BQt-3e-fjH" customClass="FujiFilmLabel" customModule="FujiFilm" customModuleProvider="target">
-                                <rect key="frame" x="52.5" y="146" width="215" height="29.5"/>
+                                <rect key="frame" x="52.5" y="172.5" width="215" height="29.5"/>
                                 <fontDescription key="fontDescription" name="Raleway-Bold" family="Raleway" pointSize="25"/>
                                 <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="successfully_icon" translatesAutoresizingMaskIntoConstraints="NO" id="wQr-LM-lis">
-                                <rect key="frame" x="133.5" y="55" width="53" height="53"/>
+                                <rect key="frame" x="120.5" y="55" width="79.5" height="79.5"/>
                             </imageView>
                             <button opaque="NO" contentMode="scaleToFill" semanticContentAttribute="forceRightToLeft" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="75g-DS-cRJ">
-                                <rect key="frame" x="0.0" y="518" width="320" height="50"/>
+                                <rect key="frame" x="0.0" y="430" width="320" height="50"/>
                                 <color key="backgroundColor" red="0.0047409962862730026" green="0.5649566650390625" blue="0.42780393362045288" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="50" id="RA3-WP-8b1"/>
@@ -53,7 +53,7 @@
                                 </connections>
                             </button>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="zBd-jK-my0">
-                                <rect key="frame" x="20" y="346" width="280" height="102"/>
+                                <rect key="frame" x="20" y="258" width="280" height="102"/>
                                 <subviews>
                                     <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacing="5" translatesAutoresizingMaskIntoConstraints="NO" id="e9h-Gi-lec">
                                         <rect key="frame" x="0.0" y="0.0" width="280" height="18"/>
@@ -125,8 +125,11 @@
                                     </stackView>
                                 </subviews>
                             </stackView>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="user_icon" translatesAutoresizingMaskIntoConstraints="NO" id="WOL-O4-T35">
-                                <rect key="frame" x="105" y="202" width="110" height="110"/>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" horizontalCompressionResistancePriority="749" verticalCompressionResistancePriority="749" image="user_icon" translatesAutoresizingMaskIntoConstraints="NO" id="WOL-O4-T35">
+                                <rect key="frame" x="77" y="228.5" width="166" height="24.5"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="166" id="QdY-Pv-RRV"/>
+                                </constraints>
                             </imageView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -143,6 +146,7 @@
                             <constraint firstItem="Typ-ak-K4U" firstAttribute="bottom" secondItem="75g-DS-cRJ" secondAttribute="bottom" id="edn-zx-N4N"/>
                             <constraint firstItem="WOL-O4-T35" firstAttribute="centerX" secondItem="wQr-LM-lis" secondAttribute="centerX" id="mbR-5m-HVX"/>
                             <constraint firstItem="75g-DS-cRJ" firstAttribute="top" secondItem="zBd-jK-my0" secondAttribute="bottom" constant="70" id="rZR-pC-kxC"/>
+                            <constraint firstItem="zBd-jK-my0" firstAttribute="top" relation="greaterThanOrEqual" secondItem="WOL-O4-T35" secondAttribute="bottom" constant="5" id="xwW-SY-NSR"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="Typ-ak-K4U"/>
                     </view>
@@ -156,12 +160,12 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="2aW-qf-LWk" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="800.79999999999995" y="-454.72263868065971"/>
+            <point key="canvasLocation" x="800.625" y="-455.28169014084506"/>
         </scene>
     </scenes>
     <resources>
-        <image name="continue_arrow" width="10.333333015441895" height="10.333333015441895"/>
-        <image name="successfully_icon" width="53" height="53"/>
-        <image name="user_icon" width="110.33333587646484" height="110.33333587646484"/>
+        <image name="continue_arrow" width="15.5" height="15.5"/>
+        <image name="successfully_icon" width="79.5" height="79.5"/>
+        <image name="user_icon" width="165.5" height="165.5"/>
     </resources>
 </document>
