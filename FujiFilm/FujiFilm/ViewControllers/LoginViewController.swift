@@ -39,6 +39,7 @@ final class LoginViewController: FujiFilmViewController {
             parameters: params,
             headers: nil,
             success: { [weak self] (data: Data, _: Int) in
+                print(String(data: data, encoding: .utf8))
                 guard let self = self else { return }
                 self.view.hideLoader()
                 if let error = try? JSONDecoder().decode(APIError.self, from: data) {

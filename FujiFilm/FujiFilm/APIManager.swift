@@ -14,7 +14,7 @@ enum APIPaths: String {
     }
 
     var baseURL: String {
-        return "http://abir.net/api/"
+        return "https://members.fujifilm-xmea.com/api/"
     }
 }
 
