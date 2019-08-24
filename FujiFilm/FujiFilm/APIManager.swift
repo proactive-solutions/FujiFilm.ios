@@ -78,6 +78,8 @@ class APIManager: NSObject {
         if let extra = extraParams {
             url += "/" + extra
         }
+        print("url:\(url)")
+        print("parameters:\(parameters)")
         let urlEncode = url.addingPercentEncoding(withAllowedCharacters: .urlQueryAllowed)
         currentDataRequest = Alamofire.request(
             urlEncode!, method: method,
@@ -86,6 +88,7 @@ class APIManager: NSObject {
         ).responseData { response in
             switch response.result {
             case let .success(data):
+                print(String(data: data, encoding: .utf8))
                 success?(data, (response.response?.statusCode)!)
                 break
             case let .failure(error):

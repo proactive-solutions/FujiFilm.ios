@@ -31,6 +31,7 @@ final class CoursesViewController: FujiFilmViewController, UITableViewDataSource
             parameters: ["distributor_id": user.result.fldDid],
             headers: nil,
             success: { [weak self] (data: Data, _: Int) in
+                // print(String.init(data: data, encoding: .utf8))
                 guard let self = self else { return }
                 self.view.hideLoader()
                 if let list = try? JSONDecoder().decode(EventList.self, from: data) {

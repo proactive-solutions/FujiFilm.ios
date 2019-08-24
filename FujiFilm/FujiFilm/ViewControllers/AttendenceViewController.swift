@@ -1,15 +1,6 @@
-//
-//  ViewController.swift
-//  StoryboardingDemo
-//
-//  Created by rails gr4 on 19/06/19.
-//  Copyright © 2019 Deqode. All rights reserved.
-//
-
 import UIKit
 
 class AttendenceViewController: FujiFilmViewController, UITableViewDataSource, UITableViewDelegate {
-
     private enum ListMode {
         case present
         case absent
@@ -30,9 +21,17 @@ class AttendenceViewController: FujiFilmViewController, UITableViewDataSource, U
             attendenceTableView?.reloadData()
         }
     }
-    private var listMode: ListMode = .present
 
-    @IBOutlet var tabMenuButtons: [UIButton]!
+    private var listMode: ListMode = .registered
+
+    @IBOutlet private var allUsersButton: UIButton!
+    @IBOutlet private var presentUsersButton: UIButton!
+    @IBOutlet private var absentUsersButton: UIButton!
+    @IBOutlet private var waitingUsersButton: UIButton!
+
+    private var tabMenuButtons: [UIButton]! {
+        return [allUsersButton, presentUsersButton, absentUsersButton, waitingUsersButton]
+    }
 
     private var present: String { return "Present" }
     private var absent: String { return "Absent" }
@@ -64,28 +63,28 @@ class AttendenceViewController: FujiFilmViewController, UITableViewDataSource, U
         resetButtonsunserLineColor()
         sender.underLineColor = UIColor.defaultBlue.cgColor
         listMode = .present
-        self.renderingList = self.presentUsers
+        renderingList = presentUsers
     }
 
     @IBAction private func absentUser(_ sender: UIButton) {
         resetButtonsunserLineColor()
         sender.underLineColor = UIColor.defaultBlue.cgColor
         listMode = .absent
-        self.renderingList = self.absentUsers
+        renderingList = absentUsers
     }
 
     @IBAction private func registeredUser(_ sender: UIButton) {
         resetButtonsunserLineColor()
         sender.underLineColor = UIColor.defaultBlue.cgColor
         listMode = .registered
-        self.renderingList = self.registeredUsers
+        renderingList = registeredUsers
     }
 
     @IBAction private func waitingListUser(_ sender: UIButton) {
         resetButtonsunserLineColor()
         sender.underLineColor = UIColor.defaultBlue.cgColor
         listMode = .waitingList
-        self.renderingList = self.waitingUsers
+        renderingList = waitingUsers
     }
 
     private func resetButtonsunserLineColor() {
@@ -110,6 +109,8 @@ class AttendenceViewController: FujiFilmViewController, UITableViewDataSource, U
                 guard let self = self else { return }
                 self.view.hideLoader()
                 if let details = try? JSONDecoder().decode(Attendees.self, from: data) {
+                    self.registeredUsers = details.result.attendence
+
                     self.absentUsers = details.result.attendence.filter {
                         $0.status.lowercased() == self.absent.lowercased()
                     }
@@ -118,15 +119,11 @@ class AttendenceViewController: FujiFilmViewController, UITableViewDataSource, U
                         $0.status.lowercased() == self.present.lowercased()
                     }
 
-                    self.registeredUsers = details.result.attendence.filter {
-                        $0.status.lowercased() == self.registered.lowercased()
-                    }
-
                     self.waitingUsers = details.result.attendence.filter {
                         $0.status.lowercased() == self.waiting.lowercased()
                     }
 
-                    self.renderingList = self.presentUsers
+                    self.renderingList = details.result.attendence
 
                     self.attendenceTableView.reloadData()
                 } else if let error = try? JSONDecoder().decode(APIError.self, from: data) {
@@ -149,15 +146,19 @@ class AttendenceViewController: FujiFilmViewController, UITableViewDataSource, U
             headers: nil,
             success: { [weak self] (data: Data, _: Int) in
                 guard let self = self else { return }
-                print(String.init(data: data, encoding: String.Encoding.utf8)!)
+                print(String(data: data, encoding: String.Encoding.utf8)!)
                 self.view.hideLoader()
                 if let details = try? JSONDecoder().decode(Attendees.self, from: data) {
                     self.absentUsers = details.result.attendence.filter {
-                        $0.status.lowercased() == "Absent".lowercased()
+                        $0.status.lowercased() == self.absent.lowercased()
                     }
 
                     self.presentUsers = details.result.attendence.filter {
-                        $0.status.lowercased() == "Present".lowercased()
+                        $0.status.lowercased() == self.present.lowercased()
+                    }
+
+                    self.waitingUsers = details.result.attendence.filter {
+                        $0.status.lowercased() == self.waiting.lowercased()
                     }
 
                     self.attendenceTableView.reloadData()
@@ -176,7 +177,16 @@ class AttendenceViewController: FujiFilmViewController, UITableViewDataSource, U
     }
 
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return renderingList?.count ?? 0
+        if let counter = renderingList?.count {
+            if counter == 0 {
+                attendenceTableView.isHidden = true
+            } else {
+                attendenceTableView.isHidden = false
+            }
+            return counter
+        }
+        attendenceTableView.isHidden = true
+        return 0
     }
 
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
@@ -186,18 +196,66 @@ class AttendenceViewController: FujiFilmViewController, UITableViewDataSource, U
             return AttendenceCell(style: .default, reuseIdentifier: cellReuseIdentifier)
         }
 
-        switch self.listMode {
+        switch listMode {
         case .present:
             cell.markPresent = nil
             cell.markPresentButton.isHidden = true
-            if let data = self.presentUsers?[indexPath.row] {
+            if let data = renderingList?[indexPath.row] {
                 cell.nameLabel?.text = data.name
                 cell.phoneNumberButton.setTitle(data.phone, for: .normal)
             }
             break
 
-        case .absent, .registered, .waitingList:
-            if let data = self.absentUsers?[indexPath.row] {
+        case .registered:
+            if let data = renderingList?[indexPath.row] {
+                guard let user = UserDefaults.standard.userDetails else { fatalError("user not found") }
+
+                cell.nameLabel?.text = data.name
+                cell.phoneNumberButton.setTitle(data.phone, for: .normal)
+                cell.markPresentButton.isHidden = false
+                cell.markPresent = { [weak self] in
+                    guard let self = self else { return }
+
+                    let apiData: [String: Any] = [
+                        "qr_code": data.qrCode,
+                        "distributor_id": user.result.fldDid,
+                        "event_id": data.eventID,
+                        "type": "S"
+                    ]
+
+                    self.markPresent(data: apiData)
+                }
+            } else {
+                cell.markPresent = nil
+            }
+            break
+
+        case .absent:
+            if let data = self.renderingList?[indexPath.row] {
+                guard let user = UserDefaults.standard.userDetails else { fatalError("user not found") }
+
+                cell.nameLabel?.text = data.name
+                cell.phoneNumberButton.setTitle(data.phone, for: .normal)
+                cell.markPresentButton.isHidden = false
+                cell.markPresent = { [weak self] in
+                    guard let self = self else { return }
+
+                    let apiData: [String: Any] = [
+                        "qr_code": data.qrCode,
+                        "distributor_id": user.result.fldDid,
+                        "event_id": data.eventID,
+                        "type": "S"
+                    ]
+
+                    self.markPresent(data: apiData)
+                }
+            } else {
+                cell.markPresent = nil
+            }
+            break
+
+        case .waitingList:
+            if let data = self.renderingList?[indexPath.row] {
                 guard let user = UserDefaults.standard.userDetails else { fatalError("user not found") }
 
                 cell.nameLabel?.text = data.name
@@ -221,10 +279,5 @@ class AttendenceViewController: FujiFilmViewController, UITableViewDataSource, U
             break
         }
         return cell
-    }
-
-    func tableView(_ tableView: UITableView, titleForHeaderInSection section: Int) -> String? {
-        let titles = ["Present", "Absent"]
-        return titles[section]
     }
 }

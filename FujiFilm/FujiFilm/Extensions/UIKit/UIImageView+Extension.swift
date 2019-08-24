@@ -8,7 +8,8 @@ import UIKit.UIImageView
 
 extension UIImageView {
     func from(url: String, completion: ((UIImage) -> Void)?) {
-        let imageURL = URL(string: url)
+        guard let str = url.addingPercentEncoding(withAllowedCharacters: CharacterSet.urlQueryAllowed) else { return }
+        let imageURL = URL(string: str)
         sd_setImage(
             with: imageURL,
             placeholderImage: #imageLiteral(resourceName: "workshop_placeholder"),

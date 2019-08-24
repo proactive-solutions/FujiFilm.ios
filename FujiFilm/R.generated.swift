@@ -184,7 +184,7 @@ struct R: Rswift.Validatable {
     fileprivate init() {}
   }
   
-  /// This `R.image` struct is generated, and contains static references to 33 images.
+  /// This `R.image` struct is generated, and contains static references to 34 images.
   struct image {
     /// Image `Attendance-button`.
     static let attendanceButton = Rswift.ImageResource(bundle: R.hostingBundle, name: "Attendance-button")
@@ -206,6 +206,8 @@ struct R: Rswift.Validatable {
     static let arrow = Rswift.ImageResource(bundle: R.hostingBundle, name: "arrow")
     /// Image `bg_image`.
     static let bg_image = Rswift.ImageResource(bundle: R.hostingBundle, name: "bg_image")
+    /// Image `call`.
+    static let call = Rswift.ImageResource(bundle: R.hostingBundle, name: "call")
     /// Image `change_password_icon`.
     static let change_password_icon = Rswift.ImageResource(bundle: R.hostingBundle, name: "change_password_icon")
     /// Image `continue_arrow`.
@@ -301,6 +303,11 @@ struct R: Rswift.Validatable {
     /// `UIImage(named: "bg_image", bundle: ..., traitCollection: ...)`
     static func bg_image(compatibleWith traitCollection: UIKit.UITraitCollection? = nil) -> UIKit.UIImage? {
       return UIKit.UIImage(resource: R.image.bg_image, compatibleWith: traitCollection)
+    }
+    
+    /// `UIImage(named: "call", bundle: ..., traitCollection: ...)`
+    static func call(compatibleWith traitCollection: UIKit.UITraitCollection? = nil) -> UIKit.UIImage? {
+      return UIKit.UIImage(resource: R.image.call, compatibleWith: traitCollection)
     }
     
     /// `UIImage(named: "change_password_icon", bundle: ..., traitCollection: ...)`
@@ -644,17 +651,24 @@ struct _R: Rswift.Validatable {
   
   struct nib: Rswift.Validatable {
     static func validate() throws {
+      try _AttendenceCell.validate()
       try _CoursesCell.validate()
       try _DashboardCell.validate()
       try _WorkshopCell.validate()
     }
     
-    struct _AttendenceCell: Rswift.NibResourceType {
+    struct _AttendenceCell: Rswift.NibResourceType, Rswift.Validatable {
       let bundle = R.hostingBundle
       let name = "AttendenceCell"
       
       func firstView(owner ownerOrNil: AnyObject?, options optionsOrNil: [UINib.OptionsKey : Any]? = nil) -> AttendenceCell? {
         return instantiate(withOwner: ownerOrNil, options: optionsOrNil)[0] as? AttendenceCell
+      }
+      
+      static func validate() throws {
+        if UIKit.UIImage(named: "call", in: R.hostingBundle, compatibleWith: nil) == nil { throw Rswift.ValidationError(description: "[R.swift] Image named 'call' is used in nib 'AttendenceCell', but couldn't be loaded.") }
+        if #available(iOS 11.0, *) {
+        }
       }
       
       fileprivate init() {}

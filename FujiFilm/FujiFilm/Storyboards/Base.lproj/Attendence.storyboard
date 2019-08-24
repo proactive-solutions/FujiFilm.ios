@@ -27,29 +27,29 @@
                                             <stackView opaque="NO" contentMode="scaleToFill" distribution="fillProportionally" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="BFt-nF-1Bm">
                                                 <rect key="frame" x="8" y="0.0" width="304" height="40"/>
                                                 <subviews>
+                                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ylE-bQ-kY2">
+                                                        <rect key="frame" x="0.0" y="0.0" width="71" height="40"/>
+                                                        <state key="normal" title="All Users"/>
+                                                        <connections>
+                                                            <action selector="registeredUser:" destination="BYZ-38-t0r" eventType="touchUpInside" id="CgH-7l-Mac"/>
+                                                        </connections>
+                                                    </button>
                                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="N0Z-LU-PTz">
-                                                        <rect key="frame" x="0.0" y="0.0" width="58.5" height="40"/>
+                                                        <rect key="frame" x="79" y="0.0" width="61.5" height="40"/>
                                                         <state key="normal" title="Present"/>
                                                         <connections>
                                                             <action selector="presentUser:" destination="BYZ-38-t0r" eventType="touchUpInside" id="e2e-xQ-Bam"/>
                                                         </connections>
                                                     </button>
                                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="qAr-fr-ACG">
-                                                        <rect key="frame" x="66.5" y="0.0" width="54.5" height="40"/>
+                                                        <rect key="frame" x="148.5" y="0.0" width="56.5" height="40"/>
                                                         <state key="normal" title="Absent"/>
                                                         <connections>
                                                             <action selector="absentUser:" destination="BYZ-38-t0r" eventType="touchUpInside" id="FCF-VK-wiF"/>
                                                         </connections>
                                                     </button>
-                                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ylE-bQ-kY2">
-                                                        <rect key="frame" x="129" y="0.0" width="81.5" height="40"/>
-                                                        <state key="normal" title="Registered"/>
-                                                        <connections>
-                                                            <action selector="registeredUser:" destination="BYZ-38-t0r" eventType="touchUpInside" id="CgH-7l-Mac"/>
-                                                        </connections>
-                                                    </button>
                                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="SBe-0i-goN">
-                                                        <rect key="frame" x="218.5" y="0.0" width="85.5" height="40"/>
+                                                        <rect key="frame" x="213" y="0.0" width="91" height="40"/>
                                                         <state key="normal" title="Waiting list"/>
                                                         <connections>
                                                             <action selector="waitingListUser:" destination="BYZ-38-t0r" eventType="touchUpInside" id="Bzq-rV-RT9"/>
@@ -77,6 +77,12 @@
                                     <constraint firstItem="wCd-jI-0E1" firstAttribute="leading" secondItem="F31-Zw-1dV" secondAttribute="leading" id="q9i-or-k4I"/>
                                 </constraints>
                             </scrollView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="No records found" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="j75-ts-zBs">
+                                <rect key="frame" x="93.5" y="230" width="133.5" height="20.5"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="tm7-V2-nKy" customClass="FujiFilmTableView" customModule="FujiFilm" customModuleProvider="target">
                                 <rect key="frame" x="0.0" y="60" width="320" height="420"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -89,21 +95,23 @@
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
                             <constraint firstItem="tm7-V2-nKy" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="1RG-qX-KTX"/>
+                            <constraint firstItem="j75-ts-zBs" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="6hG-FZ-4TL"/>
                             <constraint firstItem="tm7-V2-nKy" firstAttribute="top" secondItem="F31-Zw-1dV" secondAttribute="bottom" id="DJ2-gO-Slf"/>
                             <constraint firstItem="F31-Zw-1dV" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="Frw-Ck-yrO"/>
                             <constraint firstItem="F31-Zw-1dV" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="G7j-BB-RcH"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="tm7-V2-nKy" secondAttribute="trailing" id="g10-o4-ou4"/>
                             <constraint firstItem="F31-Zw-1dV" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" id="lqs-c6-Fe2"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="tm7-V2-nKy" secondAttribute="bottom" id="oi1-jl-Hfh"/>
+                            <constraint firstItem="j75-ts-zBs" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="wNh-z8-9if"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
                     <connections>
+                        <outlet property="absentUsersButton" destination="qAr-fr-ACG" id="7bH-FR-By4"/>
+                        <outlet property="allUsersButton" destination="ylE-bQ-kY2" id="Zce-OS-w5K"/>
                         <outlet property="attendenceTableView" destination="tm7-V2-nKy" id="b2B-JM-aXN"/>
-                        <outletCollection property="tabMenuButtons" destination="N0Z-LU-PTz" collectionClass="NSMutableArray" id="UYV-b8-y0P"/>
-                        <outletCollection property="tabMenuButtons" destination="qAr-fr-ACG" collectionClass="NSMutableArray" id="EoL-Nr-Gkd"/>
-                        <outletCollection property="tabMenuButtons" destination="ylE-bQ-kY2" collectionClass="NSMutableArray" id="TJz-MY-4Fv"/>
-                        <outletCollection property="tabMenuButtons" destination="SBe-0i-goN" collectionClass="NSMutableArray" id="Hdz-qJ-ndi"/>
+                        <outlet property="presentUsersButton" destination="N0Z-LU-PTz" id="P1g-h8-dq5"/>
+                        <outlet property="waitingUsersButton" destination="SBe-0i-goN" id="aoM-nj-ufh"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>

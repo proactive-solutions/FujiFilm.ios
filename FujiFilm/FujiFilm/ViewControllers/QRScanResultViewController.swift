@@ -35,8 +35,7 @@ class QRScanResultViewController: FujiFilmViewController {
         params["distributor_id"] = user.result.fldDid
         params["event_id"] = _data.event.fldEventID
         params["user_id"] = user.result.fldDid
-
-        print(params)
+        params["type"] = user.result.fldUserType
 
         APIManager().request(
             path: .scanQrCodeByDistributor,
@@ -47,10 +46,17 @@ class QRScanResultViewController: FujiFilmViewController {
             success: { [weak self] (data: Data, _: Int) in
                 guard let self = self else { return }
                 self.view.hideLoader()
+
+                do {
+                    try JSONDecoder().decode(QRSaveSuccess.self, from: data)
+                } catch let parse {
+                    print(parse)
+                }
+
                 if let success = try? JSONDecoder().decode(QRSaveSuccess.self, from: data) {
                     self.view.show(success: success.message)
-                    self.nameLabel.text = "- " + "\(success.result.user.fldFullname)"
-                    self.cityLabel.text = "- " + success.result.user.fldCity
+                    self.nameLabel.text = "- " + "\(success.result.user.fldFullname ?? "")"
+                    self.cityLabel.text = "- " + (success.result.user.fldCity ?? "")
                     self.dateLabel.text = "- " + (success.result.user.date ?? "")
                     self.timeLabel.text = "- " + (success.result.user.startTime ?? "")
                 } else if let fail = try? JSONDecoder().decode(APIError.self, from: data) {

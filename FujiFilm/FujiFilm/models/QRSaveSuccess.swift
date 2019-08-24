@@ -37,35 +37,35 @@ struct QRSaveSuccess: Codable {
                 return (fldCreated.components(separatedBy: " ").first ?? fldCreated)
             }
 
-            let fldUid: String
-            let fldFullname: String
-            let fldFamilyname: String
-            let fldEmail: String
-            let fldPassword: String
-            let fldPhone: String
-            let fldMobile: String
-            let fldDob: String
-            let fldGender: String
-            let fldUserImage: String
-            let fldUserCoverImage: String
-            let fldNationality: String
-            let fldCountry: String
-            let fldState: String
-            let fldCity: String
-            let fldArea: String
-            let fldAddress: String
-            let fldAddress1: String
-            let fldPo: JSONNull?
-            let fldLandmark: String
-            let fldZipcode: String
+            let fldUid: String?
+            let fldFullname: String?
+            let fldFamilyname: String?
+            let fldEmail: String?
+            let fldPassword: String?
+            let fldPhone: String?
+            let fldMobile: String?
+            let fldDob: String?
+            let fldGender: String?
+            let fldUserImage: String?
+            let fldUserCoverImage: String?
+            let fldNationality: String?
+            let fldCountry: String?
+            let fldState: String?
+            let fldCity: String?
+            let fldArea: String?
+            let fldAddress: String?
+            let fldAddress1: String?
+            let fldPo: String?
+            let fldLandmark: String?
+            let fldZipcode: String?
             let fldGear: JSONNull?
-            let fldFPSLevel: String
-            let fldActivationLink: String
-            let fldStatus: String
-            let fldUserKey: String
-            let fldUserQr: String
-            let fldCreatedBy: String
-            let fldUserParentID: String
+            let fldFPSLevel: String?
+            let fldActivationLink: String?
+            let fldStatus: String?
+            let fldUserKey: String?
+            let fldUserQr: String?
+            let fldCreatedBy: String?
+            let fldUserParentID: String?
             let fldCreated: String
 
             enum CodingKeys: String, CodingKey {
