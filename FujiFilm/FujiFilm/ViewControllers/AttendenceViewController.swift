@@ -220,7 +220,7 @@ class AttendenceViewController: FujiFilmViewController, UITableViewDataSource, U
                         "qr_code": data.qrCode,
                         "distributor_id": user.result.fldDid,
                         "event_id": data.eventID,
-                        "type": "S"
+                        "type": "M"
                     ]
 
                     self.markPresent(data: apiData)
@@ -244,7 +244,7 @@ class AttendenceViewController: FujiFilmViewController, UITableViewDataSource, U
                         "qr_code": data.qrCode,
                         "distributor_id": user.result.fldDid,
                         "event_id": data.eventID,
-                        "type": "S"
+                        "type": "M"
                     ]
 
                     self.markPresent(data: apiData)
@@ -268,7 +268,7 @@ class AttendenceViewController: FujiFilmViewController, UITableViewDataSource, U
                         "qr_code": data.qrCode,
                         "distributor_id": user.result.fldDid,
                         "event_id": data.eventID,
-                        "type": "S"
+                        "type": "M"
                     ]
 
                     self.markPresent(data: apiData)
