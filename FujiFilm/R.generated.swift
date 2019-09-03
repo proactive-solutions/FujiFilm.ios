@@ -1017,6 +1017,7 @@ struct _R: Rswift.Validatable {
         if UIKit.UIImage(named: "Warranty-Search", in: R.hostingBundle, compatibleWith: nil) == nil { throw Rswift.ValidationError(description: "[R.swift] Image named 'Warranty-Search' is used in storyboard 'WarrantySearch', but couldn't be loaded.") }
         if UIKit.UIImage(named: "iconfinder_radio-button_off", in: R.hostingBundle, compatibleWith: nil) == nil { throw Rswift.ValidationError(description: "[R.swift] Image named 'iconfinder_radio-button_off' is used in storyboard 'WarrantySearch', but couldn't be loaded.") }
         if UIKit.UIImage(named: "iconfinder_radio-button_on_", in: R.hostingBundle, compatibleWith: nil) == nil { throw Rswift.ValidationError(description: "[R.swift] Image named 'iconfinder_radio-button_on_' is used in storyboard 'WarrantySearch', but couldn't be loaded.") }
+        if UIKit.UIImage(named: "scanner", in: R.hostingBundle, compatibleWith: nil) == nil { throw Rswift.ValidationError(description: "[R.swift] Image named 'scanner' is used in storyboard 'WarrantySearch', but couldn't be loaded.") }
         if #available(iOS 11.0, *) {
         }
         if _R.storyboard.warrantySearch().warrantySearchViewController() == nil { throw Rswift.ValidationError(description:"[R.swift] ViewController with identifier 'warrantySearchViewController' could not be loaded from storyboard 'WarrantySearch' as 'WarrantySearchViewController'.") }
