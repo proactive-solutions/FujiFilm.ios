@@ -36,7 +36,7 @@ struct ProductWarrantyDetails: Codable {
             let fldModelName: String
             let fldPurchaseDate: String
             let fldWarrantyEndDate: String
-            let fldSerial: String
+            let fldSerial: String?
             let clientName: String
             let dayLeft: Int
 
@@ -54,7 +54,7 @@ struct ProductWarrantyDetails: Codable {
 
                 list.append((title: "Customer Name", subTitle: self.clientName))
                 list.append((title: "Model Name", subTitle: self.fldModelName))
-                list.append((title: "Serial Number", subTitle: self.fldSerial))
+                list.append((title: "Serial Number", subTitle: self.fldSerial ?? ""))
                 list.append((title: "Purchase Date", subTitle: self.convertToDate(self.fldPurchaseDate) ?? self.fldPurchaseDate))
                 list.append((title: "Warranty Remaining", subTitle: self.dayLeft.description + " days"))
                 // list.append((title: "Purchase From", subTitle: self.distributorName))
