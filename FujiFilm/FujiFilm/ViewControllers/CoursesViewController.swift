@@ -9,7 +9,7 @@ final class CoursesViewController: FujiFilmViewController, UITableViewDataSource
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        menuTableView.registerNib(.CoursesCell)
+        menuTableView.registerNib(.workshop)
         menuTableView.calculateCellHeight(estimatedHeight: 80.0)
         menuTableView.hideEmptyAndExtraRows()
 
@@ -58,9 +58,9 @@ final class CoursesViewController: FujiFilmViewController, UITableViewDataSource
 
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         guard let cell = tableView.dequeueReusableCell(
-            withIdentifier: TableViewCellXibs.CoursesCell.rawValue,
+            withIdentifier: TableViewCellXibs.workshop.rawValue,
             for: indexPath
-            ) as? CoursesCell else { return CoursesCell() }
+            ) as? WorkshopCell else { return WorkshopCell() }
 
         let result = evnetsEventList[indexPath.row]
 

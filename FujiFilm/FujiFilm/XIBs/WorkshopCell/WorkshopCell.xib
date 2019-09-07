@@ -27,10 +27,10 @@
                 <autoresizingMask key="autoresizingMask"/>
                 <subviews>
                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="zcW-LN-XUf">
-                        <rect key="frame" x="0.0" y="0.0" width="320" height="353"/>
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="403"/>
                         <subviews>
                             <view clipsSubviews="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="uHY-9t-4vJ">
-                                <rect key="frame" x="1.5" y="1.5" width="317" height="350"/>
+                                <rect key="frame" x="1.5" y="1.5" width="317" height="400"/>
                                 <subviews>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="e0k-jZ-7Dx">
                                         <rect key="frame" x="0.0" y="0.0" width="317" height="200"/>
@@ -140,18 +140,42 @@
                                         </constraints>
                                     </stackView>
                                     <stackView opaque="NO" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" axis="vertical" distribution="fillEqually" translatesAutoresizingMaskIntoConstraints="NO" id="EKL-Io-QH4">
-                                        <rect key="frame" x="10" y="235" width="138" height="75"/>
+                                        <rect key="frame" x="10" y="235" width="138" height="125"/>
                                         <subviews>
-                                            <view contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" translatesAutoresizingMaskIntoConstraints="NO" id="bJB-Kt-qzG">
+                                            <view contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" translatesAutoresizingMaskIntoConstraints="NO" id="zAN-Ij-cyJ">
                                                 <rect key="frame" x="0.0" y="0.0" width="138" height="25"/>
                                                 <subviews>
-                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" text="Attendee - " textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumScaleFactor="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="Bcz-og-Vp1" customClass="FujiFilmLabel" customModule="FujiFilm" customModuleProvider="target">
-                                                        <rect key="frame" x="0.0" y="5" width="69.5" height="15.5"/>
+                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" text="Total Seats - " textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumScaleFactor="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="w1I-LM-KOB" customClass="FujiFilmLabel" customModule="FujiFilm" customModuleProvider="target">
+                                                        <rect key="frame" x="0.0" y="5" width="79.5" height="15.5"/>
+                                                        <fontDescription key="fontDescription" name="Raleway-SemiBold" family="Raleway" pointSize="13"/>
+                                                        <nil key="highlightedColor"/>
+                                                    </label>
+                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="249" verticalHuggingPriority="249" horizontalCompressionResistancePriority="751" verticalCompressionResistancePriority="752" text="40" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumScaleFactor="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="3aa-xm-5ha" customClass="FujiFilmLabel" customModule="FujiFilm" customModuleProvider="target">
+                                                        <rect key="frame" x="79.5" y="5" width="15.5" height="15.5"/>
+                                                        <fontDescription key="fontDescription" name="Raleway-Regular" family="Raleway" pointSize="13"/>
+                                                        <nil key="highlightedColor"/>
+                                                    </label>
+                                                </subviews>
+                                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                <constraints>
+                                                    <constraint firstItem="w1I-LM-KOB" firstAttribute="centerY" secondItem="zAN-Ij-cyJ" secondAttribute="centerY" id="8cY-Ao-Ysc"/>
+                                                    <constraint firstItem="w1I-LM-KOB" firstAttribute="leading" secondItem="zAN-Ij-cyJ" secondAttribute="leading" id="Gg5-gk-LI9"/>
+                                                    <constraint firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="3aa-xm-5ha" secondAttribute="trailing" constant="10" id="Yy7-0f-oCn"/>
+                                                    <constraint firstItem="3aa-xm-5ha" firstAttribute="centerY" secondItem="w1I-LM-KOB" secondAttribute="centerY" id="fZm-Pd-yGj"/>
+                                                    <constraint firstItem="3aa-xm-5ha" firstAttribute="leading" secondItem="w1I-LM-KOB" secondAttribute="trailing" id="faV-L4-YK3"/>
+                                                    <constraint firstAttribute="height" constant="25" id="grR-Av-4qp"/>
+                                                </constraints>
+                                            </view>
+                                            <view contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" translatesAutoresizingMaskIntoConstraints="NO" id="bJB-Kt-qzG">
+                                                <rect key="frame" x="0.0" y="25" width="138" height="25"/>
+                                                <subviews>
+                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" text="Registered - " textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumScaleFactor="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="Bcz-og-Vp1" customClass="FujiFilmLabel" customModule="FujiFilm" customModuleProvider="target">
+                                                        <rect key="frame" x="0.0" y="5" width="79" height="15.5"/>
                                                         <fontDescription key="fontDescription" name="Raleway-SemiBold" family="Raleway" pointSize="13"/>
                                                         <nil key="highlightedColor"/>
                                                     </label>
                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="249" verticalHuggingPriority="249" horizontalCompressionResistancePriority="751" verticalCompressionResistancePriority="752" text="40" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumScaleFactor="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="YA7-a9-Zl9" customClass="FujiFilmLabel" customModule="FujiFilm" customModuleProvider="target">
-                                                        <rect key="frame" x="69.5" y="5" width="15.5" height="15.5"/>
+                                                        <rect key="frame" x="79" y="5" width="15.5" height="15.5"/>
                                                         <fontDescription key="fontDescription" name="Raleway-Regular" family="Raleway" pointSize="13"/>
                                                         <nil key="highlightedColor"/>
                                                     </label>
@@ -166,8 +190,32 @@
                                                     <constraint firstItem="YA7-a9-Zl9" firstAttribute="centerY" secondItem="Bcz-og-Vp1" secondAttribute="centerY" id="zIk-1H-hJx"/>
                                                 </constraints>
                                             </view>
+                                            <view contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" translatesAutoresizingMaskIntoConstraints="NO" id="gaF-t0-4nn">
+                                                <rect key="frame" x="0.0" y="50" width="138" height="25"/>
+                                                <subviews>
+                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" text="Waiting - " textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumScaleFactor="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="mOP-Qm-LwE" customClass="FujiFilmLabel" customModule="FujiFilm" customModuleProvider="target">
+                                                        <rect key="frame" x="0.0" y="5" width="59.5" height="15.5"/>
+                                                        <fontDescription key="fontDescription" name="Raleway-SemiBold" family="Raleway" pointSize="13"/>
+                                                        <nil key="highlightedColor"/>
+                                                    </label>
+                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="249" verticalHuggingPriority="249" horizontalCompressionResistancePriority="751" verticalCompressionResistancePriority="752" text="40" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumScaleFactor="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="uDj-tW-4pg" customClass="FujiFilmLabel" customModule="FujiFilm" customModuleProvider="target">
+                                                        <rect key="frame" x="59.5" y="5" width="15.5" height="15.5"/>
+                                                        <fontDescription key="fontDescription" name="Raleway-Regular" family="Raleway" pointSize="13"/>
+                                                        <nil key="highlightedColor"/>
+                                                    </label>
+                                                </subviews>
+                                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                <constraints>
+                                                    <constraint firstItem="uDj-tW-4pg" firstAttribute="centerY" secondItem="mOP-Qm-LwE" secondAttribute="centerY" id="1C7-cf-rqC"/>
+                                                    <constraint firstItem="mOP-Qm-LwE" firstAttribute="centerY" secondItem="gaF-t0-4nn" secondAttribute="centerY" id="DEh-7o-Ush"/>
+                                                    <constraint firstItem="uDj-tW-4pg" firstAttribute="leading" secondItem="mOP-Qm-LwE" secondAttribute="trailing" id="WAD-iQ-26K"/>
+                                                    <constraint firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="uDj-tW-4pg" secondAttribute="trailing" constant="10" id="WoS-XQ-aMP"/>
+                                                    <constraint firstAttribute="height" constant="25" id="ZCM-hJ-aq3"/>
+                                                    <constraint firstItem="mOP-Qm-LwE" firstAttribute="leading" secondItem="gaF-t0-4nn" secondAttribute="leading" id="xXC-cz-2OD"/>
+                                                </constraints>
+                                            </view>
                                             <view contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Vh7-Jy-OXl">
-                                                <rect key="frame" x="0.0" y="25" width="138" height="25"/>
+                                                <rect key="frame" x="0.0" y="75" width="138" height="25"/>
                                                 <subviews>
                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" text="Present - " textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumScaleFactor="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="gv9-DW-DeK" customClass="FujiFilmLabel" customModule="FujiFilm" customModuleProvider="target">
                                                         <rect key="frame" x="0.0" y="5" width="59" height="15.5"/>
@@ -190,7 +238,7 @@
                                                 </constraints>
                                             </view>
                                             <view contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" translatesAutoresizingMaskIntoConstraints="NO" id="WmP-sa-P4D">
-                                                <rect key="frame" x="0.0" y="50" width="138" height="25"/>
+                                                <rect key="frame" x="0.0" y="100" width="138" height="25"/>
                                                 <subviews>
                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" text="Absent - " textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumScaleFactor="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="FDI-fR-faB" customClass="FujiFilmLabel" customModule="FujiFilm" customModuleProvider="target">
                                                         <rect key="frame" x="0.0" y="5" width="55.5" height="15.5"/>
@@ -215,21 +263,21 @@
                                         </subviews>
                                     </stackView>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="KFZ-LS-Krh">
-                                        <rect key="frame" x="177" y="235" width="120" height="75"/>
+                                        <rect key="frame" x="177" y="235" width="120" height="125"/>
                                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <constraints>
                                             <constraint firstAttribute="width" constant="120" id="rtk-Km-NcR"/>
                                         </constraints>
                                     </view>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="HFW-0E-phh">
-                                        <rect key="frame" x="10" y="315" width="155" height="30"/>
+                                        <rect key="frame" x="10" y="365" width="155" height="30"/>
                                         <state key="normal" title="View Registered Users"/>
                                         <connections>
                                             <action selector="viewAttendees:" destination="KGk-i7-Jjw" eventType="touchUpInside" id="aoi-2r-9f6"/>
                                         </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Hgt-Bp-WBT">
-                                        <rect key="frame" x="224.5" y="315" width="72.5" height="30"/>
+                                        <rect key="frame" x="224.5" y="365" width="72.5" height="30"/>
                                         <state key="normal" image="small_scan"/>
                                         <connections>
                                             <action selector="scanQRCode:" destination="KGk-i7-Jjw" eventType="touchUpInside" id="hCH-2u-XaX"/>
@@ -289,6 +337,8 @@
                 <outlet property="nameLabel" destination="GWM-kL-mR6" id="7DP-cg-ALG"/>
                 <outlet property="outerWrapperView" destination="zcW-LN-XUf" id="pQf-ER-P2X"/>
                 <outlet property="presentLabel" destination="e20-tU-aeb" id="Bam-HR-M9R"/>
+                <outlet property="totalSeatsLabel" destination="3aa-xm-5ha" id="UOX-Q7-pVD"/>
+                <outlet property="waitingLabel" destination="uDj-tW-4pg" id="Rrg-aE-lVI"/>
             </connections>
             <point key="canvasLocation" x="473.60000000000002" y="214.54272863568218"/>
         </tableViewCell>

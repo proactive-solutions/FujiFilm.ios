@@ -1,11 +1,3 @@
-//
-//  WorkshopCell.swift
-//  FujiFilm
-//
-//  Created by Pawan Sharma on 24/02/19.
-//  Copyright © 2019 Pawan Sharma. All rights reserved.
-//
-
 import UIKit
 
 extension Date {
@@ -30,6 +22,8 @@ class WorkshopCell: UITableViewCell {
     @IBOutlet private var attendeeLabel: FujiFilmLabel!
     @IBOutlet private var presentLabel: FujiFilmLabel!
     @IBOutlet private var absentLabel: FujiFilmLabel!
+    @IBOutlet private var waitingLabel: FujiFilmLabel!
+    @IBOutlet private var totalSeatsLabel: FujiFilmLabel!
 
     var scan: (() -> Void)?
     var viewAttendees: (() -> Void)?
@@ -86,8 +80,11 @@ class WorkshopCell: UITableViewCell {
 
         nameLabel.text = result.fldEventTitle
         presentLabel.text = "\(result.attendanceCount)"
-        attendeeLabel.text = result.fldEventSeats
+        attendeeLabel.text = "\(result.registorCount)"
         absentLabel.text = "\(result.remainingAttendanceCount)"
+        absentLabel.text = "\(result.remainingAttendanceCount)"
+        waitingLabel.text = "\(result.waitingCount)"
+        totalSeatsLabel.text = "\(result.fldEventSeats)"
         iconImageView.from(url: result.fldEventImage, completion: nil)
     }
 }

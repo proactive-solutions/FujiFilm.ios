@@ -45,7 +45,7 @@
                                     <constraint firstAttribute="height" constant="50" id="RA3-WP-8b1"/>
                                 </constraints>
                                 <inset key="imageEdgeInsets" minX="10" minY="0.0" maxX="0.0" maxY="0.0"/>
-                                <state key="normal" title="Conitue" image="continue_arrow">
+                                <state key="normal" title="Continue" image="continue_arrow">
                                     <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 </state>
                                 <connections>

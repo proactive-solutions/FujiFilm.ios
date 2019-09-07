@@ -18,8 +18,6 @@
 		F2653E5F222703BA00BD0C1A /* Splash.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F2653E5D222703BA00BD0C1A /* Splash.storyboard */; };
 		F28F04BB22C3DE0E00F82FF3 /* Courses.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F28F04B922C3DE0E00F82FF3 /* Courses.storyboard */; };
 		F28F04BD22C3DE5B00F82FF3 /* CoursesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F28F04BC22C3DE5B00F82FF3 /* CoursesViewController.swift */; };
-		F28F04C122C3DFA100F82FF3 /* CoursesCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = F28F04BF22C3DFA100F82FF3 /* CoursesCell.swift */; };
-		F28F04C222C3DFA100F82FF3 /* CoursesCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = F28F04C022C3DFA100F82FF3 /* CoursesCell.xib */; };
 		F2B1F73B222284B500CBEA40 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F2B1F73A222284B500CBEA40 /* AppDelegate.swift */; };
 		F2B1F73D222284B500CBEA40 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F2B1F73C222284B500CBEA40 /* LoginViewController.swift */; };
 		F2B1F740222284B500CBEA40 /* Login.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F2B1F73E222284B500CBEA40 /* Login.storyboard */; };
@@ -131,8 +129,6 @@
 		F2653E5E222703BA00BD0C1A /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Splash.storyboard; sourceTree = "<group>"; };
 		F28F04BA22C3DE0E00F82FF3 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Courses.storyboard; sourceTree = "<group>"; };
 		F28F04BC22C3DE5B00F82FF3 /* CoursesViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoursesViewController.swift; sourceTree = "<group>"; };
-		F28F04BF22C3DFA100F82FF3 /* CoursesCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CoursesCell.swift; sourceTree = "<group>"; };
-		F28F04C022C3DFA100F82FF3 /* CoursesCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = CoursesCell.xib; sourceTree = "<group>"; };
 		F2B1F737222284B500CBEA40 /* FujiFilm.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = FujiFilm.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		F2B1F73A222284B500CBEA40 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		F2B1F73C222284B500CBEA40 /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
@@ -273,8 +269,6 @@
 		F28F04BE22C3DFA100F82FF3 /* CoursesCell */ = {
 			isa = PBXGroup;
 			children = (
-				F28F04BF22C3DFA100F82FF3 /* CoursesCell.swift */,
-				F28F04C022C3DFA100F82FF3 /* CoursesCell.xib */,
 			);
 			path = CoursesCell;
 			sourceTree = "<group>";
@@ -624,7 +618,6 @@
 				F2B1F7CB2222996C00CBEA40 /* Raleway-Medium.ttf in Resources */,
 				F2B1F740222284B500CBEA40 /* Login.storyboard in Resources */,
 				F2B1F7D22222996C00CBEA40 /* Raleway-Light.ttf in Resources */,
-				F28F04C222C3DFA100F82FF3 /* CoursesCell.xib in Resources */,
 				F2B1F7C62222996C00CBEA40 /* Raleway-BoldItalic.ttf in Resources */,
 				F2B1F7E52222E62B00CBEA40 /* LeftMenu.storyboard in Resources */,
 				F2B1F7C92222996C00CBEA40 /* Raleway-ExtraLight.ttf in Resources */,
@@ -754,7 +747,6 @@
 				F2B1F77D222285D200CBEA40 /* UIScrollView+Content.swift in Sources */,
 				F2B1F77E222285D200CBEA40 /* UITextField+Extension.swift in Sources */,
 				F2CF468A22985DC800FFE595 /* R.generated.swift in Sources */,
-				F28F04C122C3DFA100F82FF3 /* CoursesCell.swift in Sources */,
 				F2B1F78D222285D200CBEA40 /* FujiFilmShadowView.swift in Sources */,
 				F2D8D7372223004D00B15CC7 /* WorkshopViewController.swift in Sources */,
 				F2B1F784222285D200CBEA40 /* FujiFilmTabBarItem.swift in Sources */,

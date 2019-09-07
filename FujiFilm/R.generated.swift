@@ -428,12 +428,10 @@ struct R: Rswift.Validatable {
     fileprivate init() {}
   }
   
-  /// This `R.nib` struct is generated, and contains static references to 7 nibs.
+  /// This `R.nib` struct is generated, and contains static references to 6 nibs.
   struct nib {
     /// Nib `AttendenceCell`.
     static let attendenceCell = _R.nib._AttendenceCell()
-    /// Nib `CoursesCell`.
-    static let coursesCell = _R.nib._CoursesCell()
     /// Nib `DashboardCell`.
     static let dashboardCell = _R.nib._DashboardCell()
     /// Nib `FujiFilmLeftMenuCell`.
@@ -449,12 +447,6 @@ struct R: Rswift.Validatable {
     @available(*, deprecated, message: "Use UINib(resource: R.nib.attendenceCell) instead")
     static func attendenceCell(_: Void = ()) -> UIKit.UINib {
       return UIKit.UINib(resource: R.nib.attendenceCell)
-    }
-    
-    /// `UINib(name: "CoursesCell", in: bundle)`
-    @available(*, deprecated, message: "Use UINib(resource: R.nib.coursesCell) instead")
-    static func coursesCell(_: Void = ()) -> UIKit.UINib {
-      return UIKit.UINib(resource: R.nib.coursesCell)
     }
     
     /// `UINib(name: "DashboardCell", in: bundle)`
@@ -491,10 +483,6 @@ struct R: Rswift.Validatable {
       return R.nib.attendenceCell.instantiate(withOwner: ownerOrNil, options: optionsOrNil)[0] as? AttendenceCell
     }
     
-    static func coursesCell(owner ownerOrNil: AnyObject?, options optionsOrNil: [UINib.OptionsKey : Any]? = nil) -> CoursesCell? {
-      return R.nib.coursesCell.instantiate(withOwner: ownerOrNil, options: optionsOrNil)[0] as? CoursesCell
-    }
-    
     static func dashboardCell(owner ownerOrNil: AnyObject?, options optionsOrNil: [UINib.OptionsKey : Any]? = nil) -> DashboardCell? {
       return R.nib.dashboardCell.instantiate(withOwner: ownerOrNil, options: optionsOrNil)[0] as? DashboardCell
     }
@@ -514,14 +502,6 @@ struct R: Rswift.Validatable {
     static func workshopCell(owner ownerOrNil: AnyObject?, options optionsOrNil: [UINib.OptionsKey : Any]? = nil) -> WorkshopCell? {
       return R.nib.workshopCell.instantiate(withOwner: ownerOrNil, options: optionsOrNil)[0] as? WorkshopCell
     }
-    
-    fileprivate init() {}
-  }
-  
-  /// This `R.reuseIdentifier` struct is generated, and contains static references to 1 reuse identifiers.
-  struct reuseIdentifier {
-    /// Reuse identifier `CoursesCell`.
-    static let coursesCell: Rswift.ReuseIdentifier<CoursesCell> = Rswift.ReuseIdentifier(identifier: "CoursesCell")
     
     fileprivate init() {}
   }
@@ -652,7 +632,6 @@ struct _R: Rswift.Validatable {
   struct nib: Rswift.Validatable {
     static func validate() throws {
       try _AttendenceCell.validate()
-      try _CoursesCell.validate()
       try _DashboardCell.validate()
       try _WorkshopCell.validate()
     }
@@ -667,27 +646,6 @@ struct _R: Rswift.Validatable {
       
       static func validate() throws {
         if UIKit.UIImage(named: "call", in: R.hostingBundle, compatibleWith: nil) == nil { throw Rswift.ValidationError(description: "[R.swift] Image named 'call' is used in nib 'AttendenceCell', but couldn't be loaded.") }
-        if #available(iOS 11.0, *) {
-        }
-      }
-      
-      fileprivate init() {}
-    }
-    
-    struct _CoursesCell: Rswift.NibResourceType, Rswift.ReuseIdentifierType, Rswift.Validatable {
-      typealias ReusableType = CoursesCell
-      
-      let bundle = R.hostingBundle
-      let identifier = "CoursesCell"
-      let name = "CoursesCell"
-      
-      func firstView(owner ownerOrNil: AnyObject?, options optionsOrNil: [UINib.OptionsKey : Any]? = nil) -> CoursesCell? {
-        return instantiate(withOwner: ownerOrNil, options: optionsOrNil)[0] as? CoursesCell
-      }
-      
-      static func validate() throws {
-        if UIKit.UIImage(named: "Attendance-button", in: R.hostingBundle, compatibleWith: nil) == nil { throw Rswift.ValidationError(description: "[R.swift] Image named 'Attendance-button' is used in nib 'CoursesCell', but couldn't be loaded.") }
-        if UIKit.UIImage(named: "workshop_placeholder", in: R.hostingBundle, compatibleWith: nil) == nil { throw Rswift.ValidationError(description: "[R.swift] Image named 'workshop_placeholder' is used in nib 'CoursesCell', but couldn't be loaded.") }
         if #available(iOS 11.0, *) {
         }
       }

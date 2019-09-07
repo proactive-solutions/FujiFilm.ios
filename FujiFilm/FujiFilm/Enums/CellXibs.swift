@@ -11,7 +11,6 @@ enum TableViewCellXibs: String {
     case WarrantyCell
     case ProductWarrantyCell
     case AttendenceCell
-    case CoursesCell
 }
 
 enum CollectionViewCellXibs: String {

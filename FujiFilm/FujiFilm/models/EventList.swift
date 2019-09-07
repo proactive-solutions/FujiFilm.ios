@@ -8,10 +8,10 @@ struct EventList: Codable {
     let result: [Result]
 
     enum CodingKeys: String, CodingKey {
-        case code = "code"
-        case success = "success"
-        case message = "message"
-        case result = "result"
+        case code
+        case success
+        case message
+        case result
     }
 
     struct Result: Codable, TimestampToDateConvertible {
@@ -41,6 +41,8 @@ struct EventList: Codable {
         let fldEventType: String
         let fldCreated: String
         let attendanceCount: Int
+        let waitingCount: Int
+        let registorCount: Int
         let remainingAttendanceCount: Int
         let fldEventImage: String
 
@@ -71,6 +73,8 @@ struct EventList: Codable {
             case fldEventType = "fld_event_type"
             case fldCreated = "fld_created"
             case attendanceCount = "attendance_count"
+            case waitingCount = "waiting_count"
+            case registorCount = "registor_count"
             case remainingAttendanceCount = "remaining_attendance_count"
             case fldEventImage = "fld_event_image"
         }

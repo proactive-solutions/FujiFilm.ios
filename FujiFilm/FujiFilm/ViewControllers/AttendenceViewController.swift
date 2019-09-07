@@ -162,6 +162,8 @@ class AttendenceViewController: FujiFilmViewController, UITableViewDataSource, U
                     }
 
                     self.attendenceTableView.reloadData()
+
+                    self.getAttendees()
                 } else if let error = try? JSONDecoder().decode(APIError.self, from: data) {
                     self.view.show(error: error.message)
                 }
@@ -224,6 +226,10 @@ class AttendenceViewController: FujiFilmViewController, UITableViewDataSource, U
                     ]
 
                     self.markPresent(data: apiData)
+                }
+
+                if data.status == self.present {
+                    cell.markPresentButton.isHidden = true
                 }
             } else {
                 cell.markPresent = nil
